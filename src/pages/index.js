@@ -6,13 +6,4 @@ import Reviews from "./Reviews";
 import Contacts from "./Contacts";
 import FAQ from "./FAQ";
 
-export {
-    Home,
-    Employees,
-    Case,
-    Cases,
-    Service,
-    Reviews,
-    Contacts,
-    FAQ
-}
+export { Home, Employees, Case, Cases, Service, Reviews, Contacts, FAQ };
