@@ -1,0 +1,21 @@
+/* src/components/Contacts/MapLocation.styles.css */
+.map-location {
+    flex: 1;
+    max-width: 600px;
+    width: 100%;
+    margin-bottom: 20px; /* Учитываем мобильное отображение */
+}
+
+
+.map-location h2 {
+    font-size: 24px;
+    color: #78b348; /* Зеленый цвет */
+    margin-bottom: 20px;
+}
+
+iframe {
+    width: 100%;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
