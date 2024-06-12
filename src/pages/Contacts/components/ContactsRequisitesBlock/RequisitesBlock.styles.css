@@ -1,0 +1,45 @@
+.requisites-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    width: 100%;
+}
+
+.requisites-content {
+    flex: 3;
+    padding-right: 20px;
+}
+
+.requisites-content p {
+    margin: 5px 0;
+}
+
+.requisites-download {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+@media (max-width: 768px) {
+    .requisites-block {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .requisites-content {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .requisites-download {
+        width: 100%;
+        justify-content: center;
+    }
+}
