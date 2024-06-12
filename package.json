@@ -16,7 +16,8 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "eject": "craco eject"
+    "eject": "craco eject",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -38,6 +39,19 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "@craco/craco": "^7.1.0"
+    "@craco/craco": "^7.1.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.6",
+    "prettier": "^3.3.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ]
   }
 }

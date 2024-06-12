@@ -34,7 +34,9 @@
     font-weight: bold;
 }
 
-input, textarea, select {
+input,
+textarea,
+select {
     width: 99%;
     padding: 8px;
     margin-top: 5px;
@@ -59,8 +61,6 @@ input, textarea, select {
 textarea {
     height: 80px;
 }
-
-
 
 .consent-text {
     margin-top: 10px;

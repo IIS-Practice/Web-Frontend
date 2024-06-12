@@ -1,4 +1,3 @@
-// WorkingHours.js
 import React from "react";
 import DayWeek from "./components/ContactsDayWeek/DayWeek";
 import "./WorkingHours.styles.css";
