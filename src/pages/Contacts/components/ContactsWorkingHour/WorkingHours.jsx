@@ -1,5 +1,5 @@
 import React from "react";
-import DayWeek from "./components/ContactsDayWeek/DayWeek";
+import DayWeek from "./components/DayWeek";
 import "./WorkingHours.styles.css";
 
 const WorkingHours = () => {
