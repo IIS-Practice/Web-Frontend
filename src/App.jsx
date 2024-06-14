@@ -3,12 +3,14 @@ import { BrowserRouter } from "react-router-dom";
 import AppRouter from "@components/layout/AppRouter";
 import "./App.styles.css";
 import NavBar from "@components/layout/NavBar";
+import Footer from "@components/layout/Footer";
 
 const App = () => {
   return (
     <BrowserRouter>
       <NavBar />
       <AppRouter />
+      <Footer />
     </BrowserRouter>
   );
 };
