@@ -7,10 +7,7 @@ import {
   EMPLOYMENT_ROUTE,
   FAQ_ROUTE,
   CASES_ROUTE,
-  WEBDEV_ROUTE,
-  MOBILEDEV_ROUTE,
-  BOTDEV_ROUTE,
-  DESIGN_ROUTE,
+  SERVICES_ROUTE,
   REVIEWS_ROUTE,
   CONTACTS_ROUTE,
 } from "@utils/constants";
@@ -75,22 +72,22 @@ const NavBar = () => {
             <div className="dropdown-wrapper">
               <ul className="dropdown">
                 <li>
-                  <Link to={WEBDEV_ROUTE} className="dropdown-link">
+                  <Link to={`${SERVICES_ROUTE}/webDev`} className="dropdown-link">
                     Разработка сайта
                   </Link>
                 </li>
                 <li>
-                  <Link to={MOBILEDEV_ROUTE} className="dropdown-link">
+                  <Link to={`${SERVICES_ROUTE}/mobileDev`} className="dropdown-link">
                     Разработка мобильного приложения
                   </Link>
                 </li>
                 <li>
-                  <Link to={BOTDEV_ROUTE} className="dropdown-link">
+                  <Link to={`${SERVICES_ROUTE}/botDev`} className="dropdown-link">
                     Разработка ботов
                   </Link>
                 </li>
                 <li>
-                  <Link to={DESIGN_ROUTE} className="dropdown-link">
+                  <Link to={`${SERVICES_ROUTE}/ux`} className="dropdown-link">
                     UX/UI Дизайн
                   </Link>
                 </li>

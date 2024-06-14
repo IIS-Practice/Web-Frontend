@@ -3,11 +3,8 @@ import {
   EMPLOYEES_ROUTE,
   EMPLOYMENT_ROUTE,
   FAQ_ROUTE,
+  SERVICES_ROUTE,
   CASES_ROUTE,
-  WEBDEV_ROUTE,
-  MOBILEDEV_ROUTE,
-  BOTDEV_ROUTE,
-  DESIGN_ROUTE,
   REVIEWS_ROUTE,
   CONTACTS_ROUTE,
 } from "@utils/constants";
@@ -18,10 +15,7 @@ import {
   FAQ,
   Case,
   Cases,
-  WebdevService,
-  MobiledevService,
-  BotdevService,
-  DesignService,
+  Service,
   Reviews,
   Contacts,
 } from "@pages";
@@ -52,20 +46,8 @@ export const publicRoutes = [
     Component: Case,
   },
   {
-    path: WEBDEV_ROUTE,
-    Component: WebdevService,
-  },
-  {
-    path: MOBILEDEV_ROUTE,
-    Component: MobiledevService,
-  },
-  {
-    path: BOTDEV_ROUTE,
-    Component: BotdevService,
-  },
-  {
-    path: DESIGN_ROUTE,
-    Component: DesignService,
+    path: SERVICES_ROUTE + "/:serviceName",
+    Component: Service,
   },
   {
     path: REVIEWS_ROUTE,
