@@ -4,12 +4,19 @@ import "./NavBar.styles.css";
 import {
   HOME_ROUTE,
   EMPLOYEES_ROUTE,
+  EMPLOYMENT_ROUTE,
+  FAQ_ROUTE,
   CASES_ROUTE,
-  SERVICES_ROUTE,
+  WEBDEV_ROUTE,
+  MOBILEDEV_ROUTE,
+  BOTDEV_ROUTE,
+  DESIGN_ROUTE,
   REVIEWS_ROUTE,
   CONTACTS_ROUTE,
-  FAQ_ROUTE,
 } from "@utils/constants";
+import { ReactComponent as Logo } from "@assets/logo.svg";
+import { ReactComponent as Arrow } from "@assets/arrow.svg";
+import OutlinedButton from "@components/shared/OutlinedButton";
 
 const NavBar = () => {
   const [isHomeDropdownOpen, setIsHomeDropdownOpen] = useState(false);
@@ -17,9 +24,9 @@ const NavBar = () => {
 
   return (
     <nav className="navbar">
-      <div className="navbar-logo">
-        <Link to={HOME_ROUTE}>Logo</Link>
-      </div>
+      <Logo className="navbar-logo" />
+      <p>IISolutions</p>
+
       <ul className="navbar-menu">
         <li
           className="navbar-item"
@@ -29,14 +36,27 @@ const NavBar = () => {
           <Link to={HOME_ROUTE} className="navbar-link">
             О нас
           </Link>
+          <Arrow className="dropdown-arrow" />
           {isHomeDropdownOpen && (
-            <ul className="dropdown">
-              <li>
-                <Link to={EMPLOYEES_ROUTE} className="dropdown-link">
-                  Сотрудники
-                </Link>
-              </li>
-            </ul>
+            <div className="dropdown-wrapper">
+              <ul className="dropdown">
+                <li>
+                  <Link to={EMPLOYEES_ROUTE} className="dropdown-link">
+                    Сотрудники
+                  </Link>
+                </li>
+                <li>
+                  <Link to={EMPLOYMENT_ROUTE} className="dropdown-link">
+                    Трудоустройство
+                  </Link>
+                </li>
+                <li>
+                  <Link to={FAQ_ROUTE} className="dropdown-link">
+                    FAQ
+                  </Link>
+                </li>
+              </ul>
+            </div>
           )}
         </li>
         <li className="navbar-item">
@@ -50,24 +70,32 @@ const NavBar = () => {
           onMouseLeave={() => setIsServicesDropdownOpen(false)}
         >
           <span className="navbar-link">Услуги</span>
+          <Arrow className="dropdown-arrow" />
           {isServicesDropdownOpen && (
-            <ul className="dropdown">
-              <li>
-                <Link to={SERVICES_ROUTE + "\\1"} className="dropdown-link">
-                  Услуга 1
-                </Link>
-              </li>
-              <li>
-                <Link to={SERVICES_ROUTE + "\\2"} className="dropdown-link">
-                  Услуга 2
-                </Link>
-              </li>
-              <li>
-                <Link to={SERVICES_ROUTE + "\\3"} className="dropdown-link">
-                  Услуга 3
-                </Link>
-              </li>
-            </ul>
+            <div className="dropdown-wrapper">
+              <ul className="dropdown">
+                <li>
+                  <Link to={WEBDEV_ROUTE} className="dropdown-link">
+                    Разработка сайта
+                  </Link>
+                </li>
+                <li>
+                  <Link to={MOBILEDEV_ROUTE} className="dropdown-link">
+                    Разработка мобильного приложения
+                  </Link>
+                </li>
+                <li>
+                  <Link to={BOTDEV_ROUTE} className="dropdown-link">
+                    Разработка ботов
+                  </Link>
+                </li>
+                <li>
+                  <Link to={DESIGN_ROUTE} className="dropdown-link">
+                    UX/UI Дизайн
+                  </Link>
+                </li>
+              </ul>
+            </div>
           )}
         </li>
         <li className="navbar-item">
@@ -80,12 +108,9 @@ const NavBar = () => {
             Контакты
           </Link>
         </li>
-        <li className="navbar-item">
-          <Link to={FAQ_ROUTE} className="navbar-link">
-            FAQ
-          </Link>
-        </li>
       </ul>
+
+      <OutlinedButton text="Оставить заявку" onClick={() => {}} />
     </nav>
   );
 };
