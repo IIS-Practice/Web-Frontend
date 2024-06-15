@@ -3,10 +3,7 @@ import Employees from "./Employees";
 import Employment from "./Employment";
 import FAQ from "./FAQ";
 import { Case, Cases } from "./Cases";
-import WebdevService from "./WebdevService";
-import MobiledevService from "./MobiledevService";
-import BotdevService from "./BotdevService";
-import DesignService from "./DesignService";
+import { Service } from "./Service/index";
 import Reviews from "./Reviews";
 import Contacts from "./Contacts";
 
@@ -17,10 +14,7 @@ export {
   FAQ,
   Case,
   Cases,
-  WebdevService,
-  MobiledevService,
-  BotdevService,
-  DesignService,
+  Service,
   Reviews,
   Contacts,
 };
