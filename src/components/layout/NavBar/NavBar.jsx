@@ -10,6 +10,7 @@ import {
   SERVICES_ROUTE,
   REVIEWS_ROUTE,
   CONTACTS_ROUTE,
+  SERVICES,
 } from "@utils/constants";
 import { ReactComponent as Logo } from "@assets/logo.svg";
 import { ReactComponent as Arrow } from "@assets/arrow.svg";
@@ -71,26 +72,16 @@ const NavBar = () => {
           {isServicesDropdownOpen && (
             <div className="dropdown-wrapper">
               <ul className="dropdown">
-                <li>
-                  <Link to={`${SERVICES_ROUTE}/webDev`} className="dropdown-link">
-                    Разработка сайта
-                  </Link>
-                </li>
-                <li>
-                  <Link to={`${SERVICES_ROUTE}/mobileDev`} className="dropdown-link">
-                    Разработка мобильного приложения
-                  </Link>
-                </li>
-                <li>
-                  <Link to={`${SERVICES_ROUTE}/botDev`} className="dropdown-link">
-                    Разработка ботов
-                  </Link>
-                </li>
-                <li>
-                  <Link to={`${SERVICES_ROUTE}/ux`} className="dropdown-link">
-                    UX/UI Дизайн
-                  </Link>
-                </li>
+                {Object.keys(SERVICES).map((key) => (
+                  <li key={key}>
+                    <Link
+                      to={`${SERVICES_ROUTE}/${key}`}
+                      className="dropdown-link"
+                    >
+                      {SERVICES[key]?.name}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
           )}

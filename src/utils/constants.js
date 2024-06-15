@@ -7,7 +7,12 @@ export const SERVICES_ROUTE = "/services";
 export const REVIEWS_ROUTE = "/reviews";
 export const CONTACTS_ROUTE = "/contacts";
 
-export const WEBDEV_ROUTE = SERVICES_ROUTE + "/webdev";
-export const MOBILEDEV_ROUTE = SERVICES_ROUTE + "/mobiledev";
-export const BOTDEV_ROUTE = SERVICES_ROUTE + "/botdec";
-export const DESIGN_ROUTE = SERVICES_ROUTE + "/design";
+export const SERVICES = {
+  webDev: { name: "Разработка сайта", component: "WebDev" },
+  mobileDev: {
+    name: "Разработка мобильного приложения",
+    component: "MobileDev",
+  },
+  botDev: { name: "Разработка ботов", component: "BotDev" },
+  ux: { name: "UX/UI Дизайн", component: "UX" },
+};
