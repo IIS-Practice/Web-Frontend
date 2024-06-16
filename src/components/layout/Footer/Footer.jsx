@@ -3,7 +3,7 @@ import { ReactComponent as Logo } from "@assets/logo.svg";
 import { ReactComponent as InstagramIcon } from "@assets/instagram.svg";
 import { ReactComponent as TelegramIcon } from "@assets/telegram.svg";
 import { ReactComponent as ViberIcon } from "@assets/viber.svg";
-import "./Footer.styles.css";
+import "./Footer.styles.scss";
 
 const Footer = () => {
   return (
@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="footer-top">
         <div className="footer-left">
           <Logo className="footer-logo" />
-          <p className="footer-text">IISolutions</p>
+          <p>IISolutions</p>
         </div>
         <div className="footer-right">
           <a
@@ -33,7 +33,7 @@ const Footer = () => {
           </a>
         </div>
       </div>
-      <div className="footer-divider"></div>
+      <div className="footer-divider" />
       <div className="footer-bottom">
         <div className="footer-column">
           <p>ООО “Информационные инновационные решения”</p>

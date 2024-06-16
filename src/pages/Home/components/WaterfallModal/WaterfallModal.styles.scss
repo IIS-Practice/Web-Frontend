@@ -1,0 +1,76 @@
+.waterfall-content {
+    --first-color: #4943ff;
+    --second-color: #0000ff;
+
+    position: relative;
+    width: 100%;
+    margin-top: 10%;
+
+    .horizontal-line {
+        height: 30px;
+        width: 100%;
+        background: linear-gradient(
+            to right,
+            var(--first-color),
+            var(--second-color)
+        );
+        border-radius: 50px;
+        border: none;
+        display: flex;
+    }
+
+    .circle-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0 7% 0 1%;
+
+        .circle-wrapper {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .circle-title {
+                position: absolute;
+                bottom: 100%;
+                left: 100%;
+                font-size: 17px;
+                font-weight: 500;
+                color: var(--light-color);
+                text-align: left;
+            }
+
+            .circle {
+                background-color: var(--light-color);
+                border-radius: 50%;
+                height: 20px;
+                width: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                font-size: 70%;
+                color: var(--dark-color);
+                margin: 15px 0;
+            }
+
+            .circle-text {
+                position: absolute;
+                top: 100%;
+                left: 100%;
+                font-size: 14px;
+                font-weight: 400;
+                color: var(--light-color);
+                text-align: left;
+                width: 800%;
+            }
+        }
+    }
+}

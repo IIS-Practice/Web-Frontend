@@ -1,8 +1,12 @@
 import React from "react";
-import "./OutlinedButton.styles.css";
+import "./OutlinedButton.styles.scss";
 
 const OutlinedButton = ({ text, onClick }) => {
-  return <button onClick={onClick}>{text}</button>;
+  return (
+    <button className="outlined-button" onClick={onClick}>
+      {text}
+    </button>
+  );
 };
 
 export default OutlinedButton;
