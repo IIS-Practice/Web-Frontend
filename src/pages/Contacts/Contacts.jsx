@@ -28,7 +28,7 @@ const Contacts = () => {
   return (
     <div className="contacts-page">
       <h1>Контакты</h1>
-      <div class="three">
+      <div className="three">
         <div className="contacts-blocks">
           {contactsData.map((contact, index) => (
             <ContactsBlock

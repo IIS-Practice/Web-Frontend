@@ -1,0 +1,77 @@
+.form {
+    input::placeholder,
+    textarea::placeholder {
+        color: var(--dark-color);
+        font-size: 16px;
+    }
+
+    .input-body {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 15px;
+
+        .input-group {
+            display: flex;
+            gap: 70px;
+
+            input {
+                flex: 1;
+                border: 1px solid var(--dark-color);
+                border-radius: 2px;
+                padding: 12px;
+                font-size: 16px;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+    }
+
+    .textarea-group {
+        textarea {
+            box-sizing: border-box;
+            width: 100%;
+            border: 1px solid var(--dark-color);
+            border-radius: 2px;
+            resize: none;
+            margin: 0;
+            margin-top: 20px;
+            padding: 12px;
+            font-size: 16px;
+            height: 120%;
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    .button-body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 40px;
+        padding: 35px 15px;
+
+        button {
+            flex: 1;
+            border: 2px solid var(--secondary-color);
+            border-radius: 2px;
+            background-color: var(--secondary-color);
+            color: var(--dark-color);
+            font-size: 16px;
+            min-width: 40%;
+            padding: 12px;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        span {
+            font-size: 16px;
+        }
+    }
+}

@@ -1,0 +1,30 @@
+.employment-page {
+    padding: 5% 5% 9% 5%;
+
+    .main-text {
+        margin-bottom: 6%;
+
+        p {
+            font-size: 30px;
+            margin: 3% 12% 3% 0;
+        }
+    }
+
+    .adv-container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 8%;
+        margin: 3% 5% 0 2%;
+
+        div {
+            flex: 1;
+            text-align: left;
+            margin: 5px;
+            box-sizing: border-box;
+            border-left: 4px solid var(--dark-color);
+            padding-left: 10px;
+            font-size: 23px;
+        }
+    }
+}

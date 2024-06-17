@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./NavBar.styles.css";
+import "./NavBar.styles.scss";
 import {
   HOME_ROUTE,
   EMPLOYEES_ROUTE,
@@ -13,28 +13,35 @@ import {
   SERVICES,
 } from "@utils/constants";
 import { ReactComponent as Logo } from "@assets/logo.svg";
-import { ReactComponent as Arrow } from "@assets/arrow.svg";
+import { ReactComponent as ArrowIcon } from "@assets/arrow.svg";
 import OutlinedButton from "@components/shared/OutlinedButton";
+import ModalForm from "@components/shared/ModalForm";
 
 const NavBar = () => {
   const [isHomeDropdownOpen, setIsHomeDropdownOpen] = useState(false);
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
 
+  const [showModal, setShowModal] = useState(false);
+  const openModal = () => setShowModal(true);
+  const closeModal = () => setShowModal(false);
+
   return (
     <nav className="navbar">
-      <Logo className="navbar-logo" />
-      <p>IISolutions</p>
+      <Link to={HOME_ROUTE} className="logo-link">
+        <Logo className="logo" />
+      </Link>
+      <p className="logo-link-text">IISolutions</p>
 
-      <ul className="navbar-menu">
+      <ul className="menu">
         <li
-          className="navbar-item"
+          className="item"
           onMouseEnter={() => setIsHomeDropdownOpen(true)}
           onMouseLeave={() => setIsHomeDropdownOpen(false)}
         >
-          <Link to={HOME_ROUTE} className="navbar-link">
+          <Link to={HOME_ROUTE} className="link">
             О нас
           </Link>
-          <Arrow className="dropdown-arrow" />
+          <ArrowIcon className="dropdown-arrow" />
           {isHomeDropdownOpen && (
             <div className="dropdown-wrapper">
               <ul className="dropdown">
@@ -57,18 +64,18 @@ const NavBar = () => {
             </div>
           )}
         </li>
-        <li className="navbar-item">
-          <Link to={CASES_ROUTE} className="navbar-link">
+        <li className="item">
+          <Link to={CASES_ROUTE} className="link">
             Кейсы
           </Link>
         </li>
         <li
-          className="navbar-item"
+          className="item"
           onMouseEnter={() => setIsServicesDropdownOpen(true)}
           onMouseLeave={() => setIsServicesDropdownOpen(false)}
         >
-          <span className="navbar-link">Услуги</span>
-          <Arrow className="dropdown-arrow" />
+          <span className="link">Услуги</span>
+          <ArrowIcon className="dropdown-arrow" />
           {isServicesDropdownOpen && (
             <div className="dropdown-wrapper">
               <ul className="dropdown">
@@ -86,19 +93,20 @@ const NavBar = () => {
             </div>
           )}
         </li>
-        <li className="navbar-item">
-          <Link to={REVIEWS_ROUTE} className="navbar-link">
+        <li className="item">
+          <Link to={REVIEWS_ROUTE} className="link">
             Отзывы
           </Link>
         </li>
-        <li className="navbar-item">
-          <Link to={CONTACTS_ROUTE} className="navbar-link">
+        <li className="item">
+          <Link to={CONTACTS_ROUTE} className="link">
             Контакты
           </Link>
         </li>
       </ul>
 
-      <OutlinedButton text="Оставить заявку" onClick={() => {}} />
+      <OutlinedButton text="Оставить заявку" onClick={openModal} />
+      <ModalForm showModal={showModal} closeModal={closeModal} />
     </nav>
   );
 };
