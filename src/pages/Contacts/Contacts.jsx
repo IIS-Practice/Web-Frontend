@@ -1,65 +1,54 @@
 import React from "react";
 import ContactsBlock from "./components/ContactsBlock/ContactsBlock";
-import WorkingHours from "./components/ContactsWorkingHour/WorkingHours";
-import MapLocation from "./components/ContactsMapLocation/MapLocation";
-import ContactForm from "./components/ContactForm/ContactForm";
-import RequisitesBlock from "./components/ContactsRequisitesBlock/RequisitesBlock";
+import Form from "@components/shared/Form";
 import "./Contacts.styles.css";
+
 
 const Contacts = () => {
   const contactsData = [
     {
-      phone: "+7 (123) 456-7890",
-      email: "contact1@example.com",
-      address: "ул. Ленина, 1",
+      picture: "https://www.svgrepo.com/show/533286/phone-call-alt-1.svg",
+      name: "Телефон",
+      text:"Наши специалисты готовы принимать Ваши звонки в рабочее время офиса с 9:00 до 17:00 с понедельника по пятницу.",
+      data: "+7 (123) 456-7890",
     },
     {
-      phone: "+7 (234) 567-8901",
-      email: "contact2@example.com",
-      address: "ул. Гагарина, 2",
+      picture:"https://www.svgrepo.com/show/453779/letter.svg",
+      name: "Электронная почта",
+      text:"Заявки на электронную почту мы принимаем ежедневно в режиме 24/7. Будьте уверены, мы обязательно с вами свяжемся!",
+      data: "contact@example.com",
     },
     {
-      phone: "+7 (345) 678-9012",
-      email: "contact3@example.com",
-      address: "ул. Мира, 3",
+      picture: "https://www.svgrepo.com/show/509148/location-pin.svg",
+      name: "Местоположение офиса",
+      text:"Приглашаем Вас в наш офис. Также, есть возможность встреч с партнерами и заказчиками в удобном для Вас месте.",
+      data: "ул. Мира, 3",
     },
   ];
 
   return (
     <div className="contacts-page">
-      <h1>Контакты</h1>
-      <div className="three">
+      <h1 class="contact-head">Контакты</h1>
         <div className="contacts-blocks">
           {contactsData.map((contact, index) => (
-            <ContactsBlock
-              key={index}
-              phone={contact.phone}
-              email={contact.email}
-              address={contact.address}
+            <ContactsBlock class="contact-element"
+              picture = {contact.picture}
+              name = {contact.name}
+              text = {contact.text}
+              data={contact.data}
             />
           ))}
         </div>
+
+      <div>
+        <h1 class="contact-head">Мы рады увидеть <span className="form-head">Вашу</span> заявку!</h1>
+        <p class="contact-p">Пожалуйста оставьте Ваши имя и телефон, мы будем счастливы помочь Вам.</p>
+        <div className="contact-form">
+          <Form />
+        </div>
       </div>
 
-      <h2>Время работы:</h2>
-      <WorkingHours />
 
-      <div className="contact-details">
-        <MapLocation />
-        <ContactForm />
-      </div>
-      <RequisitesBlock
-        title="Реквизиты"
-        requisites={`Название компании: ООО 'Пример'
-ИНН: 123456789
-КПП: 987654321
-ОГРН: 1234567890123
-Банк: ПримерБанк
-БИК: 123456789
-Р/С: 40702810000000000000
-К/С: 30101810000000000000`}
-        downloadLink="/path/to/requisites.pdf"
-      />
     </div>
   );
 };
