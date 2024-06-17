@@ -1,19 +1,17 @@
 import React from "react";
-import "./ContactsBlock.styles.css";
+import "./ContactsBlock.styles.css"
 
-const ContactsBlock = ({ phone, email, address }) => {
+const ContactsBlock = ({ picture, name, text, data }) => {
   return (
+
     <div className="contacts-block">
-      <h2>Контактная информация</h2>
-      <p>
-        <strong>Телефон:</strong> {phone}
-      </p>
-      <p>
-        <strong>Эл. почта:</strong> {email}
-      </p>
-      <p>
-        <strong>Адрес:</strong> {address}
-      </p>
+      <div><img className="picture-image" src={picture} alt="pic" /></div>
+      <h2 className="name" >{name}</h2>
+      <div style={{ display: "flex", justifyContent: "center", alignItems:"center" }}>
+        <p className="text">{text}</p>
+      </div>
+
+      <p className="data" >{data}</p>
     </div>
   );
 };
