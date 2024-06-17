@@ -12,22 +12,21 @@
 .contacts-block p {
     margin: 4px 0;
 }
-.picture-image{
+.picture-image {
     width: 46px;
     height: 46px;
 }
-.name{
+.name {
     margin-top: 15px;
     line-height: 37px;
     font-weight: 500;
     font-size: 30px;
-
 }
-.text{
+.text {
     margin-top: 25px;
     width: 75%;
 }
-.data{
+.data {
     margin-top: 20px;
-    color:#8DB9FC;
+    color: var(--primary-color);
 }
