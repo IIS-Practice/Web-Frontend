@@ -1,0 +1,22 @@
+.MainBlock {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    background-color: #8DB9FC;
+  }
+  
+.CompanyName, .CompanyImage {
+  flex: 1;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  
+.CompanyImage img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transform: scaleX(-1);
+}
+  
