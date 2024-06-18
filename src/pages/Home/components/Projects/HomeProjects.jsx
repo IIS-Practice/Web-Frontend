@@ -1,7 +1,8 @@
 
 import React from 'react';
 import './HomeProjects.styles.css';
-import OutlinedButton from '../../../../components/shared/OutlinedButton/OutlinedButton';
+import { SERVICES_ROUTE } from "@utils/constants"
+import { Link } from 'react-router-dom';
 
 const HomeProjects = () => {
   return (
@@ -31,7 +32,7 @@ const HomeProjects = () => {
               Создаём уникальные сайты, которые <br />
               повышают конверсию продаж...
             </p>
-            <button className="content-button">Узнать подробнее</button>
+            <Link to={`${SERVICES_ROUTE}/webDev`} className="content-button">Узнать подробнее</Link>
           </div>
         </div>
         <div className="project-small">
@@ -42,7 +43,7 @@ const HomeProjects = () => {
               ботов, которые автоматизируют <br />
               задачи...
             </p>
-            <button className="content-button">Узнать подробнее</button>
+            <Link to={`${SERVICES_ROUTE}/botDev`} className="content-button">Узнать подробнее</Link>
           </div>
         </div>
         <div className="project-small">
@@ -53,7 +54,7 @@ const HomeProjects = () => {
               функциональные мобильные <br />
               приложения...
             </p>
-            <button className="content-button">Узнать подробнее</button>
+            <Link to={`${SERVICES_ROUTE}/mobileDev`} className="content-button">Узнать подробнее</Link>
           </div>
         </div>
         <div className="project-small">
@@ -64,7 +65,7 @@ const HomeProjects = () => {
               удобные интерфейсы, которые <br />
               улучшают пользовательский опыт...
             </p>
-            <button className="content-button">Узнать подробнее</button>
+            <Link to={`${SERVICES_ROUTE}/ux`} className="content-button">Узнать подробнее</Link>
           </div>
         </div>
       </div>
