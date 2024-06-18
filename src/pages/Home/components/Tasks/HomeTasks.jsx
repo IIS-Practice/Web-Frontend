@@ -1,5 +1,6 @@
 import React from 'react';
 import './HomeTasks.styles.css';
+import OutlinedButton from '../../../../components/shared/OutlinedButton/OutlinedButton';
 
 const HomeTasks = () => {
   return (
@@ -19,7 +20,7 @@ const HomeTasks = () => {
               <span>фиксированная цена</span>
             </li>
           </ul>
-          <button>Подробнее</button>
+          <OutlinedButton text="Подробнее"/>
         </div>
         <div className="vertical-line"></div>
         <div className="task">
@@ -35,7 +36,7 @@ const HomeTasks = () => {
               <span>гибкая цена +/-</span>
             </li>
           </ul>
-          <button>Подробнее</button>
+          <OutlinedButton text="Подробнее"/>
         </div>
       </div>
     </div>

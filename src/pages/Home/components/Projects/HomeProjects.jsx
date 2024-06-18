@@ -1,6 +1,7 @@
 
 import React from 'react';
 import './HomeProjects.styles.css';
+import OutlinedButton from '../../../../components/shared/OutlinedButton/OutlinedButton';
 
 const HomeProjects = () => {
   return (
