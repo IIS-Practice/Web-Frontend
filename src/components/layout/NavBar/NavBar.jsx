@@ -1,42 +1,47 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./NavBar.styles.css";
+import "./NavBar.styles.scss";
 import {
   HOME_ROUTE,
   EMPLOYEES_ROUTE,
   EMPLOYMENT_ROUTE,
   FAQ_ROUTE,
   CASES_ROUTE,
-  WEBDEV_ROUTE,
-  MOBILEDEV_ROUTE,
-  BOTDEV_ROUTE,
-  DESIGN_ROUTE,
+  SERVICES_ROUTE,
   REVIEWS_ROUTE,
   CONTACTS_ROUTE,
+  SERVICES,
 } from "@utils/constants";
 import { ReactComponent as Logo } from "@assets/logo.svg";
-import { ReactComponent as Arrow } from "@assets/arrow.svg";
+import { ReactComponent as ArrowIcon } from "@assets/arrow.svg";
 import OutlinedButton from "@components/shared/OutlinedButton";
+import ModalForm from "@components/shared/ModalForm";
 
 const NavBar = () => {
   const [isHomeDropdownOpen, setIsHomeDropdownOpen] = useState(false);
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
 
+  const [showModal, setShowModal] = useState(false);
+  const openModal = () => setShowModal(true);
+  const closeModal = () => setShowModal(false);
+
   return (
     <nav className="navbar">
-      <Logo className="navbar-logo" />
+      <Link to={HOME_ROUTE} className="logo-link">
+        <Logo className="logo" />
+      </Link>
       <p>IISolutions</p>
 
-      <ul className="navbar-menu">
+      <ul className="menu">
         <li
-          className="navbar-item"
+          className="item"
           onMouseEnter={() => setIsHomeDropdownOpen(true)}
           onMouseLeave={() => setIsHomeDropdownOpen(false)}
         >
-          <Link to={HOME_ROUTE} className="navbar-link">
-            О нас
+          <Link to={HOME_ROUTE} className="link">
+            О&nbsp;нас
           </Link>
-          <Arrow className="dropdown-arrow" />
+          <ArrowIcon className="dropdown-arrow" />
           {isHomeDropdownOpen && (
             <div className="dropdown-wrapper">
               <ul className="dropdown">
@@ -59,58 +64,49 @@ const NavBar = () => {
             </div>
           )}
         </li>
-        <li className="navbar-item">
-          <Link to={CASES_ROUTE} className="navbar-link">
+        <li className="item">
+          <Link to={CASES_ROUTE} className="link">
             Кейсы
           </Link>
         </li>
         <li
-          className="navbar-item"
+          className="item"
           onMouseEnter={() => setIsServicesDropdownOpen(true)}
           onMouseLeave={() => setIsServicesDropdownOpen(false)}
         >
-          <span className="navbar-link">Услуги</span>
-          <Arrow className="dropdown-arrow" />
+          <span className="link">Услуги</span>
+          <ArrowIcon className="dropdown-arrow" />
           {isServicesDropdownOpen && (
             <div className="dropdown-wrapper">
               <ul className="dropdown">
-                <li>
-                  <Link to={WEBDEV_ROUTE} className="dropdown-link">
-                    Разработка сайта
-                  </Link>
-                </li>
-                <li>
-                  <Link to={MOBILEDEV_ROUTE} className="dropdown-link">
-                    Разработка мобильного приложения
-                  </Link>
-                </li>
-                <li>
-                  <Link to={BOTDEV_ROUTE} className="dropdown-link">
-                    Разработка ботов
-                  </Link>
-                </li>
-                <li>
-                  <Link to={DESIGN_ROUTE} className="dropdown-link">
-                    UX/UI Дизайн
-                  </Link>
-                </li>
+                {Object.keys(SERVICES).map((key) => (
+                  <li key={key}>
+                    <Link
+                      to={`${SERVICES_ROUTE}/${key}`}
+                      className="dropdown-link"
+                    >
+                      {SERVICES[key]?.name}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
           )}
         </li>
-        <li className="navbar-item">
-          <Link to={REVIEWS_ROUTE} className="navbar-link">
+        <li className="item">
+          <Link to={REVIEWS_ROUTE} className="link">
             Отзывы
           </Link>
         </li>
-        <li className="navbar-item">
-          <Link to={CONTACTS_ROUTE} className="navbar-link">
+        <li className="item">
+          <Link to={CONTACTS_ROUTE} className="link">
             Контакты
           </Link>
         </li>
       </ul>
 
-      <OutlinedButton text="Оставить заявку" onClick={() => {}} />
+      <OutlinedButton text="Оставить&nbsp;заявку" onClick={openModal} />
+      <ModalForm showModal={showModal} closeModal={closeModal} />
     </nav>
   );
 };

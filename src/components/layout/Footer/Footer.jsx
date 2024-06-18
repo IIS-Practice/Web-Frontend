@@ -1,9 +1,11 @@
 import React from "react";
 import { ReactComponent as Logo } from "@assets/logo.svg";
-import { ReactComponent as InstagramIcon } from "@assets/instagram.svg";
 import { ReactComponent as TelegramIcon } from "@assets/telegram.svg";
+import { ReactComponent as InstagramIcon } from "@assets/instagram.svg";
+import { ReactComponent as WhatsappIcon } from "@assets/whatsapp.svg";
+import { ReactComponent as LinkedinIcon } from "@assets/linkedin.svg";
 import { ReactComponent as ViberIcon } from "@assets/viber.svg";
-import "./Footer.styles.css";
+import "./Footer.styles.scss";
 
 const Footer = () => {
   return (
@@ -11,9 +13,16 @@ const Footer = () => {
       <div className="footer-top">
         <div className="footer-left">
           <Logo className="footer-logo" />
-          <p className="footer-text">IISolutions</p>
+          <p>IISolutions</p>
         </div>
         <div className="footer-right">
+          <a
+            href="https://telegram.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <TelegramIcon className="social-icon" />
+          </a>
           <a
             href="https://instagram.com"
             target="_blank"
@@ -22,28 +31,35 @@ const Footer = () => {
             <InstagramIcon className="social-icon" />
           </a>
           <a
-            href="https://telegram.org"
+            href="https://www.whatsapp.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <TelegramIcon className="social-icon" />
+            <WhatsappIcon className="social-icon" />
+          </a>
+          <a
+            href="https://linkedln.ru/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <LinkedinIcon className="social-icon" />
           </a>
           <a href="https://viber.com" target="_blank" rel="noopener noreferrer">
             <ViberIcon className="social-icon" />
           </a>
         </div>
       </div>
-      <div className="footer-divider"></div>
+      <div className="footer-divider" />
       <div className="footer-bottom">
         <div className="footer-column">
           <p>ООО “Информационные инновационные решения”</p>
-          <p>УНП *********</p>
+          <p>УНП 193711547</p>
         </div>
         <div className="footer-column">
-          <p>+375 (**) ***-**-**</p>
+          <p>+375 (29) 676-45-10</p>
           <p>почта@почта</p>
-          <p>индекс, адрес</p>
-          <p>время работы</p>
+          <p>г. Минск, ул. Кропоткина, д. 44</p>
+          <p>Пн-пт с 9:00 до 17:00</p>
         </div>
         <div className="footer-column">
           <p>Copyright c 2024 IISolutions</p>

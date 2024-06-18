@@ -1,0 +1,68 @@
+.footer {
+    font-size: 1rem;
+    background-color: var(--tertiary-color);
+    box-sizing: border-box;
+    width: 100%;
+    padding: 40px 6.942% 30px;
+
+    .footer-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .footer-left {
+            display: flex;
+            align-items: center;
+
+            .footer-logo {
+                width: 3.8rem;
+                height: auto;
+            }
+
+            p {
+                margin-left: 2.5%;
+                font-family: "Noto Serif Gujarati", serif;
+                font-weight: 400;
+                font-size: 1.75rem;
+                color: var(--light-color);
+            }
+        }
+
+        .footer-right {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+
+            .social-icon {
+                width: 2rem;
+                height: auto;
+            }
+        }
+    }
+
+    .footer-divider {
+        height: 3px;
+        background-color: var(--light-color);
+        margin: 40px 0 30px;
+    }
+
+    .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer-column {
+        &:nth-child(odd) {
+            p:nth-child(1) {
+                margin-bottom: 20px;
+            }
+        }
+
+        p {
+            font-weight: 300;
+            color: var(--light-color);
+            line-height: 1.219rem;
+        }
+    }
+}
