@@ -65,7 +65,7 @@ ul li {
 .mistakesPoints {
   display: flex;
   flex-direction: column;
-  row-gap: 3px;
+  row-gap: 10px;
 }
 
 .point {
