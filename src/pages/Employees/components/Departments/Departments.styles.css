@@ -1,0 +1,181 @@
+.dropdown-btn {
+    font-size: 30px;
+    border: none;
+    background: none;
+    color: black;
+    width: 22%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown-btn:hover{
+    color: black;
+    border: none;
+}
+
+.dropdown-btn img {
+    width: 40px;
+    height: 40px;
+}
+
+
+
+
+.cv-btn {
+    margin: 0% 0% 2% 5%;
+    background-color: #8DB9FC;
+    font-size: 20px;
+    border: none;
+    color: white;
+    border-radius: 0;
+}
+
+.cv-btn:hover {
+    background-color: #8DB9FC;
+    color: white;
+    border: none;
+}
+
+
+
+.grid-developers-list {
+    display: none;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 5% 0%;
+    padding: 5%;
+}
+
+.grid-developers-list.visible {
+    display: grid;
+}
+
+.grid-developers-element {
+    text-align: center;
+    font-size: 20px;
+}
+
+.grid-developers-element img {
+    width: 300px;
+    height: 300px;
+}
+
+
+
+.grid-developers-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    padding: 5%;
+}
+
+.grid-developer-info {
+    font-size: 20px;
+}
+
+.grid-developer-info img {
+    width: 400px;
+    height: 400px;
+    padding-left: 20%;
+}
+
+.grid-developer-info p {
+    padding: 0% 0% 2% 5%;
+}
+
+
+
+.grid-designers-list {
+    display: none;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 5% 0%;
+    padding: 5%;
+}
+
+.grid-designers-list.visible {
+    display: grid;
+}
+
+.grid-designers-element {
+    text-align: center;
+    font-size: 20px;
+}
+
+.grid-designers-element img {
+    width: 300px;
+    height: 300px;
+}
+
+
+
+.grid-designers-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    padding: 5%;
+}
+
+.grid-designer-info {
+    font-size: 20px;
+}
+
+.grid-designer-info img {
+    width: 400px;
+    height: 400px;
+    padding-left: 20%;
+}
+
+.grid-designer-info p {
+    padding: 0% 0% 2% 5%;
+}
+
+
+
+.grid-analysts-list {
+    display: none;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 5% 0%;
+    padding: 5%;
+}
+
+.grid-analysts-list.visible {
+    display: grid;
+}
+
+.grid-analysts-element {
+    text-align: center;
+    font-size: 20px;
+}
+
+.grid-analysts-element img {
+    width: 300px;
+    height: 300px;
+
+}
+
+
+
+.grid-analysts-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    padding: 5%;
+}
+
+.grid-analyst-info {
+    font-size: 20px;
+}
+
+.grid-analyst-info img {
+    width: 400px;
+    height: 400px;
+    padding-left: 20%;
+}
+
+.grid-analyst-info p {
+    padding: 0% 0% 2% 5%;
+}
+
