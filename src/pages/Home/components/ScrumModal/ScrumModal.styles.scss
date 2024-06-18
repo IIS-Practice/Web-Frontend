@@ -1,9 +1,9 @@
 .scrum-content {
-    --first-color: #504dc3;
-    --second-color: #120aff;
-
     position: relative;
     width: 100%;
+    height: 100%;
+    padding-bottom: 130px;
+    margin-top: 50px;
 
     .sprint-container {
         display: flex;
@@ -12,26 +12,28 @@
 
         .sprint {
             width: 30%;
-            padding: 20px;
+            padding-bottom: 0;
             color: var(--light-color);
             margin-left: 3%;
 
             .title {
-                font-size: 30px;
+                font-size: 1.75rem;
                 font-weight: 500;
-                margin-bottom: 30px;
+                margin-bottom: 50px;
                 text-align: center;
             }
 
             .words-block {
                 display: flex;
                 flex-direction: column;
-                padding-left: 15px;
-                border-left: 2px solid var(--light-color);
+                padding-left: 5%;
+                padding-bottom: 31px;
+                border-left: 2px solid var(--primary-color);
 
                 .word {
-                    font-size: 20px;
-                    margin-bottom: 10px;
+                    font-size: 1.25rem;
+                    font-weight: 500;
+                    margin-bottom: 20px;
 
                     &:last-child {
                         margin-bottom: 0;
@@ -43,31 +45,26 @@
 
     .horizontal-line {
         position: absolute;
-        bottom: -20%;
         left: 0;
         right: 0;
-        height: 30px;
+        height: 50px;
         width: 100%;
-        background: linear-gradient(
-            to right,
-            var(--first-color),
-            var(--second-color)
-        );
-        border-radius: 50px;
+        background: var(--primary-color);
+        border-radius: 10px;
         border: none;
         display: flex;
     }
 
     .arrow-container {
         position: absolute;
-        bottom: -20%;
+        bottom: 80px;
         left: 0;
         right: 0;
-        height: 30px;
+        height: 50px;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin: 0 5% 0 13%;
+        margin: 0 3.5% 0 11.5%;
 
         .arrow-wrapper {
             position: relative;
@@ -75,21 +72,23 @@
             flex-direction: column;
             align-items: center;
             margin-left: 20%;
+            height: 100%;
 
             .arrow-title {
                 position: absolute;
                 top: 50%;
                 right: 100%;
                 transform: translateY(-58%);
-                font-size: 17px;
+                font-size: 1rem;
                 font-weight: 500;
                 color: var(--light-color);
             }
 
             .arrow {
-                height: 30px;
+                height: 100%;
                 width: auto;
                 color: var(--dark-color);
+                margin-left: 140%;
 
                 path {
                     fill: var(--light-color);

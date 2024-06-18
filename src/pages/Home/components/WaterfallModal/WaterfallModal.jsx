@@ -6,10 +6,19 @@ const WaterfallModal = ({ showModal, closeModal }) => {
   return (
     <Modal
       title="WATERFALL"
-      text="Традиционный способ ведения проектов. Он подойдет вам, если есть конкретный бюджет и сроки на реализацию проекта. Мы с вами сразу планируем этапы, распределяем работы, фиксируем сроки и результаты."
+      text="Традиционный способ ведения проектов. Он подойдет вам, если есть конкретный бюджет и сроки на реали&shy;зацию проекта. Мы с вами сразу планируем этапы, рас&shy;пределяем работы, фиксируем сроки и результаты."
       content={
         <div className="waterfall-content">
           <div className="horizontal-line"></div>
+          <div className="line-container">
+            {(() => {
+              const lines = [];
+              for (let i = 0; i < 6; i++) {
+                lines.push(<div className="line" key={i} />);
+              }
+              return lines;
+            })()}
+          </div>
           <div className="circle-container">
             <div className="circle-wrapper">
               <div className="circle-title">Старт</div>

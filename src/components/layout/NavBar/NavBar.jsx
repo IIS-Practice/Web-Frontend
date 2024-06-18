@@ -30,7 +30,7 @@ const NavBar = () => {
       <Link to={HOME_ROUTE} className="logo-link">
         <Logo className="logo" />
       </Link>
-      <p className="logo-link-text">IISolutions</p>
+      <p>IISolutions</p>
 
       <ul className="menu">
         <li
@@ -39,7 +39,7 @@ const NavBar = () => {
           onMouseLeave={() => setIsHomeDropdownOpen(false)}
         >
           <Link to={HOME_ROUTE} className="link">
-            О нас
+            О&nbsp;нас
           </Link>
           <ArrowIcon className="dropdown-arrow" />
           {isHomeDropdownOpen && (
@@ -105,7 +105,7 @@ const NavBar = () => {
         </li>
       </ul>
 
-      <OutlinedButton text="Оставить заявку" onClick={openModal} />
+      <OutlinedButton text="Оставить&nbsp;заявку" onClick={openModal} />
       <ModalForm showModal={showModal} closeModal={closeModal} />
     </nav>
   );

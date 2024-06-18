@@ -1,26 +1,54 @@
 .form {
     input::placeholder,
     textarea::placeholder {
-        color: var(--dark-color);
-        font-size: 16px;
+        color: var(--light-color);
+        font-size: 0.9rem;
+        font-weight: 400;
     }
 
     .input-body {
         display: flex;
         flex-direction: column;
-        gap: 20px;
-        padding: 0 15px;
+        padding: 0 0.8%;
 
         .input-group {
             display: flex;
-            gap: 70px;
+            gap: 5.5%;
 
             input {
+                margin: 0;
+                box-sizing: border-box;
+                height: 50px;
                 flex: 1;
-                border: 1px solid var(--dark-color);
+                border: 1px solid var(--light-color);
                 border-radius: 2px;
-                padding: 12px;
-                font-size: 16px;
+                padding: 20px;
+                font-size: 0.9rem;
+                font-weight: 400;
+                background-color: var(--primary-color);
+                color: var(--light-color);
+
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+
+        .textarea-group {
+            textarea {
+                box-sizing: border-box;
+                width: 100%;
+                border: 1px solid var(--light-color);
+                border-radius: 2px;
+                resize: none;
+                margin: 0;
+                margin-top: 40px;
+                padding: 20px;
+                font-size: 0.9rem;
+                font-weight: 400;
+                color: var(--light-color);
+                height: 115px;
+                background-color: var(--primary-color);
 
                 &:focus {
                     outline: none;
@@ -29,41 +57,25 @@
         }
     }
 
-    .textarea-group {
-        textarea {
-            box-sizing: border-box;
-            width: 100%;
-            border: 1px solid var(--dark-color);
-            border-radius: 2px;
-            resize: none;
-            margin: 0;
-            margin-top: 20px;
-            padding: 12px;
-            font-size: 16px;
-            height: 120%;
-
-            &:focus {
-                outline: none;
-            }
-        }
-    }
-
     .button-body {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 40px;
-        padding: 35px 15px;
+        gap: 2.8%;
+        padding: 40px 0.8% 0;
 
         button {
             flex: 1;
             border: 2px solid var(--secondary-color);
             border-radius: 2px;
             background-color: var(--secondary-color);
-            color: var(--dark-color);
-            font-size: 16px;
-            min-width: 40%;
+            color: var(--light-color);
+            font-size: 0.9rem;
+            font-weight: 400;
+            min-width: 41%;
             padding: 12px;
+            height: 50px;
+            box-sizing: border-box;
 
             &:focus {
                 outline: none;
@@ -71,7 +83,10 @@
         }
 
         span {
-            font-size: 16px;
+            text-align: left;
+            color: var(--light-color);
+            font-size: 0.9rem;
+            font-weight: 400;
         }
     }
 }
