@@ -103,7 +103,7 @@ const UX = () => {
       </div>
       <div className={`${styles.applicationContainer} ${styles.content}`}>
         <h3 className={styles.applicationHeading}>
-          Чтобы заказать создание сайта под ключ в Минске – свяжитесь с нами.
+          Чтобы заказать дизайн под ключ в Минске – свяжитесь с нами.
         </h3>
         <div>
           <OutlinedButton text="Оставить заявку" onClick={openModal} />

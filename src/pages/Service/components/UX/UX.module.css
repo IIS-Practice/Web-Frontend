@@ -9,7 +9,7 @@
 }
 
 .heading {
-  margin-bottom: 28px;
+  margin-bottom: 50px;
   font-size: calc(16.7px + 2.3125vw);
   font-weight: 600;
 }
@@ -20,6 +20,7 @@
 
 .topLevelText {
   margin-bottom: 28px;
+  padding-right: 8vw;
   font-size: calc(11.6px + 1.625vw);
   line-height: 130%;
   color: var(--dark-color);
@@ -67,9 +68,7 @@
 }
 
 .anotherContainer {
-  margin-top: 8vw;
-  margin-left: -5vw;
-  margin-right: -5vw;
+  margin: 8vw -5vw 0vw -5vw;
   padding: 100px 12vw 100px 5vw;
   background-color: #8DB9FC;
 }
@@ -116,9 +115,6 @@
   font-size: calc(20px + 0.3125vw);
   color: var(--light-color);
 }
-
-
-
 
 .applicationContainer {
   display: flex;
