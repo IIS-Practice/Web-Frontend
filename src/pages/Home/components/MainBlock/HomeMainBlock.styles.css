@@ -1,44 +1,50 @@
-.MainBlock {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  background-color: #8DB9FC;
+:root {
+    --primary-color: #8db9fc;
+    --text-color: white;
 }
 
-.CompanyName, .CompanyImage {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center; /* Центрирование текста */
+.MainBlock {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    background-color: var(--primary-color);
+}
+
+.CompanyName,
+.CompanyImage {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .CompanyImage img {
-  width: 100%; /* Растягивает изображение на всю ширину блока */
-  height: 100%; /* Сохраняет соотношение сторон */
-  object-fit: cover; /* Заполняет блок, возможно обрезая изображение */
-  transform: scaleX(-1); /* Отражает изображение по горизонтали */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Заполняет блок, возможно обрезая изображение */
+    transform: scaleX(-1);
 }
 
 .CompanyName {
-  display: block;
-  text-align: left; /* Выравнивание текста по левому краю */
-  padding: 100px 0 0 130px;
-  max-width: 600px;
-  color: white;
+    display: block;
+    text-align: left;
+    padding: 100px 0 0 130px;
+    max-width: 600px;
+    color: var(--text-color);
 }
 
 .CompanyName h1 {
-  width: 595px;
-  height: 145px;
-  font-family: Gujarati;
-  font-size: 100px; /* Устанавливаем размер шрифта */
-  font-weight: 500; /* Устанавливаем насыщенность шрифта */
+    width: 595px;
+    height: 145px;
+    font-family: Gujarati;
+    font-size: 100px;
+    font-weight: 500;
 }
 
-.CompanyName h2{
-  width: 576px;
-  height: 146px;
-  font-size: 60px;
-  font-weight: 500;
+.CompanyName h2 {
+    width: 576px;
+    height: 146px;
+    font-size: 60px;
+    font-weight: 500;
 }

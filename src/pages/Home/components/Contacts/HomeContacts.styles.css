@@ -1,3 +1,10 @@
+:root {
+    --primary-color: #8db9fc;
+    --white-color: white;
+    --text-black-color: black;
+    --background-color: #007bff;
+}
+
 .home-contact {
     width: 100vw;
     height: 60vh;
@@ -5,33 +12,35 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    background-color: var(--white-color);
     text-align: center;
-  }
-  
-  .home-contact h3 {
+}
+
+.home-contact h3 {
     font-size: 25px;
     font-weight: 500;
     margin-bottom: 20px;
-    color: black;
-  }
-  
-  .contact-link {
+    color: var(--text-black-color);
+}
+
+.contact-link {
     font-size: 60px;
     font-weight: 600;
     text-decoration: none;
     padding: 10px 20px;
-    transition: background-color 0.3s, color 0.3s;
-    color: black;
-  }
-  
-  .contact-link:hover {
-    background-color: #007bff;
-    color: #fff;
-  }
-  
-  hr {
-    border: 10px solid #8DB9FC;
+    transition:
+        background-color 0.3s,
+        color 0.3s;
+    color: var(--text-black-color);
+}
+
+.contact-link:hover {
+    background-color: var(--background-color);
+    color: var(--text-black-color);
+}
+
+hr {
+    border: 10px solid var(--primary-color);
     padding: 0px 300px;
     border-radius: 15px;
-  }
+}

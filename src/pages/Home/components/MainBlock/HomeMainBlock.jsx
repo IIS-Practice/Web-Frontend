@@ -1,14 +1,12 @@
-import React from 'react';
-import './HomeMainBlock.styles.css';
-import CompanyImage from '../../images/CompanyImage.png';
+import React from "react";
+import "./HomeMainBlock.styles.css";
+import CompanyImage from "../../../../assets/CompanyImage.png";
 
 const HomeMainBlock = () => {
   return (
     <div className="MainBlock">
       <div className="CompanyName">
-        <h1>
-          IISolutions - 
-        </h1>
+        <h1>IISolutions -</h1>
         <h2>
           ваши идеи, наше <span>воплощение</span>
         </h2>

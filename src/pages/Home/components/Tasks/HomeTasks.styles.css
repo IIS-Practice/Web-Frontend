@@ -1,3 +1,22 @@
+:root {
+    --background-color: white;
+    --primary-color: #8db9fc;
+    --text-color: black;
+    --content-text-color: white;
+    --link-color: white;
+    --link-hover-color: #8db9fc;
+    --link-hover-decoration: underline;
+    --task-background-color: #8db9fc;
+    --task-title-color: white;
+    --task-text-color: black;
+    --task-icon-color: white;
+    --button-border-color: white;
+    --button-background-color: transparent;
+    --button-hover-background-color: white;
+    --button-hover-color: #8db9fc;
+    --vertical-line-color: white;
+}
+
 .home-tasks {
     width: 1530px;
     height: 866px;
@@ -5,84 +24,84 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #8DB9FC;
+    background-color: var(--task-background-color);
     padding: 20px;
     box-sizing: border-box;
-  }
-  
-  .home-tasks h2 {
+}
+
+.home-tasks h2 {
     align-self: flex-start;
     font-size: 60px;
     margin-bottom: 20px;
     padding-bottom: 100px;
     padding-left: 100px;
-  }
-  
-  .tasks-container {
+    color: var(--task-text-color);
+}
+
+.tasks-container {
     display: flex;
-    justify-content: center; 
-    align-items: flex-start; 
+    justify-content: center;
+    align-items: flex-start;
     width: 80%;
-  }
-  
-  .task {
+}
+
+.task {
     flex: 1;
     display: flex;
     flex-direction: column;
     padding: 20px;
     margin: 0 10px;
     box-sizing: border-box;
-  }
-  
-  .task h3 {
+}
+
+.task h3 {
     margin-bottom: 20px;
     font-size: 60px;
     align-self: flex-start;
-    color: white;
+    color: var(--task-title-color);
     font-weight: 500;
-  }
-  
-  .about-task {
+}
+
+.about-task {
     list-style-type: none;
     padding: 0;
-    font-size: 25px; 
-    color: black;
+    font-size: 25px;
+    color: var(--task-text-color);
     font-weight: 500;
-  }
-  
-  .about-task li {
+}
+
+.about-task li {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
-  }
-  
-  .about-task li::before {
-    content: '✦';
-    font-size: 50px; 
-    color: white;
+}
+
+.about-task li::before {
+    content: "✦";
+    font-size: 50px;
+    color: var(--task-icon-color);
     margin-right: 14px;
-  }
-  
-  button {
+}
+
+button {
     padding: 10px 40px;
-    border: 2px solid white;
+    border: 2px solid var(--button-border-color);
     cursor: pointer;
     align-self: flex-start;
-    background-color: transparent;
-    color: white;
-    font-size: 1.2rem; 
-    border-radius: 2px; 
-  }
-  
-  button:hover {
-    background-color: white;
-    color: #8DB9FC;
-  }
-  
-  .vertical-line {
+    background-color: var(--button-background-color);
+    color: var(--button-border-color);
+    font-size: 1.2rem;
+    border-radius: 2px;
+}
+
+button:hover {
+    background-color: var(--button-hover-background-color);
+    color: var(--button-hover-color);
+}
+
+.vertical-line {
     width: 2px;
-    background-color: white;
+    background-color: var(--vertical-line-color);
     margin: 0 20px;
     align-self: stretch;
-  }
-  
+}

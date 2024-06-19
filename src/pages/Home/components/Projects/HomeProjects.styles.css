@@ -1,19 +1,30 @@
+:root {
+    --background-color: white;
+    --primary-color: #8db9fc;
+    --text-color: black;
+    --content-text-color: white;
+    --link-color: white;
+    --link-hover-color: white;
+    --link-hover-decoration: underline;
+}
+
 .home-projects {
     width: 100vw;
     height: 100vh;
-    background-color: white;
-  }
-  
-  .home-box {
+    background-color: var(--background-color);
+    padding-bottom: 50px;
+}
+
+.home-box {
     margin: 100px;
-  }
-  
-  .home-projects h2 {
+}
+
+.home-projects h2 {
     font-size: 60px;
     margin-bottom: 50px;
-  }
-  
-  .projects-grid {
+}
+
+.projects-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: repeat(2, auto);
@@ -22,89 +33,96 @@
     max-width: 1530px;
     margin: 0 auto;
     box-sizing: border-box;
-  }
-  
-  .project-large {
+}
+
+.project-large {
     grid-row: 1 / span 2;
     grid-column: 1;
     display: flex;
     align-items: flex-start;
     justify-content: center;
-  }
-  
-  .project-small {
-    background-color: #8DB9FC;
+}
+
+.project-small {
+    background-color: var(--primary-color);
     padding: 20px;
     width: 320px;
     height: 160px;
-  }
-  
-  .project-content {
+}
+
+.project-content {
     display: flex;
     flex-direction: column;
     height: 100%;
-  }
-  
-  .project-content-main {
+    align-items: flex-start;
+}
+
+.project-content-main {
     text-align: left;
-  }
-  
-  .project-content-main h3 {
+}
+
+.project-content-main h3 {
     width: 500px;
     font-size: 25px;
     font-weight: 500;
     line-height: 30.48px;
     text-align: left;
     margin-bottom: 20px;
-  }
-  
-  .project-content-main p {
+}
+
+.project-content-main p {
     margin-bottom: 20px;
-  }
-  
-  .projects-list {
-    list-style: none; /* Убираем стандартные маркеры */
+}
+
+.projects-list {
+    list-style: none;
     padding: 0;
     margin: 0;
-  }
-  
-  .projects-list li {
-    position: relative; /* Добавляем относительное позиционирование для использования псевдоэлементов */
-    padding-left: 20px; 
-  }
-  
-  .projects-list li::before {
-    content: '-'; 
-    position: absolute; 
-    left: 0; 
-    color: black; 
-  }
-  
-  
-  .content-name {
+}
+
+.projects-list li {
+    position: relative;
+    padding-left: 20px;
+}
+
+.projects-list li::before {
+    content: "-";
+    position: absolute;
+    left: 0;
+    color: black;
+}
+
+.content-name {
     font-size: 25px;
     margin-bottom: 10px;
     font-weight: 500;
-    color: white;
-  }
-  
-  .content-description {
+    color: var(--content-text-color);
+}
+
+.content-description {
     font-size: 16px;
     font-weight: 400;
-    color: white;
-    margin-bottom: auto; 
-  }
-  
-  button {
-    align-self: flex-start;
+    color: var(--content-text-color);
+    margin-bottom: auto;
+}
+
+button {
     font-size: 12px;
     cursor: pointer;
-    color: white;
+    color: var(--link-color);
     margin-top: 15px;
-    border: 0px solid #8DB9FC;
-  }
-  
-  /* button:hover {
-    background-color: ;
-  } */
-  
+    border: 0px solid var(--primary-color);
+}
+
+.content-link {
+    font-size: 12px;
+    color: var(--link-color);
+    text-decoration: none;
+    margin-top: 15px;
+    border: 0px solid var(--primary-color);
+}
+
+.content-link:hover {
+    text-decoration: var(--link-hover-decoration);
+    color: var(--link-hover-color);
+}

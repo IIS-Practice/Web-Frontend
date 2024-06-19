@@ -1,11 +1,14 @@
-import React from 'react';
-import './HomeTasks.styles.css';
-import OutlinedButton from '../../../../components/shared/OutlinedButton/OutlinedButton';
+import React from "react";
+import "./HomeTasks.styles.css";
+import OutlinedButton from "../../../../components/shared/OutlinedButton/OutlinedButton";
 
 const HomeTasks = () => {
   return (
     <div className="home-tasks">
-      <h2>Работаем по подходящей для Вас <br />методологии</h2>
+      <h2>
+        Работаем по подходящей для Вас <br />
+        методологии
+      </h2>
       <div className="tasks-container">
         <div className="task">
           <h3>WATERFALL</h3>
@@ -20,7 +23,7 @@ const HomeTasks = () => {
               <span>фиксированная цена</span>
             </li>
           </ul>
-          <OutlinedButton text="Подробнее"/>
+          <OutlinedButton text="Подробнее" />
         </div>
         <div className="vertical-line"></div>
         <div className="task">
@@ -36,7 +39,7 @@ const HomeTasks = () => {
               <span>гибкая цена +/-</span>
             </li>
           </ul>
-          <OutlinedButton text="Подробнее"/>
+          <OutlinedButton text="Подробнее" />
         </div>
       </div>
     </div>

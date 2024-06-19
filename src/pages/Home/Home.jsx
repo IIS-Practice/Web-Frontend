@@ -6,13 +6,12 @@ import HomeProjects from "./components/Projects/HomeProjects";
 import HomeMainBlock from "./components/MainBlock/HomeMainBlock";
 
 const Home = () => {
-
   return (
     <div>
-      <HomeMainBlock/>
-      <HomeProjects/>
-      <HomeTasks/>
-      <HomeContacts/>
+      <HomeMainBlock />
+      <HomeProjects />
+      <HomeTasks />
+      <HomeContacts />
     </div>
   );
 };
