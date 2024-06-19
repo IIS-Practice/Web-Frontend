@@ -9,6 +9,7 @@ module.exports = {
       "@pages": resolvePath("./src/pages"),
       "@utils": resolvePath("./src/utils"),
       "@assets": resolvePath("./src/assets"),
+      "@api": resolvePath("./src/api"),
       "@root": resolvePath("./src"),
     },
   },
