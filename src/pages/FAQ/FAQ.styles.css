@@ -2,7 +2,7 @@
     margin: 6rem 6rem 7.5rem 6rem;
 }
 
-.FAQPage>h1 {
+.FAQPage > h1 {
     font-size: 60px;
 }
 
@@ -18,35 +18,34 @@
     max-width: 50%;
     /* padding-right: 0.5rem; */
 
-
     /* text-wrap: wrap; */
-    border-right: 1px solid black;
+    border-right: 1px solid var(--dark-color);
 }
 
-.leftFAQ>*::before {
+.leftFAQ > *::before {
     position: absolute;
-    content: '';
+    content: "";
     width: 17px;
     height: 25px;
     z-index: 100;
     left: -2rem;
     top: 6px;
     background-repeat: no-repeat;
-    background-image: url("../../assets/leftArrow.svg");
+    background-image: url("@assets/leftArrow.svg");
     transform: rotateZ(0deg);
     transition: rotateZ 0.5s ease;
 }
 
-.leftFAQ>*.rotateLeftArrow::before {
+.leftFAQ > *.rotateLeftArrow::before {
     transform: rotateZ(90deg);
     transition: rotateZ 0.5s ease;
 }
 
-.leftFAQ>*:not(:last-child) {
+.leftFAQ > *:not(:last-child) {
     margin-bottom: 1.5rem;
 }
 
-.leftFAQ>* {
+.leftFAQ > * {
     font-weight: 400;
     font-size: 25px;
     position: relative;
