@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { ReactComponent as Star} from '@assets/star.svg';
+import { useNavigate } from 'react-router-dom';
 import styles from "./WebDev.module.css"
 import OutlinedButton from "@components/shared/OutlinedButton";
 import ModalForm from "@components/shared/ModalForm";
+import { PRICE_ROUTE } from "@utils/constants";
 
 const mistakesData = {
   mistake1: {
@@ -34,6 +36,7 @@ const mistakesData = {
 const WebDev = () => {
   const [showModal, setShowModal] = useState(false);
   const [currentMistakeKey, setCurrentMistakeKey] = useState('mistake1');
+  const navigate = useNavigate();
 
   const handleClick = (mistakeKey) => {
     setCurrentMistakeKey(mistakeKey);
@@ -178,10 +181,11 @@ const WebDev = () => {
         <h3 className={styles.applicationHeading}>
           Чтобы заказать создание сайта под ключ в Минске – свяжитесь с нами.
         </h3>
-        <div>
+        <div className={styles.applicationButtons}>
           <OutlinedButton text="Оставить заявку" onClick={openModal} />
-          <ModalForm showModal={showModal} closeModal={closeModal} />
+          <OutlinedButton text="Прайс" onClick={() => navigate(PRICE_ROUTE)} />
         </div>
+        <ModalForm showModal={showModal} closeModal={closeModal} />
       </div>
     </div>
   );

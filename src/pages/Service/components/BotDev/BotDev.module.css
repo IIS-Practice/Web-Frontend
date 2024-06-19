@@ -48,7 +48,7 @@
   max-width: 1920px;
   box-sizing: content-box;
   margin-left: 5vw;
-  margin-right: 0vw;
+  margin-right: 5vw;
 }
 
 .stagesHeading {
@@ -177,9 +177,14 @@ ul li {
   font-weight: 600;
   font-size: calc(16.8px + 1.625vw);
   line-height: 1.4;
-  color: #000000;
-  margin-left: 4vw;
-  margin-right: 4vw;
-  margin-bottom: 40px;
+  color: var(--dark-color);
+  padding-bottom: 40px;
   position: relative;
+}
+
+.applicationButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
 }

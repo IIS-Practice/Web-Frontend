@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { ReactComponent as Star} from '@assets/blueStar.svg';
 import styles from "./BotDev.module.css";
 import OutlinedButton from "@components/shared/OutlinedButton";
 import ModalForm from "@components/shared/ModalForm";
+import { PRICE_ROUTE } from "@utils/constants";
 
 const stagesData = {
   stage1: {
@@ -42,6 +44,7 @@ const stagesData = {
 const BotDev = () => {
   const [currentStageKey, setCurrentStageKey] = useState('stage1');
   const [showModal, setShowModal] = useState(false);
+  const navigate = useNavigate();
 
   const handleClick = (stageKey) => {
     setCurrentStageKey(stageKey);
@@ -104,10 +107,11 @@ const BotDev = () => {
         <h3 className={styles.applicationHeading}>
           Свяжитесь с нами, чтобы обсудить возможности разработки ботов для вашего бизнеса.
         </h3>
-        <div>
+        <div className={styles.applicationButtons}>
           <OutlinedButton text="Оставить заявку" onClick={openModal} />
-          <ModalForm showModal={showModal} closeModal={closeModal} />
+          <OutlinedButton text="Прайс" onClick={() => navigate(PRICE_ROUTE)} />
         </div>
+        <ModalForm showModal={showModal} closeModal={closeModal} />
       </div>
     </div>
   );

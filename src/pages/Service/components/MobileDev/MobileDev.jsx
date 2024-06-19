@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import OutlinedButton from "@components/shared/OutlinedButton";
 import ModalForm from "@components/shared/ModalForm";
 import styles from "./MobileDev.module.css";
+import { PRICE_ROUTE } from "@utils/constants";
 
 const stagesData = {
   stage1: {
@@ -45,6 +47,7 @@ const stagesData = {
 const MobileDev = () => {
   const [currentStageKey, setCurrentStageKey] = useState('stage1');
   const [showModal, setShowModal] = useState(false);
+  const navigate = useNavigate();
 
   const handleClick = (stageKey) => {
     setCurrentStageKey(stageKey);
@@ -94,10 +97,11 @@ const MobileDev = () => {
         <h3 className={styles.applicationHeading}>
           Чтобы заказать мобильное приложение в Минске – свяжитесь с нами.
         </h3>
-        <div>
+        <div className={styles.applicationButtons}>
           <OutlinedButton text="Оставить заявку" onClick={openModal} />
-          <ModalForm showModal={showModal} closeModal={closeModal} />
+          <OutlinedButton text="Прайс" onClick={() => navigate(PRICE_ROUTE)} />
         </div>
+        <ModalForm showModal={showModal} closeModal={closeModal} />
       </div>
     </div>
   );
