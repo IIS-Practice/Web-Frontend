@@ -1,0 +1,108 @@
+.navbar {
+    font-size: 1.25rem;
+    box-sizing: border-box;
+    background-color: var(--light-color);
+    box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    height: 130px;
+    padding: 27px 6.942%;
+    display: flex;
+    align-items: center;
+
+    .logo-link {
+        margin: 0;
+        padding: 0;
+        font-size: 0;
+
+        .logo {
+            width: 3.8rem;
+            height: auto;
+            cursor: pointer;
+        }
+    }
+
+    .logo-link + p {
+        font-family: "Noto Serif Gujarati", serif;
+        font-weight: 400;
+        font-size: 1.75rem;
+        letter-spacing: 0.02em;
+        text-align: left;
+        color: var(--secondary-color);
+        margin-left: 0.5%;
+        margin-right: 4%;
+    }
+
+    .menu {
+        display: flex;
+        margin: 0;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0;
+        list-style-type: none;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+        .item {
+            display: flex;
+            align-items: center;
+            margin-right: auto;
+
+            .link {
+                display: block;
+                color: var(--dark-color);
+                text-align: left;
+                text-decoration: none;
+                font-weight: 400;
+            }
+
+            .dropdown-arrow {
+                margin-left: 3%;
+                padding-top: 2%;
+                transition: transform 0.3s;
+                width: 1rem;
+                height: auto;
+            }
+
+            &:hover .dropdown-wrapper {
+                display: block;
+            }
+
+            &:hover .dropdown-arrow {
+                transform: rotate(-180deg);
+            }
+
+            .dropdown-wrapper {
+                padding-top: 60px;
+                position: absolute;
+                z-index: 1;
+                top: 80px;
+            }
+
+            .dropdown {
+                background-color: var(--light-color);
+                list-style-type: none;
+                box-sizing: border-box;
+                max-width: 320px;
+                box-shadow: 6px 5px 4px rgba(0, 0, 0, 0.25);
+                padding: 5px 0;
+
+                .dropdown-link {
+                    color: var(--dark-color);
+                    padding: 10px 40px 10px 20px;
+                    text-decoration: none;
+                    display: block;
+                    text-align: left;
+                    font-size: 1rem;
+                    font-weight: 400;
+                    line-height: 1.2rem;
+                }
+            }
+        }
+    }
+
+    .outlined-button {
+        font-size: 1.25rem;
+        font-weight: 500;
+    }
+}

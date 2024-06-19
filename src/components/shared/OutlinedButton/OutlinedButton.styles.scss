@@ -1,0 +1,15 @@
+.outlined-button {
+    box-sizing: border-box;
+    background-color: transparent;
+    color: var(--secondary-color);
+    padding: 5px 15px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 2px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: transparent;
+        color: var(--secondary-color);
+        border: 2px solid var(--secondary-color);
+    }
+}

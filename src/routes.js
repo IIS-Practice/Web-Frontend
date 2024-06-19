@@ -1,24 +1,24 @@
 import {
   HOME_ROUTE,
   EMPLOYEES_ROUTE,
-  CASES_ROUTE,
+  EMPLOYMENT_ROUTE,
+  FAQ_ROUTE,
   SERVICES_ROUTE,
+  CASES_ROUTE,
   REVIEWS_ROUTE,
   CONTACTS_ROUTE,
-  FAQ_ROUTE,
 } from "@utils/constants";
 import {
   Home,
   Employees,
+  Employment,
+  FAQ,
   Case,
   Cases,
   Service,
   Reviews,
   Contacts,
-  FAQ,
 } from "@pages";
-
-export const authRoutes = [];
 
 export const publicRoutes = [
   {
@@ -30,6 +30,14 @@ export const publicRoutes = [
     Component: Employees,
   },
   {
+    path: EMPLOYMENT_ROUTE,
+    Component: Employment,
+  },
+  {
+    path: FAQ_ROUTE,
+    Component: FAQ,
+  },
+  {
     path: CASES_ROUTE,
     Component: Cases,
   },
@@ -38,7 +46,7 @@ export const publicRoutes = [
     Component: Case,
   },
   {
-    path: SERVICES_ROUTE + "/:id",
+    path: SERVICES_ROUTE + "/:serviceName",
     Component: Service,
   },
   {
@@ -48,9 +56,5 @@ export const publicRoutes = [
   {
     path: CONTACTS_ROUTE,
     Component: Contacts,
-  },
-  {
-    path: FAQ_ROUTE,
-    Component: FAQ,
   },
 ];

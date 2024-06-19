@@ -1,0 +1,88 @@
+.employment-page {
+    padding: 100px 6.942% 0;
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: -5%;
+
+    .main-text {
+        padding-bottom: 90px;
+        padding-right: 3%;
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 600;
+            margin-bottom: 59px;
+
+            .logo-text {
+                font-family: "Noto Serif Gujarati", serif;
+            }
+        }
+
+        p {
+            font-size: 1.75rem;
+            font-weight: 400;
+            line-height: 2.1335rem;
+            margin-bottom: 40px;
+        }
+    }
+
+    h2 {
+        font-size: 2rem;
+        font-weight: 500;
+        margin-bottom: 85px;
+
+        .logo-text {
+            font-family: "Noto Serif Gujarati", serif;
+        }
+    }
+
+    .horizontal-line {
+        height: 4px;
+        width: 100%;
+        background: var(--primary-color);
+        border: none;
+        display: flex;
+        margin-bottom: 346px;
+    }
+
+    .adv-container {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(calc(-346px - 50%));
+        margin: 0 10%;
+
+        .adv {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .circle {
+                background-color: var(--primary-color);
+                border-radius: 50%;
+                height: 3.95rem;
+                width: 3.95rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                font-size: 2.5rem;
+                font-weight: 500;
+                color: var(--light-color);
+            }
+
+            .text {
+                position: absolute;
+                top: 120%;
+                left: 50%;
+                transform: translateX(-50%);
+                font-size: 1.25rem;
+                font-weight: 400;
+                color: var(--dark-color);
+                text-align: center;
+                min-width: 300%;
+            }
+        }
+    }
+}

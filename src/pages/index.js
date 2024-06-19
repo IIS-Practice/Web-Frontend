@@ -1,9 +1,20 @@
 import Home from "./Home";
 import Employees from "./Employees";
+import Employment from "./Employment";
+import FAQ from "./FAQ";
 import { Case, Cases } from "./Cases";
 import Service from "./Service";
 import Reviews from "./Reviews";
 import Contacts from "./Contacts";
-import FAQ from "./FAQ";
 
-export { Home, Employees, Case, Cases, Service, Reviews, Contacts, FAQ };
+export {
+  Home,
+  Employees,
+  Employment,
+  FAQ,
+  Case,
+  Cases,
+  Service,
+  Reviews,
+  Contacts,
+};
