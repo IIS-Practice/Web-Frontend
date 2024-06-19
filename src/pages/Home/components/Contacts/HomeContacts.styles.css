@@ -1,18 +1,11 @@
-:root {
-    --primary-color: #8db9fc;
-    --white-color: white;
-    --text-black-color: black;
-    --background-color: #007bff;
-}
-
 .home-contact {
-    width: 100vw;
+    width: 100%;
     height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--white-color);
+    background-color: var(--light-color);
     text-align: center;
 }
 
@@ -20,7 +13,7 @@
     font-size: 25px;
     font-weight: 500;
     margin-bottom: 20px;
-    color: var(--text-black-color);
+    color: var(--dark-color);
 }
 
 .contact-link {
@@ -32,10 +25,10 @@
     color: var(--dark-color);
     border: none;
     cursor: pointer;
-  }
-  
-  hr {
-    border: 10px solid #8DB9FC;
+}
+
+hr {
+    border: 10px solid var(--primary-color);
     padding: 0px 300px;
     border-radius: 15px;
 }

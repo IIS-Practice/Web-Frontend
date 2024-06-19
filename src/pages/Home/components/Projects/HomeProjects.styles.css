@@ -1,17 +1,7 @@
-:root {
-    --background-color: white;
-    --primary-color: #8db9fc;
-    --text-color: black;
-    --content-text-color: white;
-    --link-color: white;
-    --link-hover-color: white;
-    --link-hover-decoration: underline;
-}
-
 .home-projects {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
-    background-color: var(--background-color);
+    background-color: var(--light-color);
     padding-bottom: 50px;
 }
 
@@ -89,40 +79,29 @@
     content: "-";
     position: absolute;
     left: 0;
-    color: black;
+    color: var(--dark-color);
 }
 
 .content-name {
     font-size: 25px;
     margin-bottom: 10px;
     font-weight: 500;
-    color: var(--content-text-color);
+    color: var(--light-color);
 }
 
 .content-description {
     font-size: 16px;
     font-weight: 400;
-    color: var(--content-text-color);
+    color: var(--light-color);
     margin-bottom: auto;
 }
 
-button {
+.content-button {
+    align-self: flex-start;
+    text-decoration: none;
     font-size: 12px;
     cursor: pointer;
-    color: var(--link-color);
+    color: var(--light-color);
     margin-top: 15px;
-    border: 0px solid var(--primary-color);
-}
-
-.content-link {
-    font-size: 12px;
-    color: var(--link-color);
-    text-decoration: none;
-    margin-top: 15px;
-    border: 0px solid var(--primary-color);
-}
-
-.content-link:hover {
-    text-decoration: var(--link-hover-decoration);
-    color: var(--link-hover-color);
+    border: none;
 }
