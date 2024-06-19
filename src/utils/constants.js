@@ -4,6 +4,7 @@ export const EMPLOYMENT_ROUTE = "/employment";
 export const FAQ_ROUTE = "/faq";
 export const CASES_ROUTE = "/cases";
 export const SERVICES_ROUTE = "/services";
+export const PRICE_ROUTE = "/price";
 export const REVIEWS_ROUTE = "/reviews";
 export const CONTACTS_ROUTE = "/contacts";
 
