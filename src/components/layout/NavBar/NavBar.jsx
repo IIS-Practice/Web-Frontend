@@ -8,6 +8,7 @@ import {
   FAQ_ROUTE,
   CASES_ROUTE,
   SERVICES_ROUTE,
+  PRICE_ROUTE,
   REVIEWS_ROUTE,
   CONTACTS_ROUTE,
   SERVICES,
@@ -89,6 +90,11 @@ const NavBar = () => {
                     </Link>
                   </li>
                 ))}
+                <li>
+                  <Link to={PRICE_ROUTE} className="dropdown-link">
+                    Прайс
+                  </Link>
+                </li>
               </ul>
             </div>
           )}

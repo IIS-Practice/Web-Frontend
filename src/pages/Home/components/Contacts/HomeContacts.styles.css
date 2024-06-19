@@ -28,19 +28,14 @@
     font-weight: 600;
     text-decoration: none;
     padding: 10px 20px;
-    transition:
-        background-color 0.3s,
-        color 0.3s;
-    color: var(--text-black-color);
-}
-
-.contact-link:hover {
-    background-color: var(--background-color);
-    color: var(--text-black-color);
-}
-
-hr {
-    border: 10px solid var(--primary-color);
+    background: none;
+    color: var(--dark-color);
+    border: none;
+    cursor: pointer;
+  }
+  
+  hr {
+    border: 10px solid #8DB9FC;
     padding: 0px 300px;
     border-radius: 15px;
 }

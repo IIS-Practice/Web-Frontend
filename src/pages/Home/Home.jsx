@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Home.styles.css";
 import HomeTasks from "./components/Tasks/HomeTasks";
 import HomeContacts from "./components/Contacts/HomeContacts";

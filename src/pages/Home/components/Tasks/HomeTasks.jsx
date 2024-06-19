@@ -3,6 +3,14 @@ import "./HomeTasks.styles.css";
 import OutlinedButton from "../../../../components/shared/OutlinedButton/OutlinedButton";
 
 const HomeTasks = () => {
+  const [showWaterfallModal, setShowWaterfallModal] = useState(false);
+  const openWaterfallModal = () => setShowWaterfallModal(true);
+  const closeWaterfallModal = () => setShowWaterfallModal(false);
+
+  const [showScrumModal, setShowScrumModal] = useState(false);
+  const openScrumModal = () => setShowScrumModal(true);
+  const closeScrumModal = () => setShowScrumModal(false);
+
   return (
     <div className="home-tasks">
       <h2>
