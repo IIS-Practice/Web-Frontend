@@ -32,7 +32,7 @@
 .CompanyName h1 {
     width: 595px;
     height: 145px;
-    font-family: Gujarati;
+    font-family: "Noto Serif Gujarati", serif;
     font-size: 100px;
     font-weight: 500;
 }
