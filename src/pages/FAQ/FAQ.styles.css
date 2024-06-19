@@ -52,18 +52,22 @@
     position: relative;
 }
 
+.leftFAQ>*:hover {
+    cursor: pointer;
+}
+
 .rightFAQ {
     max-width: 55%;
     margin-left: 1.5rem;
 }
 
-.rightFAQ > h2 {
+.rightFAQ>h2 {
     font-size: 33px;
     font-weight: 500;
     margin-bottom: 24px;
     /* text-wrap: nowrap; */
 }
 
-.rightFAQ > div {
+.rightFAQ>div {
     font-size: 25px;
 }
