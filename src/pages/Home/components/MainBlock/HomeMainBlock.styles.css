@@ -7,10 +7,10 @@
 
 .CompanyName, .CompanyImage {
   flex: 1;
-  width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center; /* Центрирование текста */
 }
 
 .CompanyImage img {
@@ -18,4 +18,27 @@
   height: 100%; /* Сохраняет соотношение сторон */
   object-fit: cover; /* Заполняет блок, возможно обрезая изображение */
   transform: scaleX(-1); /* Отражает изображение по горизонтали */
+}
+
+.CompanyName {
+  display: block;
+  text-align: left; /* Выравнивание текста по левому краю */
+  padding: 100px 0 0 130px;
+  max-width: 600px;
+  color: white;
+}
+
+.CompanyName h1 {
+  width: 595px;
+  height: 145px;
+  font-family: Gujarati;
+  font-size: 100px; /* Устанавливаем размер шрифта */
+  font-weight: 500; /* Устанавливаем насыщенность шрифта */
+}
+
+.CompanyName h2{
+  width: 576px;
+  height: 146px;
+  font-size: 60px;
+  font-weight: 500;
 }

@@ -10,7 +10,7 @@ const HomeMainBlock = () => {
           IISolutions - 
         </h1>
         <h2>
-          ваши идеи, наше <p>воплощение</p>
+          ваши идеи, наше <span>воплощение</span>
         </h2>
       </div>
       <div className="CompanyImage">
