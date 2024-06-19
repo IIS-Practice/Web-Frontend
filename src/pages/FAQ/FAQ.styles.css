@@ -1,0 +1,68 @@
+.FAQPage {
+    margin: 6rem 6rem 7.5rem 6rem;
+}
+
+.FAQPage > h1 {
+    font-size: 60px;
+}
+
+.wrapperFAQ {
+    display: flex;
+    position: relative;
+    margin-top: 5rem;
+}
+
+.leftFAQ {
+    /* width: 50%; */
+    min-width: 50%;
+    max-width: 50%;
+    /* padding-right: 0.5rem; */
+
+    /* text-wrap: wrap; */
+    border-right: 1px solid var(--dark-color);
+}
+
+.leftFAQ > *::before {
+    position: absolute;
+    content: "";
+    width: 17px;
+    height: 25px;
+    z-index: 100;
+    left: -2rem;
+    top: 6px;
+    background-repeat: no-repeat;
+    background-image: url("@assets/leftArrow.svg");
+    transform: rotateZ(0deg);
+    transition: rotateZ 0.5s ease;
+}
+
+.leftFAQ > *.rotateLeftArrow::before {
+    transform: rotateZ(90deg);
+    transition: rotateZ 0.5s ease;
+}
+
+.leftFAQ > *:not(:last-child) {
+    margin-bottom: 1.5rem;
+}
+
+.leftFAQ > * {
+    font-weight: 400;
+    font-size: 25px;
+    position: relative;
+}
+
+.rightFAQ {
+    max-width: 55%;
+    margin-left: 1.5rem;
+}
+
+.rightFAQ > h2 {
+    font-size: 33px;
+    font-weight: 500;
+    margin-bottom: 24px;
+    /* text-wrap: nowrap; */
+}
+
+.rightFAQ > div {
+    font-size: 25px;
+}
