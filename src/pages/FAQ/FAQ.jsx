@@ -13,15 +13,24 @@ const questions = {
 
 const FAQ = () => {
   const [questionToDisplay, setQuestionToDisplay] = useState("");
-  return <main>
-    <div onClick={(evt) => evt.target !== evt.currentTarget && setQuestionToDisplay(evt.target.innerText)}>
-      {Object.keys(questions).map((question, index) => <h2 className="question" key={index}>{question}</h2>)}
+  return (<main className="FAQPage">
+    <h1>Часто задаваемые вопросы</h1>
+    <div className="wrapperFAQ">
+      <div className="leftFAQ" onClick={(evt) => {
+        if (evt.target !== evt.currentTarget) {
+          setQuestionToDisplay(evt.target.innerText)
+          for (const question of evt.currentTarget.children) question.className = "question"; // making all arrows face right 
+          evt.target.className = evt.target.className == "question" ? "question rotateLeftArrow" : "question"; // making clicked arrow face down
+        }
+      }}>
+        {Object.keys(questions).map((question, index) => <h2 className="question" key={question}>{question}</h2>)}
+      </div>
+      <div className="rightFAQ">
+        <h2>{questionToDisplay}</h2>
+        <div>{questions[questionToDisplay]}</div>
+      </div>
     </div>
-    <div>
-      <h2>{questionToDisplay}</h2>
-      <div>{questions[questionToDisplay]}</div>
-    </div>
-  </main>;
+  </main>);
 };
 
 export default FAQ;
