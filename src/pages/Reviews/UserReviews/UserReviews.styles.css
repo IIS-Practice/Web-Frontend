@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+}
+
+.mainBlock {
+    width: 100vw;
+    height: 1200px;
+    background-color: white;
+  }
+  
+  .contentBlock {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .nameBlock {
+    align-self: flex-start;
+  }
+  
+  .nameBlock h2 {
+    align-self: flex-start;
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding: 130px 100px 130px;
+  }
+  
+  .navigation {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    padding: 0px 100px;
+  }
+  
+  .navButton {
+    font-size: 50px;
+    cursor: pointer;
+    color: black;
+    align-self: center;
+  }
+  
+  .usersBlock {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    height: 528px;
+  }
+  
+  .userReview {
+    width: 490px;
+    height: 254px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: white;
+    border-radius: 10px;
+    border: 2px solid #8DB9FC;
+    padding: 20px;
+  }
+  
+  .userImage {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .userInfo {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .userName {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .userReviewText {
+    font-size: 14px;
+  }
+  

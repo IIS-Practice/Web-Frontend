@@ -1,8 +1,13 @@
 import React from "react";
 import "./Reviews.styles.css";
+import UserReviews from "./UserReviews/UserReviews";
 
 const Reviews = () => {
-  return <h1>REVIEWS PAGE</h1>;
+  return (
+    <div>
+      <UserReviews/>
+    </div>
+  );
 };
 
 export default Reviews;
