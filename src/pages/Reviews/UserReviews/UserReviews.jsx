@@ -1,30 +1,32 @@
-import React from 'react';
-import './UserReviews.styles.css';
+import React from "react";
+import "./UserReviews.styles.css";
+import image1 from "../../../../src/assets/font.jpg";
 
 const UserReviews = () => {
   const reviews = [
     {
       id: 1,
       name: "Иван Иванов",
-      image: "path/to/image1.jpg",
-      review: "Отличная компания, очень доволен сотрудничеством!",
+      image: image1,
+      review: "Отличная компания ",
     },
     {
       id: 2,
       name: "Мария Смирнова",
-      image: "path/to/image2.jpg",
+      image: image1,
       review: "Очень профессиональный подход, рекомендую!",
     },
     {
       id: 3,
       name: "Алексей Петров",
-      image: "path/to/image3.jpg",
-      review: "Высокий уровень сервиса и поддержки.",
+      image: image1,
+      review:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id deleniti accusantium, nihil numquam laboriosam fugit nobis doloremque vero reprehenderit non dicta, beatae minus perspiciatis. Iste quaerat ut illum voluptatum laborum, laboriosam velit esse nisi veniam commodi soluta officiis quam repellat error debitis perferendis ex reiciendis maxime sed porro optio laudantium?",
     },
     {
       id: 4,
       name: "Елена Кузнецова",
-      image: "path/to/image4.jpg",
+      image: image1,
       review: "Превзошли все мои ожидания!",
     },
   ];
@@ -35,15 +37,21 @@ const UserReviews = () => {
         <div className="nameBlock">
           <h2>Прочтите, что говорят наши клиенты</h2>
         </div>
-        <div className="navigation">
+        <div className="navigationBlock">
           <button className="navButton">{"<"}</button>
           <div className="usersBlock">
             {reviews.map((review) => (
               <div key={review.id} className="userReview">
-                <img src={review.image} alt={`${review.name}`} className="userImage" />
-                <div className="userInfo">
-                  <p className="userName">{review.name}</p>
-                  <p className="userReviewText">{review.review}</p>
+                <div className="userHeader">
+                  <img
+                    src={review.image}
+                    alt={`${review.name}`}
+                    className="userImage"
+                  />
+                  <div className="userContent">
+                    <p className="userName">{review.name}</p>
+                    <p className="userReviewText">{review.review}</p>
+                  </div>
                 </div>
               </div>
             ))}

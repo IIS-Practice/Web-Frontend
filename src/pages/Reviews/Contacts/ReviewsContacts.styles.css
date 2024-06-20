@@ -20,9 +20,9 @@
     color: var(--dark-color);
     cursor: pointer;
     align-self: center;
-  }
-  
-  hr {
+}
+
+hr {
     border: 10px solid var(--primary-color);
     padding: 0px 300px;
     border-radius: 15px;
