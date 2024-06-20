@@ -100,19 +100,22 @@
 }
 
 .point {
+  width: 100%;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   column-gap: 10px;
   color: var(--light-color);
 }
 
-.point img {
-  max-width: 36px;
+.point svg {
+  margin-right: 3%;
 }
 
 .point span {
   font-size: calc(16px + 0.625vw);
   line-height: 1.3;
+  width: 100%;
 }
 
 .lowLevelText {
