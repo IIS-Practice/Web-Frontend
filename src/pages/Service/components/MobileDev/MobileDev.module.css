@@ -21,7 +21,7 @@
 .stagesContainer {
   margin: 8vw -5vw 0vw -5vw;
   padding: 100px 7vw 100px 0vw;
-  background-color: #8DB9FC;
+  background-color: var(--primary-color);
 }
 
 .content {
@@ -76,12 +76,12 @@ ul li {
 }
 
 .point:hover {
-  background-color: #706CFF;
+  background-color: var(--secondary-color);
   transition: background-color 0.3s ease;
 }
 
 .point.active {
-  background-color: #706CFF;
+  background-color: var(--secondary-color);
 }
 
 @media (max-width: 1024px) {
@@ -171,4 +171,47 @@ ul li {
 
 .applicationButtons button {
   width: 200px;
+}
+
+@media (max-width: 512px) {
+  .heading {
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+
+  .topLevelText {
+    font-size: 25px;
+    padding-right: 0vw;
+  }
+
+  .stagesContainer {
+    margin-top: 72px;
+    padding: 50px 7vw 50px 0vw;
+  }
+
+  .pointsAndDescription {
+    grid-template-columns: 1fr;
+  }
+
+  .stagesPoints {
+    row-gap: 25px;
+    margin-bottom: 40px;
+  }
+
+  .descriptionHeading {
+    font-size: 25px;
+  }
+
+  .applicationContainer.content {
+    margin: 0px;
+  }
+
+  .applicationButtons {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .applicationButtons button {
+    width: 300px;
+  }
 }

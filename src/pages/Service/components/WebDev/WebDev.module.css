@@ -8,28 +8,28 @@
 }
 
 .headingContainer {
-  margin-top: 8vw;
-  margin-left: 5vw;
+  padding: 8vw 5vw 0vw;
 }
 
 .heading {
+  font-size: calc(25.6px + 2.3125vw);
   font-weight: 600;
 }
 
 .headingSpan {
-  color: #8DB9FC;
+  color: var(--primary-color);
 }
 
-@media (max-width: 1920px) {
+@media (max-width: 1024px) {
   .heading {
-    font-size: calc(25.6px + 2.3125vw);
+    font-size: 40px;
   }
 }
 
 .mistakesContainer {
   margin-top: 5vw;
   padding: 72px 0px 60px;
-  background-color: #8DB9FC;
+  background-color: var(--primary-color);
 }
 
 .content {
@@ -41,7 +41,15 @@
 
 .mistakesHeading {
   font-size: 40px;
+  font-weight: 600;
+  padding-right: 20vw;
   color: var(--light-color);
+}
+
+@media (max-width: 1024px) {
+  .mistakesHeading {
+    font-size: 30px;
+  }
 }
 
 .pointsAndDescription {
@@ -58,7 +66,7 @@
   }
 }
 
-ul li {
+.pointsAndDescription ul li {
   list-style-type: none;
 }
 
@@ -84,17 +92,17 @@ ul li {
 }
 
 .point:hover {
-  background-color: #706CFF;
+  background-color: var(--secondary-color);
   transition: background-color 0.3s ease;
 }
 
 .point.active {
-  background-color: #706CFF;
+  background-color: var(--secondary-color);
 }
 
 @media (max-width: 1024px) {
   .point {
-    font-size: 16px;
+    font-size: 18px;
     padding: 5px 10px 5px 55px;
   }
 }
@@ -172,6 +180,11 @@ ul li {
   display: flex;
   align-items: center;
   column-gap: 10px;
+}
+
+.star {
+  width: 36px;
+  height: 36px;
 }
 
 .advContainer {
@@ -257,8 +270,8 @@ ul li {
 }
 
 .orderContainer {
-  padding: 100px 0px 100px;
-  background-color: #8DB9FC;
+  padding: 100px 0px;
+  background-color: var(--primary-color);
 }
 
 .orderHeading {
@@ -376,4 +389,97 @@ ul li {
 
 .applicationButtons button {
   width: 200px;
+}
+
+@media (max-width: 512px) {
+  .pointsAndDescription {
+    grid-template-columns: 1fr;
+  }
+
+  .mistakesPoints {
+    order: 1;
+    margin-bottom: 40px;
+    row-gap: 20px;
+  }
+
+  .pointDescription {
+    order: 2;
+  }
+
+  .point {
+    height: 64px;
+  }
+
+  .point::before {
+    font-size: 25px;
+    left: 15px;
+  }
+
+  .descriptionHeading {
+    font-size: 25px;
+  }
+
+  .advHeading {
+    font-size: 40px;
+    padding-right: 15vw;
+    margin-bottom: 20px;
+  }
+
+  .advContent {
+    grid-template-columns: 1fr;
+  }
+
+  .advElement {
+    row-gap: 30px;
+    padding: 20px 0px 30px 0px;
+  }
+
+  .advElement:nth-child(3) {
+    border-bottom: 1px solid rgb(0, 0, 0);
+  }
+  
+  .advElementHeading {
+    font-size: 25px;
+    padding: 0px;
+  }
+
+  .advDescription {
+    text-align: left;
+    margin-right: 12vw;
+  }
+
+  .youGet {
+    font-size: 30px;
+  }
+
+  .orderContainer {
+    padding: 50px 0px 10px;
+  }
+
+  .orderHeading {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+  }
+
+  .getPointsContainer {
+    grid-template-columns: 1fr;
+  } 
+  
+  .pointsElementHeading {
+    max-width: 100%;
+  }
+
+  .pointsElementDescription {
+    padding: 0px 12px;
+    text-align: left;
+  }
+
+  .applicationButtons {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .applicationButtons button {
+    width: 300px;
+  }
 }

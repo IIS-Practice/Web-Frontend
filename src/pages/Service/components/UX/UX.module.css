@@ -15,7 +15,7 @@
 }
 
 .headingSpan {
-  color: #8DB9FC;
+  color: var(--primary-color);
 }
 
 .topLevelText {
@@ -43,7 +43,7 @@
   line-height: 50px;
   text-align: center;
   color: var(--light-color);
-  background-color: #8DB9FC;
+  background-color: var(--primary-color);
   border-radius: 4px;
 }
 
@@ -70,7 +70,11 @@
 .anotherContainer {
   margin: 8vw -5vw 0vw -5vw;
   padding: 100px 12vw 100px 5vw;
-  background-color: #8DB9FC;
+  background-color: var(--primary-color);
+}
+
+.designContainer {
+  padding: 100px 8vw 0px 0px;
 }
 
 .anotherHeading {
@@ -143,4 +147,63 @@
 
 .applicationButtons button {
   width: 200px;
+}
+
+@media (max-width: 512px) {
+  .container {
+    padding-top: 50px;
+  }
+
+  .heading {
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+
+  .topLevelText {
+    font-size: 20px;
+    padding-right: 0px;
+  }
+
+  .exampleContainers {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  .exampleContainers div {
+    font-size: 20px;
+  }
+
+  .actionsContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 40px 0px 100px;
+    gap: 30px;
+  }
+
+  .actionsContainer div p {
+    font-size: 20px;
+  }
+
+  .anotherContainer {
+    margin-top: 0px;
+    padding: 50px 5vw 50px 5vw;
+  }
+
+  .designContainer {
+    padding: 100px 0px 100px;
+  }
+
+  .anotherHeading {
+    font-size: 40px;
+  }
+
+  .applicationButtons {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .applicationButtons button {
+    width: 300px;
+  }
 }

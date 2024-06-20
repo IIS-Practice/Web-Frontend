@@ -66,7 +66,7 @@ const UX = () => {
           сферы и онбординг.
         </p>
       </div>
-      <div style={{padding: '100px 8vw 0px 0px'}}>
+      <div className={styles.designContainer}>
         <h2 className={styles.anotherHeading} style={{color: 'var(--dark-color)', marginBottom: '40px'}}>
           Дизайн, на который можно<br></br> опереться в будущем
         </h2>

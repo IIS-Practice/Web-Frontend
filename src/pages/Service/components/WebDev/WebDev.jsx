@@ -78,7 +78,7 @@ const WebDev = () => {
                 <ul className={styles.nestedPoints}>
                   {currentMistake.list.map((item, index) => (
                     <div key={index} className={styles.nestedPointWrapper}>
-                      <Star />
+                      <Star className={styles.star} />
                       <li className={styles.nestedPoint}>{item}</li>
                     </div>
                   ))}
@@ -105,7 +105,7 @@ const WebDev = () => {
               </div>
               <div className={styles.advElement}>
                 <div className={styles.advElementHeadingContainer}>
-                  <h3 className={styles.advElementHeading}>АДАПТИВНАЯ ВЕРСТКА</h3>
+                  <h3 className={styles.advElementHeading}>АДАПТИВНАЯ ВЁРСТКА</h3>
                 </div>
                 <p className={styles.advDescription}>
                   Посетителям вашего сайта не придется "подсовывать" мобильную версию сайта, опасаясь громоздкости полноэкранных страниц.
