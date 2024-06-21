@@ -190,7 +190,15 @@ ul li {
 }
 
 .applicationButtons button {
-  width: 200px;
+  width: 240px;
+  font-size: 25px;
+  padding: 5px;
+}
+
+.applicationButtons button:hover {
+  background-color: var(--secondary-color);
+  color: var(--light-color);
+  transition: background-color 0.5s ease;
 }
 
 @media (max-width: 512px) {
@@ -252,5 +260,10 @@ ul li {
 
   .applicationButtons button {
     width: 300px;
+  }
+
+  .applicationButtons button:nth-child(1) {
+    background-color: var(--secondary-color);
+    color: var(--light-color);
   }
 }
