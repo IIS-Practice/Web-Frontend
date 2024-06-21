@@ -80,6 +80,11 @@
             &:focus {
                 outline: none;
             }
+
+            &:disabled {
+                cursor: not-allowed;
+                opacity: 0.6;
+            }
         }
 
         span {
@@ -88,5 +93,15 @@
             font-size: 0.9rem;
             font-weight: 400;
         }
+    }
+
+    .error-message {
+        margin-top: 2vh;
+        color: var(--error-color);
+        font-size: 0.9rem;
+        font-weight: 400;
+        text-align: center;
+        float: left;
+        width: 42%;
     }
 }

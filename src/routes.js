@@ -4,6 +4,7 @@ import {
   EMPLOYMENT_ROUTE,
   FAQ_ROUTE,
   SERVICES_ROUTE,
+  PRICE_ROUTE,
   CASES_ROUTE,
   REVIEWS_ROUTE,
   CONTACTS_ROUTE,
@@ -13,9 +14,10 @@ import {
   Employees,
   Employment,
   FAQ,
-  Case,
+  CasePage,
   Cases,
   Service,
+  Price,
   Reviews,
   Contacts,
 } from "@pages";
@@ -42,12 +44,16 @@ export const publicRoutes = [
     Component: Cases,
   },
   {
-    path: CASES_ROUTE + "/:id",
-    Component: Case,
+    path: CASES_ROUTE + "/:caseName",
+    Component: CasePage,
   },
   {
     path: SERVICES_ROUTE + "/:serviceName",
     Component: Service,
+  },
+  {
+    path: PRICE_ROUTE,
+    Component: Price,
   },
   {
     path: REVIEWS_ROUTE,
