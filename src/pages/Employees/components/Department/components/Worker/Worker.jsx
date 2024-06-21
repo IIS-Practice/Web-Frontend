@@ -7,10 +7,8 @@ const Worker = ({ wasSelected, worker, onClick }) => {
       <div className="white-block"></div>
     ) : (
       <div className="grid-workers-element" onClick={onClick}>
-        <div className="square-image-container">
-          <div className="square-image">
-            <img src={worker.photo} alt={worker.name} />
-          </div>
+        <div className="image">
+            <img src={worker.imageUrl} alt={worker.name} />
         </div>
         <p>
           {worker.surname} {worker.name}

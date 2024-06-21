@@ -4,17 +4,22 @@ import "./WorkerInfo.styles.scss";
 const WorkerInfo = ({ worker }) => {
   return (
     <div className="worker-info">
-      <div className="square-image-container">
-        <div className="square-image">
-          <img src={worker.photo} alt={worker.name} />
+      <div className="image-container">
+        <div className="image">
+          <img src={worker.imageUrl} alt={worker.name} />
         </div>
       </div>
       <div className="worker-properties">
         <p>
           {worker.surname} {worker.name}
         </p>
-        <p>{worker.technologies}</p>
-        <button className="cv-btn">Посмотреть резюме</button>
+        <p>{worker.desscription}</p>
+        <button
+          className="cv-btn"
+          onClick={() => window.open(worker.cvUri, "_blank")}
+        >
+          Посмотреть резюме
+        </button>
       </div>
     </div>
   );
