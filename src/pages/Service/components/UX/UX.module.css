@@ -104,12 +104,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  column-gap: 10px;
+  column-gap: 20px;
   color: var(--light-color);
-}
-
-.point svg {
-  margin-right: 3%;
 }
 
 .point span {
@@ -199,6 +195,14 @@
 
   .anotherHeading {
     font-size: 40px;
+  }
+
+  .point {
+    column-gap: 10px;
+  }
+
+  .point svg {
+    margin-right: 3%;
   }
 
   .applicationButtons {

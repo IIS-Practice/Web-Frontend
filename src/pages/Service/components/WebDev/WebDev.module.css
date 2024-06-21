@@ -169,6 +169,7 @@
 }
 
 .nestedPoint {
+  width: 100%;
   font-size: 20px;
   position: relative;
   display: flex;
@@ -179,7 +180,7 @@
 .nestedPointWrapper {
   display: flex;
   align-items: center;
-  column-gap: 10px;
+  column-gap: 15px;
 }
 
 .star {
@@ -417,6 +418,10 @@
 
   .descriptionHeading {
     font-size: 25px;
+  }
+
+  .nestedPoint {
+    font-size: 18px;
   }
 
   .advHeading {
