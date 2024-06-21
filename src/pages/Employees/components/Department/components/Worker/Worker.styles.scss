@@ -1,0 +1,41 @@
+.grid-workers-element {
+    --worker-size: 15rem;
+
+    text-align: center;
+    cursor: pointer;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+
+    .square-image-container {
+        width: var(--worker-size);
+        height: var(--worker-size);
+        position: relative;
+        margin-bottom: 5%;
+
+        .square-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: var(--worker-size);
+            height: var(--worker-size);
+            overflow: hidden;
+
+            img {
+                object-fit: cover;
+                width: var(--worker-size);
+                height: var(--worker-size);
+            }
+        }
+    }
+
+    p {
+        font-size: 1.25rem;
+        font-weight: 500;
+    }
+}
+
+.white-block {
+    background: transparent;
+    width: 15rem;
+}

@@ -1,19 +1,20 @@
 import React from "react";
-import "./TextBox.styles.css";
+import "./TextBox.styles.scss";
+import { Link } from "react-router-dom";
+import { EMPLOYMENT_ROUTE} from "@utils/constants";
 
 const TextBox = ({ text1, text2 }) => {
-    return (
-        <div className="text-block">
-            <h2>Наши сотрудники</h2>
-            <p>
-                {text1}
-            </p>
+  return (
+    <div className="text-block">
+      <h2>Наши сотрудники</h2>
+      <p className="text1">{text1}</p>
 
-            <p>
-                {text2}
-            </p>
-        </div>
-    );
+      <p className="text2">{text2}</p>
+      <Link className="link-button" to={EMPLOYMENT_ROUTE}>
+        Присоединяйтесь к нам
+      </Link>
+    </div>
+  );
 };
 
 export default TextBox;
