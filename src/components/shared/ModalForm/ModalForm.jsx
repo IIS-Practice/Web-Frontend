@@ -24,7 +24,7 @@ const ModalForm = ({ showModal, closeModal }) => {
     <div className="modal-form">
       <div className="content">
         <div className="header">
-          <h2>СВЯЖИТЕСЬ С НАМИ</h2>
+          <h2>СВЯЖИТЕСЬ С&nbsp;НАМИ</h2>
           <button className="close-button" onClick={closeModal}>
             <CrossIcon />
           </button>

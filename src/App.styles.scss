@@ -10,24 +10,43 @@
     --dark-color: #000000;
 
     --error-color: #fd5050;
+    --scroll-color: #414141;
 }
 
 * {
     font-family: "Montserrat", sans-serif;
     margin: 0;
     padding: 0;
+
+    &:focus {
+        outline: none;
+    }
+
+    &::-webkit-scrollbar {
+        width: 3px;
+        height: 3px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+        border-radius: 0;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--scroll-color);
+        border-radius: 0;
+        border: none;
+    }
+    
+    &::-webkit-scrollbar-thumb:hover {
+        background-color: var(--scroll-color);
+    }
 }
 
 html {
     font-size: 20px;
-}
 
-@media (max-width: 1024px) {
-    html {
+    @media (max-width: 1024px) {
         font-size: 16px;
     }
 }
-
-/* * {
-    outline: 1px solid red;
-} */
