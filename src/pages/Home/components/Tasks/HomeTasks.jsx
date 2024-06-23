@@ -32,7 +32,7 @@ const HomeTasks = () => {
               <span>фиксированная цена</span>
             </li>
           </ul>
-          <OutlinedButton text="Подробнее" onClick={openWaterfallModal} />
+          <OutlinedButton className="button-about" text="Подробнее" onClick={openWaterfallModal} />
           <WaterfallModal
             showModal={showWaterfallModal}
             closeModal={closeWaterfallModal}
@@ -52,7 +52,7 @@ const HomeTasks = () => {
               <span>гибкая цена +/-</span>
             </li>
           </ul>
-          <OutlinedButton text="Подробнее" onClick={openScrumModal} />
+          <OutlinedButton className="button-about" text="Подробнее" onClick={openScrumModal} />
           <ScrumModal showModal={showScrumModal} closeModal={closeScrumModal} />
         </div>
       </div>

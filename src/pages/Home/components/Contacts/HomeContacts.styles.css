@@ -1,6 +1,6 @@
 .home-contact {
     width: 100%;
-    height: 60vh;
+    height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -31,4 +31,19 @@ hr {
     border: 10px solid var(--primary-color);
     padding: 0px 300px;
     border-radius: 15px;
+}
+
+@media (max-width: 768px) {
+    .home-contact h3 {
+        font-size: 18px;
+    }
+
+    .contact-link {
+        font-size: 36px;
+    }
+
+    hr {
+        width: 90%;
+        padding: 0 90px;
+    }
 }

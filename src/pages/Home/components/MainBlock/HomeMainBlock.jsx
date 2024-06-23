@@ -6,10 +6,11 @@ const HomeMainBlock = () => {
   return (
     <div className="MainBlock">
       <div className="CompanyName">
-        <h1>IISolutions -</h1>
-        <h2>
-          ваши идеи, наше <span>воплощение</span>
-        </h2>
+        <div className="text-container">
+          <h1>IISolutions -</h1>
+          <h2>ваши идеи,</h2>
+          <h2>наше воплощение</h2>
+        </div>
       </div>
       <div className="CompanyImage">
         <img src={CompanyImage} alt="Изображение" />
