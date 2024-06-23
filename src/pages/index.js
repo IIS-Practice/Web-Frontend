@@ -2,7 +2,7 @@ import Home from "./Home";
 import Employees from "./Employees";
 import Employment from "./Employment";
 import FAQ from "./FAQ";
-import { Case, Cases } from "./Cases";
+import { CasePage, Cases } from "./Cases";
 import Service from "./Service";
 import Price from "./Price";
 import Reviews from "./Reviews";
@@ -13,7 +13,7 @@ export {
   Employees,
   Employment,
   FAQ,
-  Case,
+  CasePage,
   Cases,
   Service,
   Price,

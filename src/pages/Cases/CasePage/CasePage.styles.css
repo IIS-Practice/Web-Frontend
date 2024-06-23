@@ -1,0 +1,61 @@
+.case-head{
+    margin-top: 100px;
+
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 73.14px;
+    text-align: left;
+    margin-bottom: 100px;
+}
+.case-image {
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+.case-information{
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.case-description {
+    margin-top: 100px;
+    font-size: 16px;
+}
+
+.case-description h2 {
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 42.67px;
+    margin-bottom: 60px;
+
+}
+.case-description p{
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 36.57px;
+    margin-bottom: 15px;
+
+}
+.project-details-image img {
+    height: 746px;
+    width: 554px;
+    object-fit: cover;
+    margin-right: 33px;
+}
+.project-details-image{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 130px;
+}
+.info{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.info p{
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 36.57px;
+    text-align: left;
+
+}

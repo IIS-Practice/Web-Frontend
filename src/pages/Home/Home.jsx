@@ -9,7 +9,7 @@ import {
 
 const Home = () => {
   return (
-    <div>
+    <div className="home-page">
       <HomeMainBlock />
       <HomeProjects />
       <HomeTasks />
