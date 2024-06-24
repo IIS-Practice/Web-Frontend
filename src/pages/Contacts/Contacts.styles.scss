@@ -1,6 +1,5 @@
 .contacts-page {
     padding: 20px;
-    text-align: center;
 
     .contact-head {
         margin-top: 100px;
@@ -29,6 +28,7 @@
             background: var(--light-color) !important;
             border: 1px solid var(--dark-color) !important;
             color: var(--dark-color) !important;
+
             &::placeholder {
                 color: var(--dark-color) !important;
             }
@@ -42,8 +42,63 @@
 
 .contacts-blocks {
     display: flex;
-    justify-content: space-between;
-    gap: 1%;
     flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
     margin: 100px 5% 30px;
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 1200px) {
+    .contact-head {
+        margin-left: 50px;
+        font-size: 40px;
+    }
+
+    .contact-p {
+        margin-left: 50px;
+        font-size: 16px;
+    }
+
+    .contact-form {
+        margin: 30px 50px 100px;
+    }
+
+    .contacts-blocks {
+        flex-direction: column;
+        align-items: center;
+        margin: 80px 4% 30px;
+    }
+
+    .contact-element {
+        width: 100%;
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-head {
+        margin-left: 20px;
+        font-size: 30px;
+    }
+
+    .contact-p {
+        margin-left: 20px;
+        font-size: 14px;
+    }
+
+    .contact-form {
+        margin: 20px 20px 80px;
+    }
+
+    .contacts-blocks {
+        flex-direction: column;
+        align-items: center;
+        margin: 60px 2% 20px;
+    }
+
+    .contact-element {
+        width: 100%;
+        max-width: 400px;
+    }
 }
