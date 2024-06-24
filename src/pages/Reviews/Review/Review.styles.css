@@ -78,3 +78,26 @@
     border: 2px solid var(--secondary-color);
     color: var(--secondary-color);
 }
+
+@media (max-width: 512px) {
+    .MainBlock {
+        padding: 50px 20px;
+    }
+
+    .ContentBlock {
+        margin: 0px;
+    }
+
+    .ContentText {
+        font-size: 40px;
+    }
+
+    .ContentInputName {
+        padding: 14px 0px 14px 20px;
+        width: 100%;
+    }
+
+    .SubmitButton {
+        width: 100%;
+    }
+}

@@ -7,6 +7,7 @@
 }
 
 .home-contact h3 {
+    padding: 50px;
     font-size: 25px;
     font-weight: 500;
     margin-bottom: 20px;
@@ -26,4 +27,15 @@ hr {
     border: 10px solid var(--primary-color);
     padding: 0px 300px;
     border-radius: 15px;
+}
+
+@media (max-width: 512px) {
+    .contact-link {
+        padding: 0px;
+        font-size: 35px;
+    }
+
+    hr {
+        padding: 0px 45vw;
+    }
 }
