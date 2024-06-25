@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Review.styles.css";
 
 const Review = () => {
+  const [text, setText] = useState("");
+  const maxLength = 100;
+
+  const handleTextChange = (event) => {
+    setText(event.target.value);
+  };
+
   return (
     <div className="MainBlock">
       <div className="ContentBlock">
@@ -24,7 +31,11 @@ const Review = () => {
             <textarea
               placeholder="Что вам понравилось?"
               name="Review"
+              maxLength={maxLength}
+              value={text}
+              onChange={handleTextChange}
             ></textarea>
+            
           </div>
           <div>
             <button className="SubmitButton" type="submit">

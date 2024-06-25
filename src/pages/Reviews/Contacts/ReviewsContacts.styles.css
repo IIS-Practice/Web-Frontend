@@ -29,13 +29,43 @@ hr {
     border-radius: 15px;
 }
 
-@media (max-width: 512px) {
+@media (max-width: 900px) {
+    .home-contact {
+        height: 30vh;
+    }
+
+    .home-contact h3 {
+        font-size: 20px;
+    }
+
     .contact-link {
         padding: 0px;
-        font-size: 35px;
+        padding-bottom: 5px;
+        font-size: 45px;
     }
 
     hr {
-        padding: 0px 45vw;
+        padding: 0px 28vw;
+    }
+}
+
+
+@media (max-width: 428px) {
+    .home-contact {
+        height: 35vh;
+    }
+
+    .home-contact h3 {
+        font-size: 16px;
+    }
+
+    .contact-link {
+        padding: 0px;
+        padding-bottom: 5px;
+        font-size: 28px;
+    }
+
+    hr {
+        padding: 0px 35vw;
     }
 }

@@ -5,7 +5,7 @@ import image1 from "../../../../src/assets/font.jpg";
 const reviews = [
   {
     id: 1,
-    name: "Иван Иванов",
+    name: "vaseya",
     image: image1,
     review: "Отличная компания ",
   },
@@ -17,16 +17,34 @@ const reviews = [
   },
   {
     id: 3,
-    name: "Алексей Петров",
+    name: "Иван Иванов11111111",
     image: image1,
     review:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id deleniti accusantium, nihil numquam laboriosam fugit nobis doloremque vero reprehenderit non dicta, beatae minus perspiciatis. Iste quaerat ut illum voluptatum laborum, laboriosam velit esse nisi veniam commodi soluta officiis quam repellat error debitis perferendis ex reiciendis maxime sed porro optio laudantium?",
+      "a",
   },
   {
     id: 4,
     name: "Елена Кузнецова",
     image: image1,
     review: "Превзошли все мои ожидания!",
+  },
+  {
+    id: 5,
+    name: "Васек Иванов",
+    image: image1,
+    review: "Топчик компания ",
+  },
+  {
+    id: 6,
+    name: "Васек Иванов",
+    image: image1,
+    review: "Топчик компания ",
+  },
+  {
+    id: 7,
+    name: "Васек Иванов",
+    image: image1,
+    review: "Топчик компания ",
   },
 ];
 
@@ -64,7 +82,7 @@ const UserReviews = () => {
     : reviews.slice(currentReviewIndex, currentReviewIndex + 4);
 
   return (
-    <div>
+    <div className="user-reviews-container">
       <div className="nameBlock">
         <h2>Прочтите, что говорят наши клиенты</h2>
       </div>
