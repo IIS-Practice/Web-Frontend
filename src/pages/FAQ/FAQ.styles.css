@@ -1,73 +1,107 @@
+
+
 .FAQPage {
-    margin: 6rem 6rem 7.5rem 6rem;
-}
-
-.FAQPage > h1 {
-    font-size: 60px;
-    margin-left: -45px;
-}
-
-.wrapperFAQ {
-    display: flex;
-    position: relative;
-    margin-top: 5rem;
+    margin: 50px 20px 100px 20px;
 }
 
 .leftFAQ {
-    /* width: 50%; */
-    min-width: 50%;
-    max-width: 50%;
-    /* padding-right: 0.5rem; */
-
-    /* text-wrap: wrap; */
-    border-right: 1px solid var(--dark-color);
+    margin-top: 40px; 
 }
 
-.leftFAQ > *::before {
+.question {
+    position: relative;
+    font-size: 20px;
+    font-weight: 400;
+    margin-left: 46px;
+}
+
+.question::before {
     position: absolute;
     content: "";
     width: 17px;
     height: 25px;
-    z-index: 100;
+    /* z-index: 100; */
     left: -2rem;
-    top: 6px;
+    top: 2px;
     background-repeat: no-repeat;
     background-image: url("@assets/leftArrow.svg");
     transform: rotateZ(0deg);
     transition: rotateZ 0.5s ease;
 }
 
-.leftFAQ > *.rotateLeftArrow::before {
+.question.rotateLeftArrow::before {
     transform: rotateZ(90deg);
     transition: rotateZ 0.5s ease;
 }
 
-.leftFAQ > *:not(:last-child) {
-    margin-bottom: 1.5rem;
+.showFAQAnswer {
+    display: block;
+    margin: 20px 0 40px 0;
 }
 
-.leftFAQ > * {
-    font-weight: 400;
-    font-size: 25px;
-    position: relative;
+.hideFAQAnswer {
+    display: none;
 }
 
-.leftFAQ>*:hover {
-    cursor: pointer;
-}
-
-.rightFAQ {
-    max-width: 55%;
-    margin-left: 1.5rem;
-}
-
-.rightFAQ>h2 {
-    font-size: 33px;
-    font-weight: 500;
-    margin-bottom: 24px;
-    /* text-wrap: nowrap; */
-}
-
-.rightFAQ>div {
-    font-size: 25px;
+@media only screen and (min-width: 768px) {
+    .FAQPage {
+        margin: 6rem 6rem 7.5rem 6rem;
+    }
+    
+    .FAQPage > h1 {
+        font-size: 60px;
+        margin-left: -45px;
+    }
+    
+    .wrapperFAQ {
+        display: flex;
+        position: relative;
+        margin-top: 5rem;
+    }
+    
+    .leftFAQ {
+        /* width: 50%; */
+        min-width: 50%;
+        max-width: 50%;
+        /* padding-right: 0.5rem; */
+    
+        /* text-wrap: wrap; */
+        border-right: 1px solid var(--dark-color);
+    }
+    
+    
+    
+    
+    
+    .leftFAQ > *:not(:last-child) {
+        margin-bottom: 1.5rem;
+    }
+    
+    .leftFAQ > * {
+        font-weight: 400;
+        font-size: 25px;
+        position: relative;
+    }
+    
+    .leftFAQ>*:hover {
+        cursor: pointer;
+    }
+    
+    .rightFAQ {
+        max-width: 55%;
+        margin-left: 1.5rem;
+    }
+    
+    .rightFAQ>h2 {
+        font-size: 33px;
+        font-weight: 500;
+        margin-bottom: 24px;
+        /* text-wrap: nowrap; */
+    }
+    
+    .rightFAQ>div {
+        font-size: 25px;
+    }
+    
+   
 }
