@@ -8,8 +8,8 @@ const HomeMainBlock = () => {
       <div className="CompanyName">
         <div className="text-container">
           <h1>IISolutions -</h1>
-          <h2>ваши идеи,</h2>
-          <h2>наше воплощение</h2>
+          <h2>ваши идеи, наше</h2>
+          <h2> воплощение</h2>
         </div>
       </div>
       <div className="CompanyImage">

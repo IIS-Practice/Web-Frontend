@@ -14,7 +14,7 @@ const HomeProjects = () => {
           <div className="project-large">
             <div className="project-content-main">
               <h3>
-                IlSolutions - это профессиональный разработчик веб-сервисов,
+                IISolutions - это профессиональный разработчик веб-сервисов,
                 ботов и мобильных приложений.
               </h3>
               <p>

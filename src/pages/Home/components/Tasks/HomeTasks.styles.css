@@ -1,3 +1,9 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
 .home-tasks {
     width: 100%;
     min-height: 866px;
@@ -88,10 +94,19 @@
 
 /* Адаптивность */
 @media (max-width: 1200px) {
+    .home-tasks {
+        min-height: 700px;
+    }
+    
     .home-tasks h2 {
-        font-size: 50px;
+        font-size: 40px;
         padding-left: 50px;
         padding-bottom: 80px;
+        margin-bottom: 0px;
+    }
+
+    .tasks-container {
+        width: 100%;
     }
 
     .task h3 {
@@ -112,11 +127,20 @@
     }
 }
 
-@media (max-width: 1024px) {
+
+
+
+@media (max-width: 810px) {
+    
+    .home-tasks {
+        min-height: 400px;
+    }
+    
     .home-tasks h2 {
-        font-size: 40px;
+        font-size: 10px;
         padding-left: 40px;
         padding-bottom: 60px;
+        margin-bottom: 0px;
     }
 
     .task h3 {
@@ -124,12 +148,14 @@
     }
 
     .about-task {
-        font-size: 18px;
+        font-size: 15px;
     }
 
     .about-task li::before {
         font-size: 30px;
     }
+
+   
 
     .home-tasks button {
         font-size: 0.9rem;
@@ -137,47 +163,71 @@
     }
 
     .tasks-container {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        width: 100%;
+        padding: 0px 60px;
     }
 
     .vertical-line {
+        width: 2px;
+        background-color: var(--light-color);
+        align-self: stretch; /* Растянуть по высоте контейнера */
+    }
+
+    .task {
         width: 100%;
-        height: 2px;
-        margin: 20px 0;
+        flex: 1;
+        margin: 0px;
     }
 }
 
-@media (max-width: 768px) {
+
+
+@media (max-width: 428px) {
+    .home-tasks {
+        min-height: 400px;
+        padding: 0px;
+    }
+
+
     .home-tasks h2 {
-        font-size: 30px;
-        padding-left: 30px;
-        padding-bottom: 40px;
+        font-size: 20px;
+        padding-left: 20px;
+        padding-bottom: 50px;
     }
 
     .task h3 {
-        font-size: 30px;
+        font-size: 18px;
     }
 
     .about-task {
-        font-size: 16px;
+        font-size: 9px;
     }
 
     .about-task li::before {
-        font-size: 25px;
+        font-size: 16px;
     }
 
     .home-tasks button {
         font-size: 0.8rem;
         padding: 4px 15px;
+        margin-top: 20px;
     }
 
-    .tasks-container {
-        width: 100%;
+    .vertical-line {
+        width: 2px;
+        background-color: var(--light-color);
+        align-self: stretch;
+        margin: 0px;
     }
 
     .task {
         width: 100%;
-        margin: 10px 0;
+        margin: 0px;
+        padding: 0px 20px;
+    }
+
+    .tasks-container {
+        padding: 0px 20px;
     }
 }

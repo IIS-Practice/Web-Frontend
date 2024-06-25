@@ -1,3 +1,4 @@
+/* Общие стили */
 * {
     box-sizing: border-box;
     padding: 0;
@@ -16,17 +17,16 @@
 .home-projects h2 {
     font-size: 60px;
     margin-bottom: 50px;
+    text-align: left;
 }
 
 .projects-grid {
     display: grid;
     grid-template-columns: 1.5fr 2fr; 
-
     gap: 20px; 
 }
 
 .project-large {
-    grid-row: span 1;
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -35,11 +35,12 @@
 }
 
 .small-projects-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(2, auto);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
     max-width: 740px;
+    margin: 0 auto;
 }
 
 .project-small {
@@ -49,6 +50,7 @@
     flex-direction: column;
     justify-content: space-between;
     height: 200px;
+    width: calc(50% - 10px);
     max-width: 360px;
 }
 
@@ -139,16 +141,24 @@
     }
 
     .project-large {
-        grid-row: span 1;
-        grid-column: span 2;
+        grid-column: span 1;
     }
 
     .small-projects-wrapper {
-        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content-name {
+        font-size: 18px;
+    }
+
+    .content-description {
+        font-size: 16px;
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 810px) {
     .home-box {
         margin: 50px;
     }
@@ -159,45 +169,49 @@
     }
 
     .projects-grid {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
     }
 
     .project-large {
-        grid-row: span 1; 
+        grid-column: span 1;
     }
 
     .small-projects-wrapper {
-        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
     }
 
     .project-small {
         width: 100%;
-        height: auto;
     }
 
-    .home-projects {
-        padding-bottom: 20px;
-    }
+    
 }
 
-@media (max-width: 768px) {
+@media (max-width: 428px) {
     .home-box {
         margin: 20px;
     }
 
     .home-projects h2 {
-        font-size: 25px;
-        margin-bottom: 20px;
+        font-size: 20px;
+        margin-top: 40px;
+        text-align: left;
     }
 
-    .project-large h3,
-    .project-small h3 {
-        font-size: 18px;
+    .project-large {
+        padding-right: 0px;
     }
 
-    .project-large p,
-    .project-small p {
+    .project-content-main h3 {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .project-content-main p {
         font-size: 12px;
+        margin-bottom: 10px;
     }
 
     .content-button {
@@ -209,11 +223,21 @@
     }
 
     .small-projects-wrapper {
-        width: 100%;
-        margin-left: 10px;
+        padding: 0px 10px 20px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
     }
 
-    .projects-grid {
+    .project-small {
         width: 100%;
+    }
+
+    .content-name {
+        font-size: 16px;
+    }
+
+    .content-description {
+        font-size: 13px;
     }
 }

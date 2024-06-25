@@ -27,6 +27,10 @@
     cursor: pointer;
 }
 
+.contact-link:hover {
+    color: var(--secondary-color);
+}
+
 hr {
     border: 10px solid var(--primary-color);
     padding: 0px 300px;
@@ -35,11 +39,11 @@ hr {
 
 @media (max-width: 768px) {
     .home-contact h3 {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .contact-link {
-        font-size: 36px;
+        font-size: 32px;
     }
 
     hr {

@@ -15,7 +15,7 @@ const HomeTasks = () => {
   return (
     <div className="home-tasks">
       <h2>
-        Работаем по подходящей для Вас <br />
+        Работаем по подходящей для Вас 
         методологии
       </h2>
       <div className="tasks-container">
