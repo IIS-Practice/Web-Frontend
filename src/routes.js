@@ -14,7 +14,7 @@ import {
   Employees,
   Employment,
   FAQ,
-  Case,
+  CasePage,
   Cases,
   Service,
   Price,
@@ -44,8 +44,8 @@ export const publicRoutes = [
     Component: Cases,
   },
   {
-    path: CASES_ROUTE + "/:id",
-    Component: Case,
+    path: CASES_ROUTE + "/:caseName",
+    Component: CasePage,
   },
   {
     path: SERVICES_ROUTE + "/:serviceName",
