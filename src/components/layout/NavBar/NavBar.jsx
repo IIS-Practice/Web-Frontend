@@ -58,7 +58,7 @@ const NavBar = () => {
       <div className="navbar-base"></div>
       <nav className="navbar">
         <div className="navbar-logo">
-          <Link to={HOME_ROUTE} className="logo-link">
+          <Link to={HOME_ROUTE} className="logo-link" onClick={handleLinkClick}>
             <Logo className="logo" />
           </Link>
           <p>IISolutions</p>
