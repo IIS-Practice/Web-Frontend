@@ -1,27 +1,52 @@
 .contacts-page {
-    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0 6.942%;
 
     .contact-head {
-        margin-top: 100px;
+        
         text-align: left;
-        font-size: 50px;
-        margin-left: 100px;
+        font-size: 2.5rem;
+        width: 100%;
+        box-sizing: border-box;
 
         .form-head {
+            margin: 0;
             color: var(--primary-color);
+            width: 100%;
+        }
+
+        @media (max-width: 1024px) {
+            text-align: center;
+        }
+    }
+
+
+    .contacts-blocks {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        flex-direction: row;
+        box-sizing: border-box;
+
+        @media (max-width: 1024px) {
+            flex-direction: column;
         }
     }
 
     .contact-p {
         text-align: left;
-        font-size: 18px;
-        margin-left: 100px;
-        margin-top: 15px;
+        font-size: 0.9rem;
+        margin-top: 5%;
+
+        @media (max-width: 1024px) {
+            text-align: center;
+        }
     }
 
     .contact-form {
         color: var(--dark-color) !important;
-        margin: 40px 100px 130px;
+        margin: 5% 0 20%;
 
         input,
         textarea {
@@ -37,68 +62,5 @@
         span {
             color: var(--dark-color) !important;
         }
-    }
-}
-
-.contacts-blocks {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-between;
-    margin: 100px 5% 30px;
-}
-
-/* Медиа-запросы для адаптивности */
-@media (max-width: 1200px) {
-    .contact-head {
-        margin-left: 50px;
-        font-size: 40px;
-    }
-
-    .contact-p {
-        margin-left: 50px;
-        font-size: 16px;
-    }
-
-    .contact-form {
-        margin: 30px 50px 100px;
-    }
-
-    .contacts-blocks {
-        flex-direction: column;
-        align-items: center;
-        margin: 80px 4% 30px;
-    }
-
-    .contact-element {
-        width: 100%;
-        max-width: 600px;
-    }
-}
-
-@media (max-width: 768px) {
-    .contact-head {
-        margin-left: 20px;
-        font-size: 30px;
-    }
-
-    .contact-p {
-        margin-left: 20px;
-        font-size: 14px;
-    }
-
-    .contact-form {
-        margin: 20px 20px 80px;
-    }
-
-    .contacts-blocks {
-        flex-direction: column;
-        align-items: center;
-        margin: 60px 2% 20px;
-    }
-
-    .contact-element {
-        width: 100%;
-        max-width: 400px;
     }
 }

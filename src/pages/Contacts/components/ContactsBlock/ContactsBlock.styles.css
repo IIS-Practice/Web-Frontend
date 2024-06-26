@@ -1,8 +1,10 @@
 .contacts-block {
     text-align: center;
     padding: 16px;
-    margin: 8px 0;
-    max-width: 30%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
 }
 
 .contacts-block h2 {
@@ -33,5 +35,5 @@
     margin-bottom: 25px;
 }
 .text {
-    width: 75%;
+    width: 100%;
 }
