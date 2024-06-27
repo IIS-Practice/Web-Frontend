@@ -28,7 +28,10 @@
         box-sizing: border-box;
         width: 100%;
         display: none;
-        grid-template-columns: repeat(auto-fit, minmax(var(--worker-size), 1fr));
+        grid-template-columns: repeat(
+            auto-fit,
+            minmax(var(--worker-size), 1fr)
+        );
         column-gap: 5%;
         row-gap: 10%;
         padding: 100px 8% 60px;

@@ -1,7 +1,7 @@
 import React from "react";
 import "./TextBox.styles.scss";
 import { Link } from "react-router-dom";
-import { EMPLOYMENT_ROUTE} from "@utils/constants";
+import { EMPLOYMENT_ROUTE } from "@utils/constants";
 
 const TextBox = ({ text1, text2 }) => {
   return (

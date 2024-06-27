@@ -26,8 +26,7 @@ const FAQ = () => {
     <main className="FAQPage">
       <h1>Часто задаваемые вопросы</h1>
       <div className="wrapperFAQ">
-        <div
-          className="leftFAQ">
+        <div className="leftFAQ">
           {Object.keys(questions).map((question) => (
             <>
               <h2
