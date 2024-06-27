@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./UserReviews.styles.css";
-import image1 from "../../../../src/assets/font.jpg";
+import image1 from "@assets/font.jpg";
 import { getReviews } from "@api/services/reviewApi";
 import { ReactComponent as LeftButton } from "@assets/leftButton.svg";
 import { ReactComponent as RightButton } from "@assets/rightButton.svg";
+import { useSwipeable } from "react-swipeable";
 
 const UserReviews = () => {
   const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
@@ -11,6 +12,7 @@ const UserReviews = () => {
   const [reviews, setReviews] = useState([]);
   const [disablePrev, setDisablePrev] = useState(true);
   const [disableNext, setDisableNext] = useState(false);
+  const [showButtons, setShowButtons] = useState(false);
 
   useEffect(() => {
     const fetchReviews = async () => {
@@ -39,7 +41,7 @@ const UserReviews = () => {
     setCurrentReviewIndex((prevIndex) => {
       const newIndex = isMobile ? prevIndex + 1 : prevIndex + 4;
       isMobile ? setDisableNext(newIndex >= reviews.length - 1) : setDisableNext(newIndex >= reviews.length);
-      setDisablePrev(false);
+      setDisablePrev(newIndex <= 0);
       return newIndex;
     });
   };
@@ -48,7 +50,7 @@ const UserReviews = () => {
     setCurrentReviewIndex((prevIndex) => {
       const newIndex = isMobile ? prevIndex - 1 : prevIndex - 4;
       setDisablePrev(newIndex <= 0);
-      setDisableNext(false);
+      setDisableNext(newIndex < reviews.length - 1);
       return newIndex;
     });
   };
@@ -57,14 +59,31 @@ const UserReviews = () => {
     ? [reviews[currentReviewIndex]]
     : reviews.slice(currentReviewIndex, currentReviewIndex + 4);
 
+  const swipeHandlers = useSwipeable({
+    onSwipedLeft: () => {
+      if (!disableNext) nextReview();
+      handleSwipe();
+    },
+    onSwipedRight: () => {
+      if (!disablePrev) prevReview();
+      handleSwipe();
+    },
+    trackMouse: true,
+  });
+
+  const handleSwipe = () => {
+    setShowButtons(true);
+    setTimeout(() => setShowButtons(false), 2000);
+  };
+
   return (
-    <div className="user-reviews-container">
+    <div className="user-reviews-container" {...swipeHandlers}>
       <div className="nameBlock">
         <h2>Прочтите, что говорят наши клиенты</h2>
       </div>
       <div className="navigationBlock">
         <button
-          className="navButton prevButton"
+          className={`navButton prevButton ${showButtons ? 'show' : ''}`}
           onClick={prevReview}
           disabled={disablePrev}
         >
@@ -88,7 +107,7 @@ const UserReviews = () => {
           ))}
         </div>
         <button
-          className="navButton nextButton"
+          className={`navButton nextButton ${showButtons ? 'show' : ''}`}
           onClick={nextReview}
           disabled={disableNext}
         >

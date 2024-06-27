@@ -35,7 +35,6 @@ const Review = () => {
               value={text}
               onChange={handleTextChange}
             ></textarea>
-            
           </div>
           <div>
             <button className="SubmitButton" type="submit">
