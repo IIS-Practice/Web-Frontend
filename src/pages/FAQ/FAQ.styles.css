@@ -12,7 +12,7 @@
     position: relative;
     font-size: 20px;
     font-weight: 400;
-    margin-left: 46px;
+    margin: 0 0 20px 46px;
 }
 
 .question::before {

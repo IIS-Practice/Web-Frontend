@@ -32,7 +32,7 @@ const FAQ = () => {
             <>
               <h2
                 className={
-                  question == questionToDisplay
+                  question === questionToDisplay
                     ? "question rotateLeftArrow"
                     : "question"
                 }
@@ -44,7 +44,7 @@ const FAQ = () => {
               {isMobile && (
                 <div
                   className={
-                    question == questionToDisplay
+                    question === questionToDisplay
                       ? "showFAQAnswer"
                       : "hideFAQAnswer"
                   }
