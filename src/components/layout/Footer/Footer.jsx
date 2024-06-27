@@ -20,6 +20,7 @@ const Footer = () => {
             href="https://telegram.org"
             target="_blank"
             rel="noopener noreferrer"
+            title="Telegram"
           >
             <TelegramIcon className="social-icon" />
           </a>
@@ -27,6 +28,7 @@ const Footer = () => {
             href="https://instagram.com"
             target="_blank"
             rel="noopener noreferrer"
+            title="Instagram"
           >
             <InstagramIcon className="social-icon" />
           </a>
@@ -34,6 +36,7 @@ const Footer = () => {
             href="https://www.whatsapp.com/"
             target="_blank"
             rel="noopener noreferrer"
+            title="WhatsApp"
           >
             <WhatsappIcon className="social-icon" />
           </a>
@@ -41,10 +44,16 @@ const Footer = () => {
             href="https://linkedln.ru/"
             target="_blank"
             rel="noopener noreferrer"
+            title="LinkedIn"
           >
             <LinkedinIcon className="social-icon" />
           </a>
-          <a href="https://viber.com" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://viber.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Viber"
+          >
             <ViberIcon className="social-icon" />
           </a>
         </div>
