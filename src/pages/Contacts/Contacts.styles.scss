@@ -1,13 +1,14 @@
 .contacts-page {
     box-sizing: border-box;
-    width: 100%;
-    margin: 0 6.942%;
+    //width: 100%;
+    margin: 6.942% 6.942%;
 
     .contact-head {
         
         text-align: left;
         font-size: 2.5rem;
         width: 100%;
+        margin-top: 6.942%;
         box-sizing: border-box;
 
         .form-head {
@@ -17,17 +18,19 @@
         }
 
         @media (max-width: 1024px) {
-            text-align: center;
+            //text-align: center;
         }
     }
 
 
     .contacts-blocks {
+        margin-top: 6.942%;
         display: flex;
         width: 100%;
         justify-content: space-between;
         flex-direction: row;
         box-sizing: border-box;
+        gap: 1.38%;
 
         @media (max-width: 1024px) {
             flex-direction: column;
@@ -37,10 +40,11 @@
     .contact-p {
         text-align: left;
         font-size: 0.9rem;
-        margin-top: 5%;
+        margin-top: 0.345%;
 
         @media (max-width: 1024px) {
-            text-align: center;
+            //text-align: center;
+            margin-top: 2.76%;
         }
     }
 
