@@ -78,6 +78,7 @@
 }
 
 .home-tasks button {
+    display: block;
     border-color: var(--light-color) !important;
     color: var(--light-color) !important;
     padding: 10px 40px;
