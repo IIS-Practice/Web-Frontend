@@ -5,15 +5,18 @@ import StarRating from "../StarRating/StarRating";
 const ProjectDetails = ({ service, duration, level, price }) => {
   return (
     <div className="project-details">
-
       <div className="project-details-info">
         <p>{service}</p>
-        <p>Реализация проекта заняла <strong>{duration} недель</strong> </p>
+        <p>
+          Реализация проекта заняла <strong>{duration} недель</strong>{" "}
+        </p>
         <div className="project-complexity">
           <p>Сложность проекта </p>
           <StarRating level={level} />
         </div>
-        <p>Стоимость проекта: <strong>{price}$</strong></p>
+        <p>
+          Стоимость проекта: <strong>{price}$</strong>
+        </p>
       </div>
     </div>
   );

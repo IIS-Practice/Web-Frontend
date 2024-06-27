@@ -1,20 +1,20 @@
 .case-card {
-
     border: 1px solid #e0e0e0;
     border-radius: 8px;
     overflow: hidden;
     text-decoration: none;
     color: white;
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
     background-size: cover;
     background-position: center;
     position: relative;
     height: 550px;
-
 }
 
 .case-card::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -31,12 +31,12 @@
 
     width: 100%;
 }
-.case-card-content h3{
+.case-card-content h3 {
     font-size: 30px;
     font-weight: 600;
     line-height: 36.57px;
 }
-.case-card-content p{
+.case-card-content p {
     font-size: 30px;
     font-weight: 400;
     line-height: 36.57px;
