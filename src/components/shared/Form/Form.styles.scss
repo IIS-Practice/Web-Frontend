@@ -1,4 +1,9 @@
 .form {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 0.8%;
+    padding-bottom: 80px;
+
     input::placeholder,
     textarea::placeholder {
         color: var(--light-color);
@@ -9,11 +14,19 @@
     .input-body {
         display: flex;
         flex-direction: column;
-        padding: 0 0.8%;
+        width: 100%;
 
         .input-group {
             display: flex;
             gap: 5.5%;
+            justify-content: space-between;
+            width: 100%;
+
+            @media (max-width: 768px) {
+                flex-direction: column;
+                align-items: center;
+                gap: 30px;
+            }
 
             input {
                 margin: 0;
@@ -27,9 +40,14 @@
                 font-weight: 400;
                 background-color: var(--primary-color);
                 color: var(--light-color);
+                width: 100%;
 
                 &:focus {
                     outline: none;
+                }
+
+                @media (max-width: 768px) {
+                    font-size: 1.15rem;
                 }
             }
         }
@@ -53,6 +71,10 @@
                 &:focus {
                     outline: none;
                 }
+
+                @media (max-width: 768px) {
+                    font-size: 1.15rem;
+                }
             }
         }
     }
@@ -62,7 +84,13 @@
         justify-content: space-between;
         align-items: center;
         gap: 2.8%;
-        padding: 40px 0.8% 0;
+        padding-top: 40px;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
 
         button {
             flex: 1;
@@ -71,19 +99,26 @@
             background-color: var(--secondary-color);
             color: var(--light-color);
             font-size: 0.9rem;
-            font-weight: 400;
+            font-weight: 500;
             min-width: 41%;
             padding: 12px;
             height: 50px;
             box-sizing: border-box;
+            cursor: pointer;
+            transition: background-color 0.5s;
 
-            &:focus {
-                outline: none;
+            @media (max-width: 768px) {
+                width: 100%;
             }
 
             &:disabled {
                 cursor: not-allowed;
                 opacity: 0.6;
+            }
+
+            &:hover {
+                background-color: transparent;
+                color: var(--secondary-color);
             }
         }
 
@@ -92,6 +127,12 @@
             color: var(--light-color);
             font-size: 0.9rem;
             font-weight: 400;
+
+            @media (max-width: 768px) {
+                width: 100%;
+                font-size: 0.75rem;
+                height: 50px;
+            }
         }
     }
 
@@ -103,5 +144,10 @@
         text-align: center;
         float: left;
         width: 42%;
+
+        @media (max-width: 768px) {
+            width: 100%;
+            transform: translateY(-145px);
+        }
     }
 }

@@ -10,6 +10,8 @@
     align-items: center;
     z-index: 1000;
     overflow: hidden;
+    width: 100%;
+    overflow-y: auto;
 
     .content {
         width: 100%;
@@ -20,6 +22,10 @@
             input {
                 height: 6.25vh !important;
                 padding: 2.5vh !important;
+
+                @media (max-width: 768px) {
+                    padding: 1.5vh 2.5vh !important;
+                }
             }
 
             textarea {
@@ -47,16 +53,29 @@
         border-bottom: 1px solid var(--light-color);
         padding-bottom: 2.5vh;
         margin-bottom: 7.5vh;
+        width: 100%;
+
+        @media (max-width: 768px) {
+            margin-top: 14.5vh;
+            margin-bottom: 6.5vh;
+        }
 
         h2 {
             font-weight: 400;
             font-size: 2rem;
             color: var(--light-color);
+            text-align: left;
+
+            @media (max-width: 768px) {
+                font-size: 1.8rem;
+            }
         }
 
         .close-button {
             background: none;
             border: none;
+            transition: transform 0.3s;
+            cursor: pointer;
 
             svg {
                 width: 2.5rem;
@@ -69,8 +88,8 @@
 
             &:hover {
                 background: none;
-                border: none;
-                cursor: pointer;
+                border: none;       
+                transform: scale(0.75);
             }
         }
     }
