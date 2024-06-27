@@ -13,7 +13,7 @@ const WorkerInfo = ({ worker }) => {
         <p>
           {worker.surname} {worker.name}
         </p>
-        <p>{worker.desscription}</p>
+        <p>{worker.description}</p>
         <button
           className="cv-btn"
           onClick={() => window.open(worker.cvUri, "_blank")}

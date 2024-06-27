@@ -36,31 +36,37 @@
             margin: 0;
             padding: 0;
             font-size: 0;
+            cursor: pointer;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
 
             .logo {
                 width: 3.8rem;
                 height: auto;
-                cursor: pointer;
 
                 @media (max-width: 1024px) {
                     width: 3.5rem;
                     height: auto;
                 }
             }
-        }
 
-        p {
-            font-family: "Noto Serif Gujarati", serif;
-            font-weight: 400;
-            font-size: 1.75rem;
-            letter-spacing: 0.02em;
-            text-align: left;
-            color: var(--secondary-color);
-            margin-left: 1%;
+            p {
+                font-family: "Noto Serif Gujarati", serif;
+                font-weight: 400;
+                font-size: 1.75rem;
+                letter-spacing: 0.02em;
+                text-align: left;
+                color: var(--secondary-color);
+                margin-left: 2%;
 
-            @media (max-width: 1024px) {
-                margin-left: 2.5%;
-                font-size: 1.5625rem;
+                @media (max-width: 1024px) {
+                    margin-left: 2.5%;
+                    font-size: 1.5625rem;
+                }
             }
         }
     }
