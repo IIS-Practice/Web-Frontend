@@ -23,24 +23,36 @@ const Employment = () => {
       <h2>
         Почему надо работать в <span className="logo-text">IISolutions</span>?
       </h2>
-      <div className="horizontal-line"></div>
+
       <div className="adv-container">
         <div className="adv">
-          <div className="circle">1</div>
+          <div className="adv-element">
+            <div className="horizontal-line"></div>
+            <div className="circle">1</div>
+          </div>
           <div className="text">
             Возможность проходить стажировки и перспективный карьерный рост
           </div>
         </div>
         <div className="adv">
-          <div className="circle">2</div>
+          <div className="adv-element">
+            <div className="horizontal-line"></div>
+            <div className="circle">2</div>
+          </div>
           <div className="text">Различные проекты и конкретные задачи</div>
         </div>
         <div className="adv">
-          <div className="circle">3</div>
+          <div className="adv-element">
+            <div className="horizontal-line"></div>
+            <div className="circle">3</div>
+          </div>
           <div className="text">Возможность работы в финтех компаниях</div>
         </div>
         <div className="adv">
-          <div className="circle">4</div>
+          <div className="adv-element">
+            <div className="horizontal-line"></div>
+            <div className="circle">4</div>
+          </div>
           <div className="text">
             Возможность пересмотра з/п после 6 месяцев работы
           </div>

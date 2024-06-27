@@ -1,6 +1,6 @@
 import React from "react";
 import "./HomeMainBlock.styles.css";
-import CompanyImage from "../../../../assets/CompanyImage.png";
+import CompanyImage from "@assets/CompanyImage.png";
 
 const HomeMainBlock = () => {
   return (

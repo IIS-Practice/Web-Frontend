@@ -1,0 +1,43 @@
+.text-block {
+    padding: 100px 6.942% 130px 6.942%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+        text-align: left;
+        font-size: 3rem;
+        margin-bottom: 40px;
+    }
+
+    .text1 {
+        padding-bottom: 30px;
+        width: 80%;
+        text-align: left;
+        font-size: 1.25rem;
+        line-height: 1.524rem;
+    }
+
+    .text2 {
+        padding-bottom: 40px;
+        width: 80%;
+        text-align: left;
+        font-size: 1.25rem;
+        line-height: 1.524rem;
+    }
+
+    .link-button {
+        box-sizing: border-box;
+        height: 57px;
+        font-size: 1.5rem;
+        background: var(--secondary-color);
+        color: var(--light-color);
+        text-align: left;
+        padding: 0 1%;
+        border: none;
+        border-radius: 2px;
+        text-decoration: none;
+        line-height: 57px;
+        margin-right: auto;
+    }
+}

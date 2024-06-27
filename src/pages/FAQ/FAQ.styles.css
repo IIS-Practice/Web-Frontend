@@ -1,0 +1,93 @@
+.FAQPage {
+    margin: 50px 20px 100px 20px;
+}
+
+.leftFAQ {
+    margin-top: 40px;
+}
+
+.question {
+    position: relative;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0 0 20px 46px;
+}
+
+.question::before {
+    position: absolute;
+    content: "";
+    width: 17px;
+    height: 25px;
+    left: -2rem;
+    top: 2px;
+    background-repeat: no-repeat;
+    background-image: url("@assets/leftArrow.svg");
+    transform: rotateZ(0deg);
+    transition: rotateZ 0.5s ease;
+}
+
+.question.rotateLeftArrow::before {
+    transform: rotateZ(90deg);
+    transition: rotateZ 0.5s ease;
+}
+
+.showFAQAnswer {
+    display: block;
+    margin: 20px 0 40px 0;
+}
+
+.hideFAQAnswer {
+    display: none;
+}
+
+@media only screen and (min-width: 768px) {
+    .FAQPage {
+        margin: 6rem 6rem 7.5rem 6rem;
+    }
+
+    .FAQPage > h1 {
+        font-size: 60px;
+        margin-left: -45px;
+    }
+
+    .wrapperFAQ {
+        display: flex;
+        position: relative;
+        margin-top: 5rem;
+    }
+
+    .leftFAQ {
+        min-width: 50%;
+        max-width: 50%;
+        border-right: 1px solid var(--dark-color);
+    }
+
+    .leftFAQ > *:not(:last-child) {
+        margin-bottom: 1.5rem;
+    }
+
+    .leftFAQ > * {
+        font-weight: 400;
+        font-size: 25px;
+        position: relative;
+    }
+
+    .leftFAQ > *:hover {
+        cursor: pointer;
+    }
+
+    .rightFAQ {
+        max-width: 55%;
+        margin-left: 1.5rem;
+    }
+
+    .rightFAQ > h2 {
+        font-size: 33px;
+        font-weight: 500;
+        margin-bottom: 24px;
+    }
+
+    .rightFAQ > div {
+        font-size: 25px;
+    }
+}

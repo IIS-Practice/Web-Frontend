@@ -1,5 +1,7 @@
 import React from "react";
 import "./HomeProjects.styles.css";
+import { SERVICES_ROUTE } from "@utils/constants";
+import { Link } from "react-router-dom";
 
 const HomeProjects = () => {
   return (
@@ -35,9 +37,9 @@ const HomeProjects = () => {
                 Создаём уникальные сайты, которые <br />
                 повышают конверсию продаж...
               </p>
-              <a href="#" className="content-link">
+              <Link to={`${SERVICES_ROUTE}/webDev`} className="content-button">
                 Узнать подробнее
-              </a>
+              </Link>
             </div>
           </div>
           <div className="project-small">
@@ -48,9 +50,9 @@ const HomeProjects = () => {
                 ботов, которые автоматизируют <br />
                 задачи...
               </p>
-              <a href="#" className="content-link">
+              <Link to={`${SERVICES_ROUTE}/botDev`} className="content-button">
                 Узнать подробнее
-              </a>
+              </Link>
             </div>
           </div>
           <div className="project-small">
@@ -61,9 +63,12 @@ const HomeProjects = () => {
                 функциональные мобильные <br />
                 приложения...
               </p>
-              <a href="#" className="content-link">
+              <Link
+                to={`${SERVICES_ROUTE}/mobileDev`}
+                className="content-button"
+              >
                 Узнать подробнее
-              </a>
+              </Link>
             </div>
           </div>
           <div className="project-small">
@@ -74,9 +79,9 @@ const HomeProjects = () => {
                 удобные интерфейсы, которые <br />
                 улучшают пользовательский опыт...
               </p>
-              <a href="#" className="content-link">
+              <Link to={`${SERVICES_ROUTE}/ux`} className="content-button">
                 Узнать подробнее
-              </a>
+              </Link>
             </div>
           </div>
         </div>

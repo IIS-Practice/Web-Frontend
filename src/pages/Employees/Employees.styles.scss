@@ -1,0 +1,17 @@
+.employees-page {
+    width: 100%;
+    overflow-x: hidden;
+
+    .text-blocks {
+        width: 100%;
+        background-color: var(--primary-color);
+        color: var(--light-color);
+    }
+
+    .departments-blocks {
+        padding: 130px 6.942%;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+}

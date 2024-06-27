@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import "./HomeTasks.styles.css";
-import OutlinedButton from "../../../../components/shared/OutlinedButton/OutlinedButton";
+import OutlinedButton from "@components/shared/OutlinedButton";
+import { ScrumModal, WaterfallModal } from "./components";
 
 const HomeTasks = () => {
   const [showWaterfallModal, setShowWaterfallModal] = useState(false);
@@ -31,7 +32,11 @@ const HomeTasks = () => {
               <span>фиксированная цена</span>
             </li>
           </ul>
-          <OutlinedButton text="Подробнее" />
+          <OutlinedButton text="Подробнее" onClick={openWaterfallModal} />
+          <WaterfallModal
+            showModal={showWaterfallModal}
+            closeModal={closeWaterfallModal}
+          />
         </div>
         <div className="vertical-line"></div>
         <div className="task">
@@ -47,7 +52,8 @@ const HomeTasks = () => {
               <span>гибкая цена +/-</span>
             </li>
           </ul>
-          <OutlinedButton text="Подробнее" />
+          <OutlinedButton text="Подробнее" onClick={openScrumModal} />
+          <ScrumModal showModal={showScrumModal} closeModal={closeScrumModal} />
         </div>
       </div>
     </div>
