@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./FAQ.styles.css";
+import { useMediaQuery } from "@uidotdev/usehooks";
 
 const questions = {
   "Какие услуги вы предоставляете?":
@@ -20,34 +21,46 @@ const questions = {
 
 const FAQ = () => {
   const [questionToDisplay, setQuestionToDisplay] = useState("");
+  const isMobile = useMediaQuery("only screen and (max-width: 768px)");
   return (
     <main className="FAQPage">
       <h1>Часто задаваемые вопросы</h1>
       <div className="wrapperFAQ">
         <div
-          className="leftFAQ"
-          onClick={(evt) => {
-            if (evt.target !== evt.currentTarget) {
-              setQuestionToDisplay(evt.target.innerText);
-              for (const question of evt.currentTarget.children)
-                question.className = "question"; // making all arrows face right
-              evt.target.className =
-                evt.target.className === "question"
-                  ? "question rotateLeftArrow"
-                  : "question"; // making clicked arrow face down
-            }
-          }}
-        >
-          {Object.keys(questions).map((question, index) => (
-            <h2 className="question" key={question}>
-              {question}
-            </h2>
+          className="leftFAQ">
+          {Object.keys(questions).map((question) => (
+            <>
+              <h2
+                className={
+                  question === questionToDisplay
+                    ? "question rotateLeftArrow"
+                    : "question"
+                }
+                key={question}
+                onClick={(e) => setQuestionToDisplay(e.target.innerText)}
+              >
+                {question}
+              </h2>
+              {isMobile && (
+                <div
+                  className={
+                    question === questionToDisplay
+                      ? "showFAQAnswer"
+                      : "hideFAQAnswer"
+                  }
+                >
+                  {questions[question]}
+                </div>
+              )}
+            </>
           ))}
         </div>
-        <div className="rightFAQ">
-          <h2>{questionToDisplay}</h2>
-          <div>{questions[questionToDisplay]}</div>
-        </div>
+        {!isMobile && (
+          <div className="rightFAQ">
+            <h2>{questionToDisplay}</h2>
+            <div>{questions[questionToDisplay]}</div>
+          </div>
+        )}
       </div>
     </main>
   );
