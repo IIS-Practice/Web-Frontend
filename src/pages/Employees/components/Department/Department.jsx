@@ -25,9 +25,7 @@ const Department = ({ departmentName, workers }) => {
         <ArrowIcon className={`dropdown-arrow ${isVisible ? "open" : ""}`} />
       </div>
 
-      {selectedWorker && (
-        <WorkerInfo worker={selectedWorker} />
-      )}
+      {selectedWorker && <WorkerInfo worker={selectedWorker} />}
 
       <div className={`grid-workers ${isVisible ? "visible" : ""}`}>
         {workers.map((worker, index) => (
