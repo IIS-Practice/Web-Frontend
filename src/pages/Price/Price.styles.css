@@ -8,7 +8,6 @@
     flex-wrap: wrap;
     justify-content: space-around;
     margin-bottom: 100px;
-    /* margin: 0px 20px; */
 }
 
 .priceGridContainer>div {
@@ -26,12 +25,10 @@
     margin: 25px 0 40px 0;
     font-size: 30px;
     text-wrap: wrap;
-    /* padding: 10px; */
 }
 
 .priceFeatures>div {
     text-align: left;
-    /* margin-left: 80px; */
     position: relative;
     margin: 20px 0px 20px 80px;
     font-size: 20px;
@@ -44,13 +41,11 @@
     bottom: 35px;
     background-color: transparent;
     border: 2px solid var(--light-color);
-    color: white;
+    color: var(--light-color);
     width: 300px;
-    /* width: 100%; */
     font-size: 20px;
     height: 45px;
     margin: 0 auto;
-
 }
 
 .priceGridContainer a:visited, .priceGridContainer a:link {
@@ -60,7 +55,7 @@
 
 .priceFeatures>div::before {
     content: "";
-    background-image: url("../../assets/star.svg");
+    background-image: url("@assets/star.svg");
     position: absolute;
     width: 36px;
     height: 36px;
