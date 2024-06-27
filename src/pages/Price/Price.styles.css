@@ -12,9 +12,9 @@
 }
 
 .priceGridContainer>div {
-    background-color: #8DB9FC;
+    background-color: var(--primary-color);
     flex-basis: 320px;
-    color: white;
+    color: var(--light-color);
     text-align: center;
     padding: 25px 10px 110px 10px;
     margin: 0 20px 35px 20px;
@@ -43,7 +43,7 @@
     right: 0;
     bottom: 35px;
     background-color: transparent;
-    border: 2px solid white;
+    border: 2px solid var(--light-color);
     color: white;
     width: 300px;
     /* width: 100%; */
@@ -54,7 +54,7 @@
 }
 
 .priceGridContainer a:visited, .priceGridContainer a:link {
-    color: white;
+    color: var(--light-color);
     text-decoration: none;
 }
 
