@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Cases.styles.scss";
 import Case from "./components/Case";
-import IMG from "./case_example.svg";
 import OutlinedButton from "@components/shared/OutlinedButton";
 import { getCases } from "@api/services/caseApi";
 
@@ -41,11 +40,11 @@ const Cases = () => {
         {cases.slice(0, visibleCount).map((caseItem) => (
           <Case
             key={caseItem.id}
-            image={caseItem.images}
+            image={caseItem.images[0]}
             title={caseItem.name}
             little_description={caseItem.shortDescription}
             link={caseItem.id}
-            steps={caseItem.steps}
+
             className={`case-card ${getClassName(caseItem.id)}`}
           />
         ))}
