@@ -11,7 +11,6 @@ const CasePage = () => {
   const [caseData, setCaseData] = useState(null);
 
   useEffect(() => {
-
     const caseInfo = casesData.find((c) => c.link === caseName);
 
     if (!caseInfo) {
@@ -54,11 +53,9 @@ const CasePage = () => {
               price={caseData.price}
             />
           </div>
-          <div >
+          <div className="connect-link">
             <ConnectLink title="ХОТИТЕ ТАК ЖЕ? МЫ ПОМОЖЕМ!" name="Заказать звонок" />
           </div>
-
-
         </>
       ) : (
         <p>Loading...</p>
@@ -66,6 +63,5 @@ const CasePage = () => {
     </div>
   );
 };
-
 
 export default CasePage;

@@ -67,6 +67,10 @@
     display: none;
 }
 
+.connect-link {
+    margin: 0 5.5%;
+}
+
 @media (max-width: 768px) {
     .info .mobile-image {
         display: block;
@@ -110,5 +114,8 @@
         line-height: 1.371rem;
     }
 
-
+    .case-information {
+        padding-left: 5.5%;
+        padding-right: 5.5%;
+    }
 }
