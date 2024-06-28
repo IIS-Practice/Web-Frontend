@@ -31,13 +31,13 @@
         background: transparent;
         border-radius: 0;
     }
-    
+
     &::-webkit-scrollbar-thumb {
         background-color: var(--scroll-color);
         border-radius: 0;
         border: none;
     }
-    
+
     &::-webkit-scrollbar-thumb:hover {
         background-color: var(--scroll-color);
     }

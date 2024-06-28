@@ -60,8 +60,8 @@ const NavBar = () => {
         <div className="navbar-logo">
           <Link to={HOME_ROUTE} className="logo-link" onClick={handleLinkClick}>
             <Logo className="logo" />
+            <p>IISolutions</p>
           </Link>
-          <p>IISolutions</p>
         </div>
 
         <ul className="desktop-menu">
