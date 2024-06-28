@@ -5,16 +5,16 @@
     width: 100%;
 }
 .call-to-action p{
-    font-size: 35px;
+    font-size: 1.75rem;
     font-weight: 500;
-    line-height: 42.67px;
+    line-height: 2.134rem;
     margin-bottom: 50px;
 
 }
 .action-ring{
-    font-size: 60px;
+    font-size: 3rem;
     font-weight: 600;
-    line-height: 73px;
+    line-height: 3.65rem;
     text-decoration: none;
     cursor: pointer;
     color: var(--dark-color)

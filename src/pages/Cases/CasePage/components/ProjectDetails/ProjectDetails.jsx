@@ -13,7 +13,7 @@ const ProjectDetails = ({ service, duration, level, price }) => {
           <p>Сложность проекта </p>
           <StarRating level={level} />
         </div>
-        <p>Стоимость проекта: <strong>{price}$</strong></p>
+        <p>Стоимость проекта <strong>{price}$</strong></p>
       </div>
     </div>
   );
