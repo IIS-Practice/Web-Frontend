@@ -10,7 +10,6 @@
     font-weight: 500;
     line-height: 2.134rem;
     margin-bottom: 50px;
-
 }
 
 .action-ring {
@@ -19,7 +18,7 @@
     line-height: 3.65rem;
     text-decoration: none;
     cursor: pointer;
-    color: var(--dark-color)
+    color: var(--dark-color);
 }
 
 .line {
@@ -36,7 +35,6 @@
         font-size: 1.125rem;
         line-height: 1.371rem;
         margin-bottom: 20px;
-
     }
 
     .action-ring {
@@ -44,7 +42,6 @@
         line-height: 2.667rem;
         text-decoration: none;
         cursor: pointer;
-        color: var(--dark-color)
+        color: var(--dark-color);
     }
-
 }

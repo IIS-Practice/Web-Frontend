@@ -4,7 +4,9 @@
     overflow: hidden;
     text-decoration: none;
     color: var(--light-color);
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
     background-size: cover;
     background-position: center;
     position: relative;
@@ -12,7 +14,7 @@
 }
 
 .case-card::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;

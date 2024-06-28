@@ -38,7 +38,6 @@
         margin-top: 5px;
         padding-top: 0;
         padding-left: 0;
-
     }
 
     .project-details {
@@ -62,7 +61,7 @@
     p strong {
         display: block;
     }
-        
+
     .project-details .price-p {
         margin-left: 0;
     }

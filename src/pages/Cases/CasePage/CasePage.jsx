@@ -25,21 +25,33 @@ const CasePage = () => {
       {caseData ? (
         <>
           <div className="case-information">
-            <h1 className="case-head">Кейс {caseData.service} для <br></br> "{caseData.title}"</h1>
-            <img src={caseData.image} alt={caseData.title} className="case-image" />
+            <h1 className="case-head">
+              Кейс {caseData.service} для <br></br> "{caseData.title}"
+            </h1>
+            <img
+              src={caseData.image}
+              alt={caseData.title}
+              className="case-image"
+            />
             <div className="case-description">
               <h2>{caseData.title}</h2>
-              <p>Специализируется на <br></br> {caseData.specialization}</p>
+              <p>
+                Специализируется на <br></br> {caseData.specialization}
+              </p>
             </div>
             <div className="project-details-image">
               <img
                 src="https://avatars.mds.yandex.net/i?id=48a4918289cb9ad4a778c06b628dfd8765dc83a0-12146588-images-thumbs&n=13"
-                alt="Project Details" className="desktop-image"/>
+                alt="Project Details"
+                className="desktop-image"
+              />
               <div className="info">
                 <p>{caseData.description}</p>
                 <img
                   src="https://avatars.mds.yandex.net/i?id=48a4918289cb9ad4a778c06b628dfd8765dc83a0-12146588-images-thumbs&n=13"
-                  alt="Project Details" className="mobile-image" />
+                  alt="Project Details"
+                  className="mobile-image"
+                />
                 <p>{caseData.steps}</p>
               </div>
             </div>
@@ -54,7 +66,10 @@ const CasePage = () => {
             />
           </div>
           <div className="connect-link">
-            <ConnectLink title="ХОТИТЕ ТАК ЖЕ? МЫ ПОМОЖЕМ!" name="Заказать звонок" />
+            <ConnectLink
+              title="ХОТИТЕ ТАК ЖЕ? МЫ ПОМОЖЕМ!"
+              name="Заказать звонок"
+            />
           </div>
         </>
       ) : (
