@@ -6,7 +6,7 @@ import "./StarRating.styles.css";
 const StarRating = ({ level }) => {
   return (
     <div className="star-rating">
-      {[...Array(10)].map((_, i) => (
+      {[...Array(5)].map((_, i) => (
         <div key={i} className="star">
           {i < level ? <BlueStar /> : <WhiteStar />}
         </div>
