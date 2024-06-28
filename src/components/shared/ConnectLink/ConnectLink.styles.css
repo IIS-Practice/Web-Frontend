@@ -4,14 +4,16 @@
     margin-bottom: 130px;
     width: 100%;
 }
-.call-to-action p{
+
+.call-to-action p {
     font-size: 1.75rem;
     font-weight: 500;
     line-height: 2.134rem;
     margin-bottom: 50px;
 
 }
-.action-ring{
+
+.action-ring {
     font-size: 3rem;
     font-weight: 600;
     line-height: 3.65rem;
@@ -19,7 +21,7 @@
     cursor: pointer;
     color: var(--dark-color)
 }
-.line{
+
+.line {
     width: 100%;
 }
-
