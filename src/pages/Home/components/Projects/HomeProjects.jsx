@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./HomeProjects.styles.css";
 import { SERVICES_ROUTE } from "@utils/constants";
 import { Link } from "react-router-dom";
+import { ReactComponent as LeftButton } from "@assets/leftButtonHome.svg";
+import { ReactComponent as RightButton } from "@assets/rightButtonHome.svg";
 
 const HomeProjects = () => {
-  const [currentProject, setCurrentProject] = useState(0);
+  const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
 
   const projects = [
     {
@@ -30,11 +32,11 @@ const HomeProjects = () => {
   ];
 
   const nextProject = () => {
-    setCurrentProject((prev) => (prev + 1) % projects.length);
+    setCurrentProjectIndex((prevIndex) => (prevIndex + 1) % projects.length);
   };
 
   const prevProject = () => {
-    setCurrentProject((prev) => (prev - 1 + projects.length) % projects.length);
+    setCurrentProjectIndex((prevIndex) => (prevIndex - 1 + projects.length) % projects.length);
   };
 
   return (
@@ -65,13 +67,13 @@ const HomeProjects = () => {
           </div>
 
           <div className="small-projects-wrapper">
-            <button className="nav-button left" onClick={prevProject}>
-              &lt;
+            <button className="navButton left" onClick={prevProject}>
+              <LeftButton />
             </button>
             {projects.map((project, index) => (
               <div
                 key={index}
-                className={`project-small ${index === currentProject ? "active" : ""}`}
+                className={`project-small ${index === currentProjectIndex ? "active" : ""}`}
               >
                 <div className="project-content">
                   <h3 className="content-name">{project.name}</h3>
@@ -82,8 +84,8 @@ const HomeProjects = () => {
                 </div>
               </div>
             ))}
-            <button className="nav-button right" onClick={nextProject}>
-              &gt;
+            <button className="navButton right" onClick={nextProject}>
+              <RightButton />
             </button>
           </div>
         </div>
