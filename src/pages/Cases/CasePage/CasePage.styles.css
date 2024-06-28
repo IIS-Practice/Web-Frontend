@@ -78,4 +78,37 @@
     .project-details-image .desktop-image {
         display: none;
     }
+
+    .case-information {
+        padding: 50px 3% 100px 3%;
+    }
+
+    .case-head {
+        font-size: 2.5rem;
+        line-height: 3.048rem;
+        margin-bottom: 40px;
+    }
+
+    .case-description {
+        margin-top: 40px;
+    }
+
+    .case-description h2 {
+        font-size: 2.187rem;
+        margin-bottom: 20px;
+        line-height: 2.667rem;
+    }
+
+    .case-description p {
+        font-size: 1.875rem;
+        margin-bottom: 25px;
+        line-height: 2.286rem;
+    }
+
+    .info p {
+        font-size: 1.125rem;
+        line-height: 1.371rem;
+    }
+
+
 }
