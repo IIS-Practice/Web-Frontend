@@ -15,7 +15,7 @@ const ProjectDetails = ({ service, duration, level, price }) => {
           <StarRating level={level} />
         </div>
         <p>
-          Стоимость проекта: <strong>{price}$</strong>
+          Стоимость проекта<strong className="price-p">{price}$</strong>
         </p>
       </div>
     </div>

@@ -33,16 +33,10 @@ const CasePage = () => {
               alt={caseData.name}
               className="case-image"
             />
-            {/*AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa*/}
-            <div className="case-description" style={{ marginTop: "100px", fontSize: "16px" }}>
-              <h2 style={{
-                fontSize: "35px",
-                fontWeight: "600",
-                lineHeight: "43px",
-                marginBottom: "60px"
-            }}>PITA STREET FOOD </h2>
-              <p style={{ fontSize: "30px", fontWeight: "400", lineHeight: "37px", marginBottom: "15px" }}>
-                Специализируется на <br></br> кулинарии
+            <div className="case-description">
+              <h2>{caseData.title}</h2>
+              <p>
+                Специализируется на <br></br> {caseData.specialization}
               </p>
             </div>
             <div className="project-details-image"

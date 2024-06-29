@@ -1,0 +1,66 @@
+.contact-head {
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 3.657rem;
+    text-align: left;
+    margin-bottom: 100px;
+}
+
+.cases-grid {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(150px, auto);
+    row-gap: 52px;
+    column-gap: 3.23%;
+}
+
+.button-div {
+    display: flex;
+    justify-content: center;
+}
+
+.cases-content .outlined-button {
+    margin-top: 100px;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.524rem;
+    text-align: left;
+    padding: 10px 3.15%;
+}
+
+.cases-content {
+    padding: 100px 6.942% 130px 6.942%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 768px) {
+    .cases-grid {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+    }
+
+    .contact-head {
+        margin-bottom: 40px;
+    }
+
+    .cases-content {
+        padding-top: 50px;
+    }
+
+    .button-div {
+        width: 100%;
+        display: block;
+    }
+
+    .cases-content .outlined-button {
+        margin-top: 40px;
+        font-size: 1.5625rem;
+        padding: 10px 3.15%;
+        text-align: center;
+        width: 100% !important;
+    }
+}
