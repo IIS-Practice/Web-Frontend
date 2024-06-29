@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import "./Cases.styles.scss";
+import "./Cases.styles.css";
 import Case from "./components/Case";
 import OutlinedButton from "@components/shared/OutlinedButton";
 import { getCases } from "@api/services/caseApi";
+
 
 const Cases = () => {
   const [visibleCount, setVisibleCount] = useState(5);
@@ -44,7 +45,6 @@ const Cases = () => {
             title={caseItem.name}
             little_description={caseItem.shortDescription}
             link={caseItem.id}
-
             className={`case-card ${getClassName(caseItem.id)}`}
           />
         ))}
