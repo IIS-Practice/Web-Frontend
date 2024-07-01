@@ -51,24 +51,9 @@
     margin: 0;
 }
 
-/* Responsiveness */
-/* @media (max-width: 1200px) {
-    .text-container {
-        padding-top: 100px;
-    }
-
-    .CompanyName h1 {
-        font-size: 80px;
-    }
-
-    .CompanyName h2 {
-        font-size: 50px;
-    }
-} */
-
 .outlined-button {
     display: none;
-} 
+}
 
 @media (max-width: 1024px) {
     .MainBlock {
@@ -79,16 +64,14 @@
 
     .CompanyImage {
         width: 100%;
-        height: auto; /* Ensure the image maintains aspect ratio */
+        height: auto;
     }
 
     .CompanyImage img {
         width: 100%;
         height: auto;
-        transform: scaleX(-1); /* Keep the image mirrored */
+        transform: scaleX(-1);
     }
-
-   
 
     .CompanyName h1 {
         font-size: 55px;
@@ -148,6 +131,5 @@
         color: var(--dark-color);
         font-size: 14px;
         padding: 11px 40px;
-
-    }   
+    }
 }

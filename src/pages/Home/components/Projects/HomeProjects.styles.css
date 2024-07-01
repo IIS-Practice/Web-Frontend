@@ -21,8 +21,8 @@
 
 .projects-grid {
     display: grid;
-    grid-template-columns: 1.5fr 2fr; 
-    gap: 20px; 
+    grid-template-columns: 1.5fr 2fr;
+    gap: 20px;
 }
 
 .project-large {
@@ -129,7 +129,6 @@
     color: var(--secondary-color);
 }
 
-/* Адаптивность */
 @media (max-width: 1200px) {
     .home-box {
         margin: 50px;
@@ -141,7 +140,7 @@
     }
 
     .projects-grid {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
     }
 
     .project-large {
@@ -217,7 +216,7 @@
         top: 50%;
         transform: translateY(-50%);
         display: block;
-    }      
+    }
 
     .navButton.left {
         left: 0;
@@ -230,11 +229,11 @@
     }
 
     .content-name {
-        font-size: 17px;
+        font-size: 16px;
     }
 
     .content-description {
-        font-size: 12px;
+        font-size: 11px;
     }
 
     .project-small {
@@ -258,5 +257,6 @@
 
     .small-projects-wrapper .project-small.active {
         display: block;
-        padding: 18px;
-    }}
+        padding: 15px;
+    }
+}

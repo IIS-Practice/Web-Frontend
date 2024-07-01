@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import "./HomeMainBlock.styles.css";
 import CompanyImage from "@assets/CompanyImage.png";
 import OutlinedButton from "@components/shared/OutlinedButton";
-
+import ModalForm from "@components/shared/ModalForm";
 
 const HomeMainBlock = () => {
   const [showModal, setShowModal] = useState(false);
   const openModal = () => setShowModal(true);
+  const closeModal = () => setShowModal(false);
 
   return (
     <div className="MainBlock">
@@ -16,6 +17,7 @@ const HomeMainBlock = () => {
           <h2>ваши идеи, наше</h2>
           <h2>воплощение</h2>
           <OutlinedButton text="Оставить&nbsp;заявку" onClick={openModal} />
+          <ModalForm showModal={showModal} closeModal={closeModal} />
         </div>
       </div>
       <div className="CompanyImage">

@@ -11,24 +11,28 @@ const HomeProjects = () => {
   const projects = [
     {
       name: "Разработка сайтов",
-      description: "Создаём уникальные сайты, которые повышают конверсию продаж...",
-      route: `${SERVICES_ROUTE}/webDev`
+      description:
+        "Создаём уникальные сайты, которые повышают конверсию продаж...",
+      route: `${SERVICES_ROUTE}/webDev`,
     },
     {
       name: "Разработка ботов",
-      description: "Разрабатываем интеллектуальных ботов, которые автоматизируют задачи...",
-      route: `${SERVICES_ROUTE}/botDev`
+      description:
+        "Разрабатываем интеллектуальных ботов, которые автоматизируют задачи...",
+      route: `${SERVICES_ROUTE}/botDev`,
     },
     {
       name: "Разработка мобильных приложений",
-      description: "Создаём интуитивно понятные и функциональные мобильные приложения...",
-      route: `${SERVICES_ROUTE}/mobileDev`
+      description:
+        "Создаём интуитивно понятные и функциональные мобильные приложения...",
+      route: `${SERVICES_ROUTE}/mobileDev`,
     },
     {
       name: "UX/UI Дизайн",
-      description: "Разрабатываем привлекательные и удобные интерфейсы, которые улучшают пользовательский опыт...",
-      route: `${SERVICES_ROUTE}/ux`
-    }
+      description:
+        "Разрабатываем привлекательные и удобные интерфейсы, которые улучшают пользовательский опыт...",
+      route: `${SERVICES_ROUTE}/ux`,
+    },
   ];
 
   const nextProject = () => {
@@ -36,7 +40,9 @@ const HomeProjects = () => {
   };
 
   const prevProject = () => {
-    setCurrentProjectIndex((prevIndex) => (prevIndex - 1 + projects.length) % projects.length);
+    setCurrentProjectIndex(
+      (prevIndex) => (prevIndex - 1 + projects.length) % projects.length,
+    );
   };
 
   return (

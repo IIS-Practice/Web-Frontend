@@ -90,7 +90,7 @@
 
 .home-tasks button:hover {
     color: var(--primary-color) !important;
-    background-color: var(--light-color);
+    background-color: var(--light-color) !important;
 }
 
 /* Адаптивность */
@@ -98,7 +98,7 @@
     .home-tasks {
         min-height: 700px;
     }
-    
+
     .home-tasks h2 {
         font-size: 40px;
         padding-left: 50px;
@@ -128,13 +128,11 @@
     }
 }
 
-
 @media (max-width: 512px) {
     .home-tasks {
         min-height: 400px;
         padding: 0px;
     }
-
 
     .home-tasks h2 {
         font-size: 20px;
