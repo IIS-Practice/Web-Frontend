@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./HomeTasks.styles.css";
+import "./HomeTasks.styles.scss";
 import OutlinedButton from "@components/shared/OutlinedButton";
 import { ScrumModal, WaterfallModal } from "./components";
 
