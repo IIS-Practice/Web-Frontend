@@ -1,9 +1,50 @@
-import React from "react";
+import React, { useState } from "react";
 import "./HomeProjects.styles.css";
 import { SERVICES_ROUTE } from "@utils/constants";
 import { Link } from "react-router-dom";
+import { ReactComponent as LeftButton } from "@assets/leftButtonHome.svg";
+import { ReactComponent as RightButton } from "@assets/rightButtonHome.svg";
 
 const HomeProjects = () => {
+  const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
+
+  const projects = [
+    {
+      name: "Разработка сайтов",
+      description:
+        "Создаём уникальные сайты, которые повышают конверсию продаж...",
+      route: `${SERVICES_ROUTE}/webDev`,
+    },
+    {
+      name: "Разработка ботов",
+      description:
+        "Разрабатываем интеллектуальных ботов, которые автоматизируют задачи...",
+      route: `${SERVICES_ROUTE}/botDev`,
+    },
+    {
+      name: "Разработка мобильных приложений",
+      description:
+        "Создаём интуитивно понятные и функциональные мобильные приложения...",
+      route: `${SERVICES_ROUTE}/mobileDev`,
+    },
+    {
+      name: "UX/UI Дизайн",
+      description:
+        "Разрабатываем привлекательные и удобные интерфейсы, которые улучшают пользовательский опыт...",
+      route: `${SERVICES_ROUTE}/ux`,
+    },
+  ];
+
+  const nextProject = () => {
+    setCurrentProjectIndex((prevIndex) => (prevIndex + 1) % projects.length);
+  };
+
+  const prevProject = () => {
+    setCurrentProjectIndex(
+      (prevIndex) => (prevIndex - 1 + projects.length) % projects.length,
+    );
+  };
+
   return (
     <div className="home-projects">
       <div className="home-box">
@@ -14,7 +55,7 @@ const HomeProjects = () => {
           <div className="project-large">
             <div className="project-content-main">
               <h3>
-                IlSolutions - это профессиональный разработчик веб-сервисов,
+                IISolutions - это профессиональный разработчик веб-сервисов,
                 ботов и мобильных приложений.
               </h3>
               <p>
@@ -30,59 +71,28 @@ const HomeProjects = () => {
               </ul>
             </div>
           </div>
-          <div className="project-small">
-            <div className="project-content">
-              <h3 className="content-name">Разработка сайтов</h3>
-              <p className="content-description">
-                Создаём уникальные сайты, которые <br />
-                повышают конверсию продаж...
-              </p>
-              <Link to={`${SERVICES_ROUTE}/webDev`} className="content-button">
-                Узнать подробнее
-              </Link>
-            </div>
-          </div>
-          <div className="project-small">
-            <div className="project-content">
-              <h3 className="content-name">Разработка ботов</h3>
-              <p className="content-description">
-                Разрабатываем интеллектуальных <br />
-                ботов, которые автоматизируют <br />
-                задачи...
-              </p>
-              <Link to={`${SERVICES_ROUTE}/botDev`} className="content-button">
-                Узнать подробнее
-              </Link>
-            </div>
-          </div>
-          <div className="project-small">
-            <div className="project-content">
-              <h3 className="content-name">Разработка мобильных приложений</h3>
-              <p className="content-description">
-                Создаём интуитивно понятные и <br />
-                функциональные мобильные <br />
-                приложения...
-              </p>
-              <Link
-                to={`${SERVICES_ROUTE}/mobileDev`}
-                className="content-button"
+
+          <div className="small-projects-wrapper">
+            <button className="navButton left" onClick={prevProject}>
+              <LeftButton />
+            </button>
+            {projects.map((project, index) => (
+              <div
+                key={index}
+                className={`project-small ${index === currentProjectIndex ? "active" : ""}`}
               >
-                Узнать подробнее
-              </Link>
-            </div>
-          </div>
-          <div className="project-small">
-            <div className="project-content">
-              <h3 className="content-name">UX/UI Дизайн</h3>
-              <p className="content-description">
-                Разрабатываем привлекательные и <br />
-                удобные интерфейсы, которые <br />
-                улучшают пользовательский опыт...
-              </p>
-              <Link to={`${SERVICES_ROUTE}/ux`} className="content-button">
-                Узнать подробнее
-              </Link>
-            </div>
+                <div className="project-content">
+                  <h3 className="content-name">{project.name}</h3>
+                  <p className="content-description">{project.description}</p>
+                  <Link to={project.route} className="content-button">
+                    Узнать подробнее
+                  </Link>
+                </div>
+              </div>
+            ))}
+            <button className="navButton right" onClick={nextProject}>
+              <RightButton />
+            </button>
           </div>
         </div>
       </div>
