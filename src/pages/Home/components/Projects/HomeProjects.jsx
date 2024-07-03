@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./HomeProjects.styles.css";
 import { SERVICES_ROUTE } from "@utils/constants";
 import { Link } from "react-router-dom";
