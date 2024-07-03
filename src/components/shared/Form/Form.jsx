@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Form.styles.scss";
-import { addAplication } from "@api/services/applicationApi";
+import { addApplication } from "@api/services/applicationApi";
 
 const Form = () => {
   const [author, setAuthor] = useState("");
@@ -17,7 +17,7 @@ const Form = () => {
     setIsError(false);
     setErrors({});
 
-    addAplication(author, phoneNumber, email, description)
+    addApplication(author, phoneNumber, email, description)
       .then((response) => {
         console.log(response);
 

@@ -1,6 +1,6 @@
 import { $host } from "../axios";
 
-export const addAplication = async (
+export const addApplication = async (
   author,
   phoneNumber,
   email,
