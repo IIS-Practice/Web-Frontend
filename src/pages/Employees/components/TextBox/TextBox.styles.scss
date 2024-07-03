@@ -63,6 +63,7 @@
         background: var(--secondary-color);
         color: var(--light-color);
         text-align: center;
+        vertical-align: center;
         padding: 10px 1%;
         border: 2px solid var(--secondary-color);
         border-radius: 2px;
@@ -72,7 +73,7 @@
         white-space: nowrap;
 
         &:hover {
-            background-color: var(--light-color);
+            background-color: inherit;
             color: var(--secondary-color);
         }
 
