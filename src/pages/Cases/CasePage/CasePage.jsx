@@ -1,65 +1,42 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import ProjectDetails from "./components/ProjectDetails";
 import ConnectLink from "@components/shared/ConnectLink";
 import { differenceInWeeks } from "date-fns";
-// import IMG from "../case_example.svg";
 import "./CasePage.styles.css";
+import { getCase } from "@api/services/caseApi";
+
 const CasePage = () => {
-  const { caseName } = useParams();
   const navigate = useNavigate();
   const [caseData, setCaseData] = useState(null);
 
-  // useEffect(() => {
-  // Примерные данные о кейсе
-  // const exampleCaseData = {
-  //   link: "example-case",
-  //   services: ["Разработка сайта", "Разработка бота"],
-  //   name: "PITA STREET FOOD",
-  //   images: [IMG],
-  //   complexity: 3,
-  //   innerHtml: `
-  //     <div class="case-description" style="margin-top: 100px;">
-  //       <h2 style="font-size: 1.75rem; font-weight: 600; line-height: 2.133rem; margin-bottom: 60px;">
-  //         PITA STREET FOOD
-  //       </h2>
-  //       <p style="font-size: 1.5rem; font-weight: 400; line-height: 1.828rem; margin-bottom: 15px;">
-  //         Специализируется на <br /> кулинарии
-  //       </p>
-  //     </div>
-  //     <div class="project-details-image" style="display: flex; flex-direction: row; margin-bottom: 130px;">
-  //       <img style="height: 37.3rem; width: 27.7rem; object-fit: cover; margin-right: 3%;" src="https://avatars.mds.yandex.net/i?id=48a4918289cb9ad4a778c06b628dfd8765dc83a0-12146588-images-thumbs&n=13" alt="Project Details" />
-  //       <div class="info" style="display: flex; justify-content: space-between; flex-direction: column;">
-  //         <p style="font-size: 1.5rem; font-weight: 400; line-height: 1.828rem; text-align: left;">
-  //           Компания “PITA STREET FOOD” обратилась к нам за разработкой полноценного сайта их заведения. В ходе живого общения с нашими специалистами, заказчик четко определился со структурой сайта, также в ТЗ была включена реализация платёжной системы сайта.
-  //         </p>
-  //         <p style="font-size: 1.5rem; font-weight: 400; line-height: 1.828rem; text-align: left;">
-  //           На ранних этапах сотрудничества, мы составили поэтапную смету, промежуточные сроки реализации, в рамках которых вели дальнейшую разработку проекта.
-  //         </p>
-  //       </div>
-  //     </div>
-  //
-  //   `,
-  //   price: 1000,
-  //   startDate: "2024-02-01T12:00:00.000",
-  //   endDate: "2024-08-01T12:00:00.000",
-  // };
-
-  // if (exampleCaseData.link !== caseName) {
-  //   navigate("/cases");
-  // } else {
-  //   setCaseData(exampleCaseData);
-  // }
-  // }, [caseName, navigate]);
   useEffect(() => {
-    const caseInfo = caseData.find((c) => c.link === caseName);
+    const getCaseIdFromUrl = () => {
+      const pathname = window.location.pathname;
+      const regex = /\/cases\/([a-f0-9-]+)/;
+      const match = pathname.match(regex);
+      return match ? match[1] : null;
+    };
 
-    if (!caseInfo) {
-      navigate("/cases");
-    } else {
-      setCaseData(caseInfo);
-    }
-  }, [caseName, navigate, caseData]);
+    const caseId = getCaseIdFromUrl();
+
+    const fetchData = async () => {
+      try {
+        const data = await getCase(caseId);
+
+        if (!data) {
+          navigate("/cases");
+        } else {
+          setCaseData(data);
+        }
+      } catch (error) {
+        console.error("Failed to fetch case data:", error);
+        navigate("/cases");
+      }
+    };
+
+    fetchData();
+  }, [navigate]);
 
   const getWeeksBetweenDates = (start, end) => {
     if (!start || !end) return 0;

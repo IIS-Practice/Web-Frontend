@@ -38,14 +38,14 @@ const Cases = () => {
     <div className="cases-content">
       <h1 className="contact-head">Кейсы</h1>
       <div className="cases-grid">
-        {cases.slice(0, visibleCount).map((caseItem) => (
+        {cases.slice(0, visibleCount).map((caseItem, index) => (
           <Case
             key={caseItem.id}
             image={caseItem.images[0]}
             title={caseItem.name}
             little_description={caseItem.shortDescription}
             link={caseItem.id}
-            className={`case-card ${getClassName(caseItem.id)}`}
+            className={`case-card ${getClassName(index)}`}
           />
         ))}
       </div>
