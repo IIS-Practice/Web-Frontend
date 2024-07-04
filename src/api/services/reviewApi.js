@@ -14,3 +14,24 @@ export const getReviews = async () => {
     }
   }
 };
+
+export const addReviews = async (
+  username,
+  text,
+) => {
+  try {
+    const response = await $host.post("reviews", {
+      username,
+      text,
+    });
+    return response.data;
+  } catch (error) {
+    if (error.response) {
+      console.log("Server error response:", error.response.data);
+      throw error.response.data;
+    } else {
+      console.error("Request failed:", error.message);
+      throw new Error(error.message);
+    }
+  }
+};

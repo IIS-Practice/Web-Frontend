@@ -30,9 +30,6 @@ hr {
 }
 
 @media (max-width: 900px) {
-    .home-contact {
-        height: 30vh;
-    }
 
     .home-contact h3 {
         font-size: 20px;
@@ -49,7 +46,7 @@ hr {
     }
 }
 
-@media (max-width: 428px) {
+@media (max-width: 512px) {
     .home-contact {
         height: 35vh;
     }
