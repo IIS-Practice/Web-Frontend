@@ -33,24 +33,24 @@
         gap: 40px;
         font-size: 1.25rem;
         font-weight: 500;
+        line-height: 1.524rem;
         color: var(--dark-color);
         width: 100%;
 
         .cv-btn {
             background-color: var(--primary-color);
-            border: none;
+            border: 2px solid var(--primary-color);
             color: var(--light-color);
-            border-radius: 0;
+            border-radius: 2px;
             height: 50px;
             font-size: 1.25rem;
             line-height: 1.524rem;
-            max-width: 80%;
+            max-width: 85%;
             cursor: pointer;
 
             &:hover {
-                background-color: var(--primary-color);
-                color: var(--light-color);
-                border: none;
+                background-color: var(--light-color);
+                color: var(--primary-color);
             }
         }
     }

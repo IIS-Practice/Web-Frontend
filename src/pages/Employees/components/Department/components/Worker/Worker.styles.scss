@@ -1,11 +1,11 @@
 .grid-workers-element {
     text-align: center;
     cursor: pointer;
-    justify-content: center;
+    justify-items: center;
     display: flex;
     flex-direction: column;
     width: var(--worker-size);
-    height: calc(var(--worker-size) + 10%);
+    min-height: calc(var(--worker-size) + 10%);
 
     .image {
         position: relative;
@@ -27,6 +27,77 @@
     p {
         font-size: 1.25rem;
         font-weight: 500;
+        line-height: 1.524rem;
+    }
+
+    .worker-info-mobile {
+        display: none;
+    }
+
+    .mobile-title {
+        display: none;
+        align-items: center;
+        justify-content: space-between;
+        white-space: nowrap;
+        border: none;
+        background-color: var(--light-color);
+        font-weight: 500;
+        font-size: 1.25rem;
+        line-height: 1.524rem;
+
+        .worker-name {
+           margin-right: 2%;
+
+            span {
+                margin-right: 3%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            display: block;
+        }
+    }
+
+    .desktop-title {
+        display: block;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .worker-info-mobile {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            p {
+                font-size: 1.125rem;
+                font-weight: 400;
+                line-height: 1.371rem;
+                padding-top: 20px;
+                padding-bottom: 30px;
+            }
+
+            .cv-btn {
+                background-color: var(--primary-color);
+                border: 2px solid var(--primary-color);
+                color: var(--light-color);
+                border-radius: 2px;
+                height: 44px;
+                font-size: 1.25rem;
+                line-height: 1.524rem;
+                width: 160%;
+                cursor: pointer;
+                margin-left: -60px;
+
+                &:hover {
+                    background-color: var(--light-color);
+                    color: var(--primary-color);
+                }
+            }
+        }
     }
 }
 
