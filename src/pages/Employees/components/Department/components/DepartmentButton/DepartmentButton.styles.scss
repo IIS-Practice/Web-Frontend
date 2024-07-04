@@ -1,6 +1,7 @@
 .dropdown-btn {
     font-size: 1.75rem;
     font-weight: 500;
+    line-height: 2.134rem;
     border: none;
     background: none;
     color: var(--dark-color);
@@ -8,6 +9,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: 768px) {
+        width: 70%;
+        font-size: 1.5625rem;
+        line-height: 1.905rem;
+    }
 
     &:hover {
         color: var(--dark-color);

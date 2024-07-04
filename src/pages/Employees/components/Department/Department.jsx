@@ -20,9 +20,10 @@ const Department = ({ departmentName, workers }) => {
 
   return (
     <div className="department">
-      <div className="button-header">
-        <DepartmentButton text={departmentName} onClick={handleButtonClick} />
-        <ArrowIcon className={`dropdown-arrow ${isVisible ? "open" : ""}`} />
+      <div className="button-header" >
+        <DepartmentButton text={departmentName}  onClick={handleButtonClick}/>
+        <ArrowIcon className={`dropdown-arrow ${isVisible ? "open" : ""}`} onClick={handleButtonClick} />
+
       </div>
 
       {selectedWorker && <WorkerInfo worker={selectedWorker} />}
@@ -33,7 +34,7 @@ const Department = ({ departmentName, workers }) => {
             key={index}
             wasSelected={selectedWorker && selectedWorker.id === worker.id}
             worker={worker}
-            onClick={() => handleWorkerClick(worker)}
+            onDesktopClick={() => handleWorkerClick(worker)}
           />
         ))}
       </div>
