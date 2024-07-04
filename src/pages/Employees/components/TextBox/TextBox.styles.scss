@@ -55,6 +55,9 @@
     }
 
     .link-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         box-sizing: border-box;
         height: 57px;
         width: 36%;
