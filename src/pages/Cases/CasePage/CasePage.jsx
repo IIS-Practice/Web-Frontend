@@ -43,13 +43,20 @@ const CasePage = () => {
               <img
                 src="https://avatars.mds.yandex.net/i?id=48a4918289cb9ad4a778c06b628dfd8765dc83a0-12146588-images-thumbs&n=13"
                 alt="Project Details"
+                className="desktop-image"
               />
               <div className="info">
                 <p>{caseData.description}</p>
+                <img
+                  src="https://avatars.mds.yandex.net/i?id=48a4918289cb9ad4a778c06b628dfd8765dc83a0-12146588-images-thumbs&n=13"
+                  alt="Project Details"
+                  className="mobile-image"
+                />
                 <p>{caseData.steps}</p>
               </div>
             </div>
           </div>
+
           <div>
             <ProjectDetails
               service={caseData.service}
@@ -58,7 +65,7 @@ const CasePage = () => {
               price={caseData.price}
             />
           </div>
-          <div className="case-information">
+          <div className="connect-link">
             <ConnectLink
               title="ХОТИТЕ ТАК ЖЕ? МЫ ПОМОЖЕМ!"
               name="Заказать звонок"

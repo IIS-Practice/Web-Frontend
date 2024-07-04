@@ -4,20 +4,44 @@
     margin-bottom: 130px;
     width: 100%;
 }
+
 .call-to-action p {
-    font-size: 35px;
+    font-size: 1.75rem;
     font-weight: 500;
-    line-height: 42.67px;
+    line-height: 2.134rem;
     margin-bottom: 50px;
 }
+
 .action-ring {
-    font-size: 60px;
+    font-size: 3rem;
     font-weight: 600;
-    line-height: 73px;
+    line-height: 3.65rem;
     text-decoration: none;
     cursor: pointer;
     color: var(--dark-color);
 }
+
 .line {
     width: 100%;
+}
+
+@media (max-width: 768px) {
+    .call-to-action {
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+    .call-to-action p {
+        font-size: 1.125rem;
+        line-height: 1.371rem;
+        margin-bottom: 20px;
+    }
+
+    .action-ring {
+        font-size: 2.188rem;
+        line-height: 2.667rem;
+        text-decoration: none;
+        cursor: pointer;
+        color: var(--dark-color);
+    }
 }

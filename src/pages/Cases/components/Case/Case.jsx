@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Case.styles.css";
 import { CASES_ROUTE } from "@utils/constants";
+
 const Case = ({ image, title, link, className, little_description }) => {
   return (
     <Link

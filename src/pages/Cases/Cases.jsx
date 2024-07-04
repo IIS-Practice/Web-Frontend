@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "./Cases.styles.scss";
+import "./Cases.styles.css";
 import Case from "./components/Case";
-import IMG from "./case_example.svg";
+import IMG from "@assets/case_example.svg";
 import OutlinedButton from "@components/shared/OutlinedButton";
 
 export const casesData = [
