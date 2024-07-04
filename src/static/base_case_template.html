@@ -1,0 +1,105 @@
+<style>
+    .case-description {
+        margin-top: 100px;
+    }
+
+    .case-description h2 {
+        font-size: 1.75rem;
+        font-weight: 600;
+        line-height: 2.133rem;
+        margin-bottom: 60px;
+    }
+
+    .case-description p {
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 1.828rem;
+        margin-bottom: 15px;
+    }
+
+    .project-details-image img {
+        height: 37.3rem;
+        width: 27.7rem;
+        object-fit: cover;
+        margin-right: 3%;
+    }
+
+    .info .mobile-image {
+        display: none;
+    }
+
+    .project-details-image {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .info {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .info p {
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 1.828rem;
+        text-align: left;
+    }
+
+    .info .mobile-image {
+        display: none;
+    }
+
+    @media (max-width: 768px) {
+        .info .mobile-image {
+            display: block;
+            width: 100%;
+            height: auto;
+            margin: 30px 0;
+        }
+
+        .project-details-image .desktop-image {
+            display: none;
+        }
+
+        .case-description {
+            margin-top: 40px;
+        }
+
+        .case-description h2 {
+            font-size: 2.187rem;
+            margin-bottom: 20px;
+            line-height: 2.667rem;
+        }
+
+        .case-description p {
+            font-size: 1.875rem;
+            margin-bottom: 25px;
+            line-height: 2.286rem;
+        }
+
+        .info p {
+            font-size: 1.125rem;
+            line-height: 1.371rem;
+        }
+    }
+</style>
+<div class="case-description">
+    <h2>PITA STREET FOOD</h2>
+    <p>Специализируется на <br /> кулинарии</p>
+</div>
+<div class="project-details-image">
+    <div class="project-details-image">
+        <img src="https://avatars.mds.yandex.net/i?id=48a4918289cb9ad4a778c06b628dfd8765dc83a0-12146588-images-thumbs&n=13"
+            alt="Project Details" class="desktop-image" />
+        <div class="info">
+            <p>Компания “PITA STREET FOOD” обратилась к нам за разработкой полноценного сайта их заведения. В ходе
+                живого общения с нашими специалистами, заказчик четко определился со структурой сайта, также в ТЗ была
+                включена реализация платёжной системы сайта.</p>
+            <img src="https://avatars.mds.yandex.net/i?id=48a4918289cb9ad4a778c06b628dfd8765dc83a0-12146588-images-thumbs&n=13"
+                alt="Project Details" class="mobile-image" />
+            <p>На ранних этапах сотрудничества, мы составили поэтапную смету, промежуточные сроки реализации, в рамках
+                которых вели дальнейшую разработку проекта.</p>
+        </div>
+    </div>
+</div>

@@ -1,24 +1,49 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
-import { casesData } from "../Cases";
-import "./CasePage.styles.css";
+import { useNavigate } from "react-router-dom";
 import ProjectDetails from "./components/ProjectDetails";
 import ConnectLink from "@components/shared/ConnectLink";
+import { differenceInWeeks } from "date-fns";
+import "./CasePage.styles.css";
+import { getCase } from "@api/services/caseApi";
 
 const CasePage = () => {
-  const { caseName } = useParams();
   const navigate = useNavigate();
   const [caseData, setCaseData] = useState(null);
 
   useEffect(() => {
-    const caseInfo = casesData.find((c) => c.link === caseName);
+    const getCaseIdFromUrl = () => {
+      const pathname = window.location.pathname;
+      const regex = /\/cases\/([a-f0-9-]+)/;
+      const match = pathname.match(regex);
+      return match ? match[1] : null;
+    };
 
-    if (!caseInfo) {
-      navigate("/cases");
-    } else {
-      setCaseData(caseInfo);
-    }
-  }, [caseName, navigate]);
+    const caseId = getCaseIdFromUrl();
+
+    const fetchData = async () => {
+      try {
+        const data = await getCase(caseId);
+
+        if (!data) {
+          navigate("/cases");
+        } else {
+          setCaseData(data);
+        }
+      } catch (error) {
+        console.error("Failed to fetch case data:", error);
+        navigate("/cases");
+      }
+    };
+
+    fetchData();
+  }, [navigate]);
+
+  const getWeeksBetweenDates = (start, end) => {
+    if (!start || !end) return 0;
+    const startDate = new Date(start);
+    const endDate = new Date(end);
+    return differenceInWeeks(endDate, startDate);
+  };
 
   return (
     <div>
@@ -26,46 +51,28 @@ const CasePage = () => {
         <>
           <div className="case-information">
             <h1 className="case-head">
-              Кейс {caseData.service} для <br></br> "{caseData.title}"
+              Кейс {caseData.services.join(", ")} для <br />"{caseData.name}"
             </h1>
             <img
-              src={caseData.image}
-              alt={caseData.title}
+              src={caseData.images[0]}
+              alt={caseData.name}
               className="case-image"
             />
-            <div className="case-description">
-              <h2>{caseData.title}</h2>
-              <p>
-                Специализируется на <br></br> {caseData.specialization}
-              </p>
-            </div>
-            <div className="project-details-image">
-              <img
-                src="https://avatars.mds.yandex.net/i?id=48a4918289cb9ad4a778c06b628dfd8765dc83a0-12146588-images-thumbs&n=13"
-                alt="Project Details"
-                className="desktop-image"
-              />
-              <div className="info">
-                <p>{caseData.description}</p>
-                <img
-                  src="https://avatars.mds.yandex.net/i?id=48a4918289cb9ad4a778c06b628dfd8765dc83a0-12146588-images-thumbs&n=13"
-                  alt="Project Details"
-                  className="mobile-image"
-                />
-                <p>{caseData.steps}</p>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <ProjectDetails
-              service={caseData.service}
-              duration={caseData.duration}
-              level={caseData.level}
-              price={caseData.price}
+            <div
+              dangerouslySetInnerHTML={{ __html: caseData.innerHtml }}
             />
           </div>
-          <div className="connect-link">
+          <ProjectDetails
+            service={caseData.services.join(", ")}
+            duration={getWeeksBetweenDates(
+              caseData.startDate,
+              caseData.endDate
+            )}
+            level={caseData.complexity}
+            price={caseData.cost}
+          />
+
+          <div className="case-information">
             <ConnectLink
               title="ХОТИТЕ ТАК ЖЕ? МЫ ПОМОЖЕМ!"
               name="Заказать звонок"
