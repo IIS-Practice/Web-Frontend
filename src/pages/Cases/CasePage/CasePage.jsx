@@ -6,28 +6,6 @@ import { differenceInWeeks } from "date-fns";
 import "./CasePage.styles.css";
 import { getCase } from "@api/services/caseApi";
 
-const addStylesToHead = (styles) => {
-  const styleElement = document.createElement("style");
-  styleElement.textContent = styles;
-  document.head.appendChild(styleElement);
-  return () => {
-    document.head.removeChild(styleElement);
-  };
-};
-
-
-const extractStyles = (html) => {
-  const styleMatch = html.match(/<style>(.*?)<\/style>/s);
-  if (styleMatch && styleMatch[1]) {
-    return styleMatch[1];
-  }
-  return "";
-};
-
-
-const removeStyles = (html) => {
-  return html.replace(/<style>(.*?)<\/style>/s, "");
-};
 const CasePage = () => {
   const navigate = useNavigate();
   const [caseData, setCaseData] = useState(null);
@@ -91,7 +69,7 @@ const CasePage = () => {
               caseData.endDate
             )}
             level={caseData.complexity}
-            price={caseData.price}
+            price={caseData.cost}
           />
 
           <div className="case-information">
