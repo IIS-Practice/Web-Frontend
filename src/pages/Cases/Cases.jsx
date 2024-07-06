@@ -27,7 +27,7 @@ const Cases = () => {
         const data = await getCases();
         setCases(data);
       } catch (error) {
-        console.error("Failed to fetch specialists:", error);
+        console.error("Failed to fetch cases:", error);
       }
     };
 
