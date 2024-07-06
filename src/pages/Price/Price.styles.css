@@ -10,7 +10,7 @@
     margin-bottom: 100px;
 }
 
-.priceGridContainer>div {
+.priceGridContainer > div {
     background-color: var(--primary-color);
     flex-basis: 320px;
     color: var(--light-color);
@@ -27,7 +27,7 @@
     text-wrap: wrap;
 }
 
-.priceFeatures>div {
+.priceFeatures > div {
     text-align: left;
     position: relative;
     margin: 20px 0px 20px 80px;
@@ -48,12 +48,13 @@
     margin: 0 auto;
 }
 
-.priceGridContainer a:visited, .priceGridContainer a:link {
+.priceGridContainer a:visited,
+.priceGridContainer a:link {
     color: var(--light-color);
     text-decoration: none;
 }
 
-.priceFeatures>div::before {
+.priceFeatures > div::before {
     content: "";
     background-image: url("@assets/star.svg");
     position: absolute;
@@ -72,7 +73,7 @@
     .priceGridContainer > div {
         flex-basis: 600px;
         font-size: 25px;
-        margin: 0 20px 35px 20px;   
+        margin: 0 20px 35px 20px;
     }
 
     .priceGridContainer h2 {

@@ -1,58 +1,29 @@
 .case-head {
-    margin-top: 100px;
-
-    font-size: 60px;
+    font-size: 3rem;
     font-weight: 600;
-    line-height: 73.14px;
+    line-height: 3.657rem;
     text-align: left;
     margin-bottom: 100px;
 }
+
 .case-image {
     width: 100%;
-    height: auto;
-    margin: 20px 0;
+    border-radius: 2px;
 }
+
 .case-information {
-    margin-left: 100px;
-    margin-right: 100px;
+    padding: 100px 6.942% 130px 6.942%;
 }
 
-.case-description {
-    margin-top: 100px;
-    font-size: 16px;
+
+.connect-link {
+    margin: 0 5.5%;
 }
 
-.case-description h2 {
-    font-size: 35px;
-    font-weight: 600;
-    line-height: 42.67px;
-    margin-bottom: 60px;
-}
-.case-description p {
-    font-size: 30px;
-    font-weight: 400;
-    line-height: 36.57px;
-    margin-bottom: 15px;
-}
-.project-details-image img {
-    height: 746px;
-    width: 554px;
-    object-fit: cover;
-    margin-right: 33px;
-}
-.project-details-image {
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 130px;
-}
-.info {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-}
-.info p {
-    font-size: 30px;
-    font-weight: 400;
-    line-height: 36.57px;
-    text-align: left;
+@media (max-width: 768px) {
+    .case-head {
+        font-size: 2.5rem;
+        line-height: 3.048rem;
+        margin-bottom: 40px;
+    }
 }

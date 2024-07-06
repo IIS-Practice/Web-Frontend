@@ -1,5 +1,3 @@
-
-
 .FAQPage {
     margin: 50px 20px 100px 20px;
 }
@@ -46,55 +44,49 @@
     .FAQPage {
         margin: 6rem 6rem 7.5rem 6rem;
     }
-    
+
     .FAQPage > h1 {
         font-size: 60px;
     }
-    
+
     .wrapperFAQ {
         display: flex;
         position: relative;
         margin-top: 5rem;
     }
-    
+
     .leftFAQ {
         min-width: 50%;
         max-width: 50%;
         border-right: 1px solid var(--dark-color);
     }
-    
-    
-    
-    
-    
+
     .leftFAQ > *:not(:last-child) {
         margin-bottom: 1.5rem;
     }
-    
+
     .leftFAQ > * {
         font-weight: 400;
         font-size: 25px;
         position: relative;
     }
-    
-    .leftFAQ>*:hover {
+
+    .leftFAQ > *:hover {
         cursor: pointer;
     }
-    
+
     .rightFAQ {
         max-width: 55%;
         margin-left: 1.5rem;
     }
-    
-    .rightFAQ>h2 {
+
+    .rightFAQ > h2 {
         font-size: 33px;
         font-weight: 500;
         margin-bottom: 24px;
     }
-    
-    .rightFAQ>div {
+
+    .rightFAQ > div {
         font-size: 25px;
     }
-    
-   
 }

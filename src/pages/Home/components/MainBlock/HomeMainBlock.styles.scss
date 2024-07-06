@@ -1,0 +1,142 @@
+.MainBlock {
+    width: 100%;
+    height: 725px;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--primary-color);
+    box-sizing: border-box;
+
+    .CompanyName,
+    .CompanyImage {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .CompanyImage {
+        position: relative;
+        width: 50%;
+        height: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: scaleX(-1);
+        }
+    }
+
+    .CompanyName {
+        color: var(--light-color);
+
+        h1 {
+            font-family: "Noto Serif Gujarati", serif;
+            font-size: 100px;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 60px;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        .text-container {
+            align-self: flex-start;
+            padding-top: 130px;
+            padding-left: 20px;
+        }
+    }
+
+    .submit-application {
+        display: none;
+    }
+
+    @media (max-width: 1024px) {
+        height: auto;
+        flex-direction: row;
+        position: relative;
+
+        .CompanyImage {
+            width: 100%;
+            height: auto;
+
+            img {
+                width: 100%;
+                height: auto;
+                transform: scaleX(-1);
+            }
+        }
+
+        .CompanyName {
+            h1 {
+                font-size: 55px;
+            }
+
+            h2 {
+                font-size: 35px;
+            }
+        }
+
+        .submit-application {
+            display: block;
+            margin-top: 20px;
+            background-color: var(--light-color) !important;
+            border: 1px solid var(--light-color) !important;
+            border-radius: 2px;
+            color: var(--dark-color);
+            font-size: 14px;
+            padding: 11px 60px;
+        }
+    }
+
+    @media (max-width: 512px) {
+        position: relative;
+
+        .CompanyImage {
+            width: 100%;
+
+            img {
+                width: 100%;
+                height: 338px;
+                object-fit: cover;
+                transform: scaleX(-1);
+                position: relative;
+            }
+        }
+
+        .CompanyName {
+            align-self: flex-start;
+            position: absolute;
+
+            h1 {
+                font-size: 40px;
+            }
+
+            h2 {
+                font-size: 30px;
+            }
+
+            .text-container {
+                padding-top: 50px;
+                padding-left: 20px;
+                padding-bottom: 40px;
+                text-align: left;
+                z-index: 2;
+            }
+        }
+
+        .submit-application {
+            display: block;
+            margin-top: 20px;
+            background-color: var(--light-color);
+            border: 1px solid var(--light-color);
+            border-radius: 2px;
+            color: var(--dark-color);
+            font-size: 14px;
+            padding: 11px 40px;
+        }
+    }
+}
