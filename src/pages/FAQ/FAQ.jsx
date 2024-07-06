@@ -1,63 +1,75 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./FAQ.styles.css";
 import { useMediaQuery } from "@uidotdev/usehooks";
-
-const questions = {
-  "Какие услуги вы предоставляете?":
-    "Мы предлагаем полный спектр ИТ-услуг, включая разработку веб-сайтов, мобильных приложений, чат-ботов, а также UX/UI дизайн. Наша команда экспертов поможет вам реализовать проект любой сложности от концепции до запуска.",
-  "Сколько стоит разработка сайта или мобильного приложения?":
-    "Стоимость разработки зависит от множества факторов, включая сложность проекта, функциональные требования и сроки выполнения. Для получения более точной оценки, пожалуйста, свяжитесь с нами для обсуждения вашего проекта.",
-  "Как долго разрабатывается сайт или приложение?":
-    "Время разработки зависит от сложности и объема проекта. В среднем, на создание простого сайта уходит от 4 до 8 недель, тогда как разработка мобильного приложения может занять от 3 до 6 месяцев. Точные сроки мы определяем после обсуждения всех деталей проекта.",
-  "Можете ли вы модернизировать или поддерживать уже существующий сайт или приложение?":
-    "Да, мы предоставляем услуги по модернизации и поддержке уже существующих сайтов и приложений. Наша команда может помочь вам улучшить функциональность, обновить дизайн или устранить технические проблемы.",
-  "Как происходит процесс разработки?":
-    "Наш процесс разработки включает несколько этапов: анализ требований, планирование, дизайн, разработка, тестирование и запуск. Мы тесно сотрудничаем с клиентами на каждом этапе, чтобы убедиться, что конечный продукт соответствует их ожиданиям и требованиям.",
-  "Как вы обеспечиваете защиту данных и безопасность приложений?":
-    "Мы применяем передовые методы и технологии для обеспечения безопасности данных и приложений. Наши специалисты регулярно проводят аудит безопасности и тестирование на уязвимости, чтобы защитить ваш продукт от потенциальных угроз.",
-  "Как мне начать сотрудничество с вашей компанией?":
-    "Чтобы начать сотрудничество, вы можете связаться с нами через форму обратной связи на сайте или по телефону. Мы обсудим ваши потребности и предложим оптимальное решение для вашего проекта. После этого мы подготовим коммерческое предложение и заключим договор.",
-};
+import { getFaqs } from "@api/services/faqApi";
 
 const FAQ = () => {
-  const [questionToDisplay, setQuestionToDisplay] = useState("");
+  const [questionToDisplay, setQuestionToDisplay] = useState();
+  const [faqs, setFaqs] = useState([]);
   const isMobile = useMediaQuery("only screen and (max-width: 768px)");
+
+  useEffect(() => {
+    const fetchFaqs = async () => {
+      try {
+        const data = await getFaqs();
+        setFaqs(data);
+      } catch (error) {
+        console.error("Failed to fetch faqs:", error);
+      }
+    };
+
+    fetchFaqs();
+  }, []);
+
+  useEffect(() => {
+    console.log(questionToDisplay)
+  }, [questionToDisplay])
+
   return (
     <main className="FAQPage">
       <h1>Часто задаваемые вопросы</h1>
       <div className="wrapperFAQ">
-        <div className="leftFAQ">
-          {Object.keys(questions).map((question) => (
-            <>
+        <div
+          className="leftFAQ">
+          {faqs.map((faq, index) => (
+            <div key={index}>
               <h2
                 className={
-                  question === questionToDisplay
+                  index === questionToDisplay
                     ? "question rotateLeftArrow"
                     : "question"
                 }
-                key={question}
-                onClick={(e) => setQuestionToDisplay(e.target.innerText)}
+                key={index}
+                onClick={() => setQuestionToDisplay(index)}
               >
-                {question}
+                {faq.question}
               </h2>
               {isMobile && (
                 <div
                   className={
-                    question === questionToDisplay
+                    index === questionToDisplay
                       ? "showFAQAnswer"
                       : "hideFAQAnswer"
                   }
                 >
-                  {questions[question]}
+                  {faq.answer}
                 </div>
               )}
-            </>
+            </div>
           ))}
         </div>
         {!isMobile && (
           <div className="rightFAQ">
-            <h2>{questionToDisplay}</h2>
-            <div>{questions[questionToDisplay]}</div>
+            <h2>
+              {faqs?.filter(
+                (_, index) => index === questionToDisplay,
+              )[0]?.question}
+            </h2>
+            <div>
+              {faqs?.filter(
+                (_, index) => index === questionToDisplay,
+              )[0]?.answer}
+            </div>
           </div>
         )}
       </div>
