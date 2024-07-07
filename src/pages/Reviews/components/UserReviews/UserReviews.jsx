@@ -1,41 +1,28 @@
 import React, { useEffect, useState, useCallback } from "react";
-import "./UserReviews.styles.css";
+import "./UserReviews.styles.scss";
 import image1 from "@assets/font.jpg";
-import { getReviews } from "@api/services/reviewApi";
 import { ReactComponent as LeftButton } from "@assets/leftButton.svg";
 import { ReactComponent as RightButton } from "@assets/rightButton.svg";
 import { useSwipeable } from "react-swipeable";
 
-const UserReviews = () => {
+const UserReviews = ({ reviews }) => {
   const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
   const [viewport, setViewport] = useState(
     window.innerWidth <= 640 ? "mobile" : window.innerWidth <= 1024 ? "tablet" : "desktop"
   );
-  const [reviews, setReviews] = useState([]);
   const [disablePrev, setDisablePrev] = useState(true);
   const [disableNext, setDisableNext] = useState(false);
   const [showButtons, setShowButtons] = useState(false);
 
   const updateDisableButtons = useCallback((length) => {
     const increment = viewport === "mobile" ? 1 : viewport === "tablet" ? 2 : 4;
-    setDisableNext(length <= increment);
-    setDisableNext(currentReviewIndex >= length - increment)
+    setDisableNext(currentReviewIndex >= length - increment);
     setDisablePrev(currentReviewIndex === 0);
   }, [viewport, currentReviewIndex]);
 
   useEffect(() => {
-    const fetchReviews = async () => {
-      try {
-        const data = await getReviews();
-        setReviews(data);
-        updateDisableButtons(data.length);
-      } catch (error) {
-        console.error("Failed to fetch reviews:", error);
-      }
-    };
-
-    fetchReviews();
-  }, [viewport, updateDisableButtons]);
+    updateDisableButtons(reviews.length);
+  }, [reviews, viewport, updateDisableButtons]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -74,7 +61,7 @@ const UserReviews = () => {
 
   const displayedReviews = (() => {
     if (viewport === "mobile") {
-      return [reviews[currentReviewIndex]];
+      return reviews.length > 0 ? [reviews[currentReviewIndex]] : [];
     } 
     if (viewport === "tablet") {
       const startIndex = currentReviewIndex % 2 ? currentReviewIndex - 1 : currentReviewIndex;
@@ -84,9 +71,8 @@ const UserReviews = () => {
       const startIndex = currentReviewIndex % 4 ? currentReviewIndex - (currentReviewIndex % 4) : currentReviewIndex;
       return reviews.slice(startIndex, startIndex + 4);
     }
-})();
+  })();
 
-      
   const swipeHandlers = useSwipeable({
     onSwipedLeft: () => {
       if (!disableNext) nextReview();
@@ -110,18 +96,17 @@ const UserReviews = () => {
         <h2>Прочтите, что говорят наши клиенты</h2>
       </div>
       <div className="navigationBlock">
-          <button
-            className={`navButtonReview prevButton ${!disablePrev && (showButtons || viewport !== 'mobile') ? 'show' : ''}`}
-            onClick={prevReview}
-            disabled={disablePrev}
-          >
-            <LeftButton />
-          </button>
+        <button
+          className={`navButtonReview prevButton ${!disablePrev && (showButtons || viewport !== 'mobile') ? 'show' : ''}`}
+          onClick={prevReview}
+          disabled={disablePrev}
+        >
+          <LeftButton />
+        </button>
         <div className="usersBlock">
           {displayedReviews.map((review) => (
             <div key={review.reviewId} className="userReview">
               <div className="userHeader">
-              
                 <img
                   src={image1}
                   alt={`${review.username}`}
@@ -135,15 +120,13 @@ const UserReviews = () => {
             </div>
           ))}
         </div>
-        { (
-          <button
-            className={`navButtonReview nextButton ${!disableNext && (showButtons || viewport !== 'mobile') ? 'show' : ''}`}
-            onClick={nextReview}
-            disabled={disableNext}
-          >
-            <RightButton className="btn"/>
-          </button>
-        )}
+        <button
+          className={`navButtonReview nextButton ${!disableNext && (showButtons || viewport !== 'mobile') ? 'show' : ''}`}
+          onClick={nextReview}
+          disabled={disableNext}
+        >
+          <RightButton className="btn"/>
+        </button>
       </div>
     </div>
   );

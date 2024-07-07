@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./ReviewsContacts.styles.css";
+import "./ReviewsContacts.styles.scss";
 import ModalForm from "@components/shared/ModalForm";
 
 const ReviewsContacts = () => {

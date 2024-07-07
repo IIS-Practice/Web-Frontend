@@ -1,49 +1,44 @@
 import React, { useState } from "react";
-import "./Review.styles.css";
-import { addReviews } from "@api/services/reviewApi";
+import "./Review.styles.scss";
 
-const Review = () => {
+const Review = ({ onAddReview }) => {
   const [text, setText] = useState("");
   const [username, setUserName] = useState("");
   const maxLengthText = 300;
   const maxLengthName = 30;
-  
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState({});
 
-  const handleSendReview = (event) => {
+  const handleSendReview = async (event) => {
     event.preventDefault();
     setIsSubmitting(true);
     setErrors({});
 
-    addReviews(username, text)
-      .then((response) => {
-        console.log(response);
+    try {
+      await onAddReview(username, text);
+      setUserName("");
+      setText("");
+    } catch (error) {
+      console.log(error);
 
-        setUserName("");
-        setText("");
-      })
-      .catch((error) => {
-        console.log(error);
-
-        if (error.status === 400) {
-          setErrors(error.errors);
-        }
-      })
-      .finally(() => {
-        setIsSubmitting(false);
-      });
+      if (error.status === 400) {
+        setErrors(error.errors);
+      }
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
-    <div className="MainBlock">
+    <div className="MainBlockReview">
       <div className="ContentBlock">
         <form
           className="FormBlock"
           action="#"
           method="post"
           encType="multipart/form-data"
-          onSubmit={handleSendReview} 
+          onSubmit={handleSendReview}
         >
           <h2 className="ContentText">Вы можете оставить свой отзыв</h2>
           <div>
