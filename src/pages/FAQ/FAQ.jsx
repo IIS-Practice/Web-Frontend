@@ -22,15 +22,14 @@ const FAQ = () => {
   }, []);
 
   useEffect(() => {
-    console.log(questionToDisplay)
-  }, [questionToDisplay])
+    console.log(questionToDisplay);
+  }, [questionToDisplay]);
 
   return (
     <main className="FAQPage">
       <h1>Часто задаваемые вопросы</h1>
       <div className="wrapperFAQ">
-        <div
-          className="leftFAQ">
+        <div className="leftFAQ">
           {faqs.map((faq, index) => (
             <div key={index}>
               <h2
@@ -61,14 +60,16 @@ const FAQ = () => {
         {!isMobile && (
           <div className="rightFAQ">
             <h2>
-              {faqs?.filter(
-                (_, index) => index === questionToDisplay,
-              )[0]?.question}
+              {
+                faqs?.filter((_, index) => index === questionToDisplay)[0]
+                  ?.question
+              }
             </h2>
             <div>
-              {faqs?.filter(
-                (_, index) => index === questionToDisplay,
-              )[0]?.answer}
+              {
+                faqs?.filter((_, index) => index === questionToDisplay)[0]
+                  ?.answer
+              }
             </div>
           </div>
         )}

@@ -8,17 +8,25 @@ import { useSwipeable } from "react-swipeable";
 const UserReviews = ({ reviews }) => {
   const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
   const [viewport, setViewport] = useState(
-    window.innerWidth <= 640 ? "mobile" : window.innerWidth <= 1024 ? "tablet" : "desktop"
+    window.innerWidth <= 640
+      ? "mobile"
+      : window.innerWidth <= 1024
+        ? "tablet"
+        : "desktop",
   );
   const [disablePrev, setDisablePrev] = useState(true);
   const [disableNext, setDisableNext] = useState(false);
   const [showButtons, setShowButtons] = useState(false);
 
-  const updateDisableButtons = useCallback((length) => {
-    const increment = viewport === "mobile" ? 1 : viewport === "tablet" ? 2 : 4;
-    setDisableNext(currentReviewIndex >= length - increment);
-    setDisablePrev(currentReviewIndex === 0);
-  }, [viewport, currentReviewIndex]);
+  const updateDisableButtons = useCallback(
+    (length) => {
+      const increment =
+        viewport === "mobile" ? 1 : viewport === "tablet" ? 2 : 4;
+      setDisableNext(currentReviewIndex >= length - increment);
+      setDisablePrev(currentReviewIndex === 0);
+    },
+    [viewport, currentReviewIndex],
+  );
 
   useEffect(() => {
     updateDisableButtons(reviews.length);
@@ -30,8 +38,8 @@ const UserReviews = ({ reviews }) => {
         window.innerWidth <= 640
           ? "mobile"
           : window.innerWidth <= 1024
-          ? "tablet"
-          : "desktop"
+            ? "tablet"
+            : "desktop",
       );
     };
 
@@ -41,7 +49,8 @@ const UserReviews = ({ reviews }) => {
 
   const nextReview = () => {
     setCurrentReviewIndex((prevIndex) => {
-      const increment = viewport === "mobile" ? 1 : viewport === "tablet" ? 2 : 4;
+      const increment =
+        viewport === "mobile" ? 1 : viewport === "tablet" ? 2 : 4;
       const newIndex = prevIndex + increment;
       setDisableNext(newIndex >= reviews.length - increment);
       setDisablePrev(newIndex <= 0);
@@ -51,7 +60,8 @@ const UserReviews = ({ reviews }) => {
 
   const prevReview = () => {
     setCurrentReviewIndex((prevIndex) => {
-      const decrement = viewport === "mobile" ? 1 : viewport === "tablet" ? 2 : 4;
+      const decrement =
+        viewport === "mobile" ? 1 : viewport === "tablet" ? 2 : 4;
       const newIndex = prevIndex - decrement;
       setDisablePrev(newIndex <= 0);
       setDisableNext(newIndex > reviews.length - decrement);
@@ -62,13 +72,17 @@ const UserReviews = ({ reviews }) => {
   const displayedReviews = (() => {
     if (viewport === "mobile") {
       return reviews.length > 0 ? [reviews[currentReviewIndex]] : [];
-    } 
+    }
     if (viewport === "tablet") {
-      const startIndex = currentReviewIndex % 2 ? currentReviewIndex - 1 : currentReviewIndex;
+      const startIndex =
+        currentReviewIndex % 2 ? currentReviewIndex - 1 : currentReviewIndex;
       return reviews.slice(startIndex, startIndex + 2);
-    } 
+    }
     if (viewport === "desktop") {
-      const startIndex = currentReviewIndex % 4 ? currentReviewIndex - (currentReviewIndex % 4) : currentReviewIndex;
+      const startIndex =
+        currentReviewIndex % 4
+          ? currentReviewIndex - (currentReviewIndex % 4)
+          : currentReviewIndex;
       return reviews.slice(startIndex, startIndex + 4);
     }
   })();
@@ -97,7 +111,7 @@ const UserReviews = ({ reviews }) => {
       </div>
       <div className="navigationBlock">
         <button
-          className={`navButtonReview prevButton ${!disablePrev && (showButtons || viewport !== 'mobile') ? 'show' : ''}`}
+          className={`navButtonReview prevButton ${!disablePrev && (showButtons || viewport !== "mobile") ? "show" : ""}`}
           onClick={prevReview}
           disabled={disablePrev}
         >
@@ -121,11 +135,11 @@ const UserReviews = ({ reviews }) => {
           ))}
         </div>
         <button
-          className={`navButtonReview nextButton ${!disableNext && (showButtons || viewport !== 'mobile') ? 'show' : ''}`}
+          className={`navButtonReview nextButton ${!disableNext && (showButtons || viewport !== "mobile") ? "show" : ""}`}
           onClick={nextReview}
           disabled={disableNext}
         >
-          <RightButton className="btn"/>
+          <RightButton className="btn" />
         </button>
       </div>
     </div>

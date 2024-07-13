@@ -15,10 +15,7 @@ export const getReviews = async () => {
   }
 };
 
-export const addReviews = async (
-  username,
-  text,
-) => {
+export const addReviews = async (username, text) => {
   try {
     const response = await $host.post("reviews", {
       username,

@@ -70,7 +70,11 @@ const Review = ({ onAddReview }) => {
             ></textarea>
           </div>
           <div>
-            <button className="SubmitButton" type="submit" disabled={isSubmitting}>
+            <button
+              className="SubmitButton"
+              type="submit"
+              disabled={isSubmitting}
+            >
               Отправить
             </button>
           </div>

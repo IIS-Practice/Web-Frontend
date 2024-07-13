@@ -58,15 +58,13 @@ const CasePage = () => {
               alt={caseData.name}
               className="case-image"
             />
-            <div
-              dangerouslySetInnerHTML={{ __html: caseData.innerHtml }}
-            />
+            <div dangerouslySetInnerHTML={{ __html: caseData.innerHtml }} />
           </div>
           <ProjectDetails
             service={caseData.services.join(", ")}
             duration={getWeeksBetweenDates(
               caseData.startDate,
-              caseData.endDate
+              caseData.endDate,
             )}
             level={caseData.complexity}
             price={caseData.cost}

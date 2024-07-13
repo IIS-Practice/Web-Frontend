@@ -4,7 +4,6 @@ import Case from "./components/Case";
 import OutlinedButton from "@components/shared/OutlinedButton";
 import { getCases } from "@api/services/caseApi";
 
-
 const Cases = () => {
   const [visibleCount, setVisibleCount] = useState(5);
 

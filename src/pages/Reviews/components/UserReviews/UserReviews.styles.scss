@@ -10,12 +10,12 @@
         font-weight: 600;
         padding: 100px;
         text-align: left;
-    
+
         @media (max-width: 1024px) {
             padding: 50px 20px 35px;
             font-size: 45px;
         }
-    
+
         @media (max-width: 640px) {
             font-size: 40px;
         }
@@ -26,40 +26,38 @@
         align-items: center;
         justify-content: space-between;
         padding: 0px 100px 130px;
-    
+
         @media (max-width: 1024px) {
             padding: 0px 50px 80px;
         }
-       
-            .navButtonReview {
-                padding: 10px;
-                font-size: 100px;
-                font-weight: bold;
-                color: var(--primary-color);
-                background: none;
-                border: none;
-                align-self: center;
-                margin: 0px;
-                opacity: 0;
-                transition: opacity 0.5s ease;
-            
-                @media (max-width: 640px) {
-                    padding: 0px;
-                    position: absolute;
-                }
-            }
-    
-            .show {
-                opacity: 0.7;
-                cursor: pointer;
-            }
 
-            
-            .btn {
-                height: 94px;
-                width: 94px;
+        .navButtonReview {
+            padding: 10px;
+            font-size: 100px;
+            font-weight: bold;
+            color: var(--primary-color);
+            background: none;
+            border: none;
+            align-self: center;
+            margin: 0px;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+
+            @media (max-width: 640px) {
+                padding: 0px;
+                position: absolute;
             }
-        
+        }
+
+        .show {
+            opacity: 0.7;
+            cursor: pointer;
+        }
+
+        .btn {
+            height: 94px;
+            width: 94px;
+        }
 
         .usersBlock {
             display: grid;
@@ -69,7 +67,7 @@
             width: 100%;
             height: auto;
             min-height: 518px;
-        
+
             @media (max-width: 1024px) {
                 grid-template-columns: minmax(250px, 1fr);
             }
@@ -93,28 +91,26 @@
                 .userHeader {
                     display: flex;
                 }
-                
+
                 .userImage {
                     width: 110px;
                     height: 110px;
                     border-radius: 50%;
                     margin-right: 20px;
                     flex-shrink: 0;
-                
-                    
-                    @media  (max-width: 1280px){
+
+                    @media (max-width: 1280px) {
                         width: 70px;
                         height: 70px;
                         margin-right: 10px;
                     }
                 }
-                
-                
+
                 .userContent {
                     display: flex;
                     flex-direction: column;
                     max-width: calc(100% - 130px);
-                
+
                     @media (max-width: 1280px) {
                         max-width: calc(100% - 80px);
                     }
@@ -124,26 +120,24 @@
                         font-size: 25px;
                         margin: 0px;
                     }
-                    
+
                     .userReviewText {
                         font-weight: 500;
                         font-size: 17px;
                         margin-top: 25px;
                         word-wrap: break-word;
-                    
                     }
                 }
             }
         }
     }
-    
 }
 
 @media (max-width: 640px) {
-        .prevButton {
-            left: 25px;
-        }
-        .nextButton {
-            right: 25px;
-        }
+    .prevButton {
+        left: 25px;
+    }
+    .nextButton {
+        right: 25px;
+    }
 }
